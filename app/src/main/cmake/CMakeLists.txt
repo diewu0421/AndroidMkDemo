@@ -8,4 +8,4 @@ add_library(Test STATIC IMPORTED)
 message("android_abi11111111111111111111111111111111111111111111  ${CMAKE_ANDROID_ARCH_ABI}")
 set_target_properties(Test PROPERTIES IMPORTED_LOCATION ${CMAKE_SOURCE_DIR}/libTest.a)
 
-#target_link_libraries()
+target_link_libraries(native-lib Test)

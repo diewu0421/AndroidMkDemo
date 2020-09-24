@@ -27,7 +27,7 @@ Java_com_example_androidmkdemo_MainActivity_myJni(JNIEnv *env, jobject thiz) {
 //    strcat(dst, str);
 //    strcat(dst, "1111");
 
-    sprintf(dst, "test方法返回值是 asdf " );
+    sprintf(dst, "test方法返回值是 asdf %d", test());
 
     jstring  s =(*env)->NewStringUTF(env, dst);
     (*env)->CallVoidMethod(env, thiz, id, s);
