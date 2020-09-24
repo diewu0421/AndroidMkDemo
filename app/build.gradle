@@ -34,7 +34,7 @@ android {
 //        }
 
         cmake {
-            path "src/main/cmake/CMakeLists.txt"
+            path "CMakeLists.txt"
         }
     }
     buildTypes {
