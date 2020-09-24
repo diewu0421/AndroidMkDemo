@@ -28,7 +28,7 @@ Java_com_example_androidmkdemo_MainActivity_myJni(JNIEnv *env, jobject thiz) {
 //    strcat(dst, "1111");
 
     sprintf(dst, "test方法返回值是 asdf %d", test());
-
+    __android_log_print(ANDROID_LOG_ERROR, "zenglw", "这是c传过来的值%d", test());
     jstring  s =(*env)->NewStringUTF(env, dst);
     (*env)->CallVoidMethod(env, thiz, id, s);
     (*env)->DeleteLocalRef(env, s);

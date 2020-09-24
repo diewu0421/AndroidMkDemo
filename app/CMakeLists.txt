@@ -12,4 +12,8 @@ add_library(native-lib SHARED src/main/cmake/native-lib.c)
 # 这里不能使用 CMAKE_CXX_FLAGS 因为这里是c文件 （原因未知）
 set(CMAKE_C_FLAGS  "${CMAKE_C_FLAGS} -L${CMAKE_SOURCE_DIR}/src/main/jniLibs/${CMAKE_ANDROID_ARCH_ABI}")
 
-target_link_libraries(native-lib Test)
+
+# 查找log 将路径复制给mylog  然后在target_link_libraries这里要这么写${mylog}, 不能直接写成mylog，否则报错
+#find_library(mylog log)
+
+target_link_libraries(native-lib Test log)
