@@ -8,7 +8,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.androidmkdemo"
-        minSdkVersion 16
+        minSdkVersion 15
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -20,6 +20,7 @@ android {
 //                abiFilters "armeabi-v7a"
 //            }
             cmake {
+                cppFlags ""
                 abiFilters "armeabi-v7a"
             }
         }
