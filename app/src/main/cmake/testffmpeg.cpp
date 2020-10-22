@@ -16,7 +16,7 @@ extern "C" {
 #define LOGE(...) __android_log_print(ANDROID_LOG_ERROR, "zenglw", __VA_ARGS__);
 //extern int test();
 
-extern "C" JNIEXPORT void JNICALL
+extern "C" JNIEXPORT jstring JNICALL
 Java_com_example_androidmkdemo_MainActivity_myJni(JNIEnv *env, jobject thiz) {
 
 //    __android_log_print(ANDROID_LOG_ERROR, "zenglw_log", "1111111");
@@ -42,6 +42,7 @@ LOGE("这是c传过来的值 %s", av_version_info())
 //(*env)->CallVoidMethod(env, thiz, id, s);
 //(*env)->DeleteLocalRef(env, s);
 //    (*env)->ReleaseStringUTFChars(env, s, str);
+    return env->NewStringUTF(av_version_info());
 }
 
 

@@ -12,7 +12,7 @@ include_directories(src/main/cmake/include)
 
 # 使用别的地方的so文件 就这么定义 如果是C++ 则使用CMAKE_CXX_FLAGS
 # 这里不能使用 CMAKE_CXX_FLAGS 因为这里是c文件 （原因未知）
-set(CMAKE_CXX_FLAGS   "${CMAKE_CXX_FLAGS} -L${CMAKE_SOURCE_DIR}/src/main/cpp/libs/${ANDROID_ABI}")
+set(CMAKE_CXX_FLAGS   "${CMAKE_CXX_FLAGS} -L${CMAKE_SOURCE_DIR}/src/main/jniLibs/${ANDROID_ABI}")
 #set(CMAKE_C_FLAGS     "${CMAKE_C_FLAGS} -L${CMAKE_SOURCE_DIR}/src/main/cpp/libs/${ANDROID_ABI}")
 
 
