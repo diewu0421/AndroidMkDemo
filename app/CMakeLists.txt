@@ -1,8 +1,12 @@
 # 指定cmake最小的版本
 cmake_minimum_required(VERSION 3.4.1)
 
+file(GLOB source_file src/main/cpp/*.cpp)
 #add_library(native-lib SHARED src/main/cmake/native-lib.c)
-add_library(testffmpeg SHARED src/main/cmake/testffmpeg.cpp)
+add_library(
+        testffmpeg
+        SHARED
+        ${source_file})
 
 # 怎么导入
 #message("android_abi11111111111111111111111111111111111111111111  ${ANDROID_ABI}")
@@ -12,7 +16,7 @@ include_directories(src/main/cmake/include)
 
 # 使用别的地方的so文件 就这么定义 如果是C++ 则使用CMAKE_CXX_FLAGS
 # 这里不能使用 CMAKE_CXX_FLAGS 因为这里是c文件 （原因未知）
-set(CMAKE_CXX_FLAGS   "${CMAKE_CXX_FLAGS} -L${CMAKE_SOURCE_DIR}/src/main/jniLibs/${ANDROID_ABI}")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -L${CMAKE_SOURCE_DIR}/src/main/jniLibs/${ANDROID_ABI}")
 #set(CMAKE_C_FLAGS     "${CMAKE_C_FLAGS} -L${CMAKE_SOURCE_DIR}/src/main/cpp/libs/${ANDROID_ABI}")
 
 
@@ -21,6 +25,7 @@ set(CMAKE_CXX_FLAGS   "${CMAKE_CXX_FLAGS} -L${CMAKE_SOURCE_DIR}/src/main/jniLibs
 
 target_link_libraries(
         testffmpeg
-#        native-lib
-        avcodec avfilter avformat avutil swresample swscale
-        log)
+        #        native-lib
+        avfilter avformat avcodec  avutil swresample swscale
+        log
+        z)
