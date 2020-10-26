@@ -2,9 +2,11 @@ package com.example.androidmkdemo
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import com.example.androidmkdemo.utils.DNFFPlayer
 import kotlinx.android.synthetic.main.activity_main.*
+import java.io.File
 
 class MainActivity : AppCompatActivity() {
 
@@ -14,8 +16,12 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+
+
         prepare_btn.setOnClickListener {
 
+            Log.e("MainActivity","onCreate ${File(externalCacheDir?.absolutePath + "/big_buck_bunny.mp4").exists()}")
             dnFFmpegPlayer.prepare()
 
         }

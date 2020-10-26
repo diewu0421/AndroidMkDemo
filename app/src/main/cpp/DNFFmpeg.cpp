@@ -26,24 +26,27 @@ DNFFmpeg::~DNFFmpeg() {
 }
 
 void DNFFmpeg::_prepare() {
+    av_register_all();
     avformat_network_init();
     int ret = 0;
     avFormatContext = 0;
-//    ret = avformat_open_input(&avFormatContext, source, 0, 0);
-//    if (ret != 0) {
-//        helper->onError(THREAD_CHILD, FFMPEG_CAN_NOT_OPEN_URL);
-//        return;
-//    }
-//
-//    ret = avformat_find_stream_info(avFormatContext, 0);
-//    if (ret < 0) {
-//        helper->onError(THREAD_CHILD, FFMPEG_CAN_NOT_FIND_STREAMS);
-//        return;
-//    }
-//    unsigned int streams = avFormatContext->nb_streams;
-//    LOGE("stream = %d" , streams);
-//    avformat_close_input(&avFormatContext);
-//    LOGE("close file");
+    LOGE("视频url %s", source);
+    ret = avformat_open_input(&avFormatContext, source, 0, 0);
+    if (ret != 0) {
+        LOGE("打开文件失败 %d", ret);
+        helper->onError(THREAD_CHILD, FFMPEG_CAN_NOT_OPEN_URL);
+        return;
+    }
+
+    ret = avformat_find_stream_info(avFormatContext, 0);
+    if (ret < 0) {
+        helper->onError(THREAD_CHILD, FFMPEG_CAN_NOT_FIND_STREAMS);
+        return;
+    }
+    unsigned int streams = avFormatContext->nb_streams;
+    LOGE("stream = %d" , streams);
+    avformat_close_input(&avFormatContext);
+    LOGE("close file");
 }
 
 void DNFFmpeg::prepare() {

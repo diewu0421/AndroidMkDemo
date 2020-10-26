@@ -23,7 +23,8 @@ class DNFFPlayer : IPlay, PlayCallback {
             System.loadLibrary("testffmpeg")
         }
 
-        const val PLAY_URL = "http://ivi.bupt.edu.cn/hls/cctv1hd.m3u8"
+//        const val PLAY_URL = "${}"
+//        const val PLAY_URL = "rtmp://live.hkstv.hk.lxdns.com/live/hks"
     }
 
     private var mContext: Context? = null
@@ -34,7 +35,8 @@ class DNFFPlayer : IPlay, PlayCallback {
     }
 
     override fun prepare() {
-        native_prepare(PLAY_URL)
+        native_prepare(mContext?.externalCacheDir?.absolutePath + "/big_buck_bunny.mp4")
+
     }
 
     override fun play() {

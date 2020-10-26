@@ -447,11 +447,6 @@ enum AVCodecID {
     AV_CODEC_ID_SVG,
     AV_CODEC_ID_GDV,
     AV_CODEC_ID_FITS,
-    AV_CODEC_ID_IMM4,
-    AV_CODEC_ID_PROSUMER,
-    AV_CODEC_ID_MWSC,
-    AV_CODEC_ID_WCMV,
-    AV_CODEC_ID_RASC,
 
     /* various PCM "codecs" */
     AV_CODEC_ID_FIRST_AUDIO = 0x10000,     ///< A dummy id pointing at the start of audio codecs
@@ -491,7 +486,6 @@ enum AVCodecID {
     AV_CODEC_ID_PCM_S64BE,
     AV_CODEC_ID_PCM_F16LE,
     AV_CODEC_ID_PCM_F24LE,
-    AV_CODEC_ID_PCM_VIDC,
 
     /* various ADPCM codecs */
     AV_CODEC_ID_ADPCM_IMA_QT = 0x11000,
@@ -1321,7 +1315,7 @@ enum AVPacketSideDataType {
     AV_PKT_DATA_METADATA_UPDATE,
 
     /**
-     * MPEGTS stream ID as uint8_t, this is required to pass the stream ID
+     * MPEGTS stream ID, this is required to pass the stream ID
      * information from the demuxer to the corresponding muxer.
      */
     AV_PKT_DATA_MPEGTS_STREAM_ID,
@@ -1365,12 +1359,6 @@ enum AVPacketSideDataType {
      * The format is not part of ABI, use av_encryption_info_* methods to access.
      */
     AV_PKT_DATA_ENCRYPTION_INFO,
-
-    /**
-     * Active Format Description data consisting of a single byte as specified
-     * in ETSI TS 101 154 using AVActiveFormatDescription enum.
-     */
-    AV_PKT_DATA_AFD,
 
     /**
      * The number of side data types.
@@ -1627,7 +1615,6 @@ typedef struct AVCodecContext {
      * The allocated memory should be AV_INPUT_BUFFER_PADDING_SIZE bytes larger
      * than extradata_size to avoid problems if it is read with the bitstream reader.
      * The bytewise contents of extradata must not depend on the architecture or CPU endianness.
-     * Must be allocated with the av_malloc() family of functions.
      * - encoding: Set/allocated/freed by libavcodec.
      * - decoding: Set/allocated/freed by user.
      */
@@ -5782,7 +5769,6 @@ typedef struct AVBitStreamFilter {
     int (*init)(AVBSFContext *ctx);
     int (*filter)(AVBSFContext *ctx, AVPacket *pkt);
     void (*close)(AVBSFContext *ctx);
-    void (*flush)(AVBSFContext *ctx);
 } AVBitStreamFilter;
 
 #if FF_API_OLD_BSF
@@ -5908,11 +5894,6 @@ int av_bsf_send_packet(AVBSFContext *ctx, AVPacket *pkt);
  * AVERROR(EAGAIN) immediately after a successful av_bsf_send_packet() call.
  */
 int av_bsf_receive_packet(AVBSFContext *ctx, AVPacket *pkt);
-
-/**
- * Reset the internal bitstream filter state / flush internal buffers.
- */
-void av_bsf_flush(AVBSFContext *ctx);
 
 /**
  * Free a bitstream filter context and everything associated with it; write NULL
