@@ -116,6 +116,9 @@ extern "C"
 JNIEXPORT void JNICALL
 Java_com_example_androidmkdemo_utils_DNFFPlayer_00024Companion_play(JNIEnv *env, jobject thiz) {
 }
+
+DNFFmpeg *ffmpeg;
+
 extern "C"
 JNIEXPORT void JNICALL
 Java_com_example_androidmkdemo_utils_DNFFPlayer_native_1prepare(JNIEnv *env, jobject thiz,
@@ -128,10 +131,22 @@ Java_com_example_androidmkdemo_utils_DNFFPlayer_native_1prepare(JNIEnv *env, job
 
     JavaHelper *helper = new JavaHelper(env, vm, thiz);
 
-    DNFFmpeg *dnfFmpeg = new DNFFmpeg(helper, playUrl);
-    dnfFmpeg->prepare();
+    ffmpeg = new DNFFmpeg(helper, playUrl);
+    ffmpeg->prepare();
 
 //    jclass jcls = env->GetObjectClass(thiz);
 //    env->DeleteLocalRef(jcls);
     env->ReleaseStringUTFChars(play_url, playUrl);
+}
+
+extern "C"
+JNIEXPORT void JNICALL
+Java_com_example_androidmkdemo_utils_DNFFPlayer_native_1start(JNIEnv *env, jobject thiz) {
+
+
+}extern "C"
+JNIEXPORT void JNICALL
+Java_com_example_androidmkdemo_utils_DNFFPlayer_native_1setSurface(JNIEnv *env, jobject thiz,
+                                                                   jobject surface) {
+
 }

@@ -4,6 +4,8 @@ import android.app.Activity
 import android.content.Context
 import android.os.Looper
 import android.util.Log
+import android.view.Surface
+import android.view.SurfaceHolder
 import android.widget.ActionMenuView
 import android.widget.Toast
 import com.example.androidmkdemo.listenner.IPlay
@@ -14,7 +16,7 @@ import com.example.androidmkdemo.listenner.PlayCallback
  * @author zenglw
  * @date   2020/10/26 10:03 AM
  */
-class DNFFPlayer : IPlay, PlayCallback {
+class DNFFPlayer : IPlay, PlayCallback, SurfaceHolder.Callback {
 
 
     companion object {
@@ -28,14 +30,22 @@ class DNFFPlayer : IPlay, PlayCallback {
     }
 
     private var mContext: Context? = null
+    private var mHolder: SurfaceHolder? = null
 
     fun setContext(context: Context): DNFFPlayer {
         this.mContext = context
         return this
     }
 
+    fun setSurfaceHolder(holder: SurfaceHolder): DNFFPlayer {
+        this.mHolder = holder
+        holder.addCallback(this)
+        return this
+    }
+
     override fun prepare() {
-        native_prepare(mContext?.externalCacheDir?.absolutePath + "/big_buck_bunny.mp4")
+//        native_prepare(mContext?.externalCacheDir?.absolutePath + "/big_buck_bunny.mp4")
+        native_prepare("http://ivi.bupt.edu.cn/hls/cctv1hd.m3u8")
 
     }
 
@@ -53,6 +63,10 @@ class DNFFPlayer : IPlay, PlayCallback {
     }
 
     override fun onPrepare() {
+        (mContext as Activity).runOnUiThread {
+            Toast.makeText(mContext, "onPrepare", Toast.LENGTH_SHORT).show()
+
+        }
     }
 
     override fun onError(errorId: Int) {
@@ -64,4 +78,17 @@ class DNFFPlayer : IPlay, PlayCallback {
     }
 
     external fun native_prepare(playUrl: String)
+    external fun native_start()
+    external fun native_setSurface(surface: Surface)
+
+    override fun surfaceCreated(holder: SurfaceHolder) {
+
+    }
+
+    override fun surfaceChanged(holder: SurfaceHolder, format: Int, width: Int, height: Int) {
+        native_setSurface(holder.surface)
+    }
+
+    override fun surfaceDestroyed(holder: SurfaceHolder) {
+    }
 }

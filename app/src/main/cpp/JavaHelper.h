@@ -16,6 +16,8 @@ public:
 
     void onError(int pthreadId, int errorCode);
 
+    void onPrepare(int pthreadId);
+
 private:
 
     JNIEnv *env;
@@ -23,5 +25,6 @@ private:
     jobject  instance;
     jmethodID onErrorId;
     jmethodID onPrepareId;
+
 };
 #endif //ANDROIDMKDEMO_JAVAHELPER_H

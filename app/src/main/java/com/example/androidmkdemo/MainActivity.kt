@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
 
             Log.e("MainActivity","onCreate ${File(externalCacheDir?.absolutePath + "/big_buck_bunny.mp4").exists()}")
             dnFFmpegPlayer.prepare()
+            dnFFmpegPlayer.play()
 
         }
 
@@ -35,7 +36,6 @@ class MainActivity : AppCompatActivity() {
 //            System.loadLibrary("Test")
             System.loadLibrary("testffmpeg")
 //            System.loadLibrary("native-lib")
-
         }
     }
 

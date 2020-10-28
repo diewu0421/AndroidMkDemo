@@ -11,6 +11,9 @@ extern "C" {
 };
 #include "macro.h"
 #include "JavaHelper.h"
+#include "AudioChannel.h"
+#include "VideoChannel.h"
+
 class DNFFmpeg {
 
 public:
@@ -22,11 +25,14 @@ public:
     void prepare();
 
     void _prepare();
+    void start();
 
     void test() {
 
     }
 private:
+    AudioChannel *audioChannel;
+    VideoChannel *videoChannel;
     AVFormatContext *avFormatContext;
     char* source;
     JavaHelper *helper;

@@ -54,3 +54,33 @@ JavaHelper::~JavaHelper() {
     env->DeleteGlobalRef(instance);
 
 }
+
+void JavaHelper::onPrepare(int pthreadId) {
+
+    if (pthreadId == THREAD_MAIN) {
+        env->CallVoidMethod(instance, onPrepareId);
+
+    } else {
+        JNIEnv *env = 0;
+        int status;
+
+        bool isAttached = false;
+
+        status = vm->GetEnv((void **) &env, JNI_VERSION_1_6);
+        if (status < 0) {
+            // 获取属于我这一个线程的env
+            int attachStatus = vm->AttachCurrentThread(&env, 0);
+            if (attachStatus) {
+                return;
+            }
+            isAttached = true;
+        }
+
+
+        env->CallVoidMethod(instance, onPrepareId);
+        if (isAttached) {
+            vm->DetachCurrentThread();
+        } else {
+        }
+    }
+}
