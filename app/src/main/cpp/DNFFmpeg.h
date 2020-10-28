@@ -13,7 +13,7 @@ extern "C" {
 #include "JavaHelper.h"
 #include "AudioChannel.h"
 #include "VideoChannel.h"
-
+#include <pthread.h>
 class DNFFmpeg {
 
 public:
@@ -27,15 +27,19 @@ public:
     void _prepare();
     void start();
 
+    void _start();
+
     void test() {
 
     }
 private:
-    AudioChannel *audioChannel;
-    VideoChannel *videoChannel;
+    bool isPlaying;
+    AudioChannel *audioChannel = 0;
+    VideoChannel *videoChannel = 0;
     AVFormatContext *avFormatContext;
     char* source;
     JavaHelper *helper;
     pthread_t pid;
+    pthread_t pid_play;
 };
 #endif

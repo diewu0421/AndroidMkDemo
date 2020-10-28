@@ -3,7 +3,6 @@
 //
 
 
-#include <pthread.h>
 #include "DNFFmpeg.h"
 
 
@@ -16,7 +15,7 @@ void* task_prepare(void *arg) {
 
 DNFFmpeg::DNFFmpeg(JavaHelper *helper, const char *playUrl) {
     this->helper = helper;
-    this->source = new char[strlen(playUrl)];
+    this->source = new char[strlen(playUrl + 1)];
     strcpy(this->source, playUrl);
 }
 
@@ -81,9 +80,11 @@ void DNFFmpeg::_prepare() {
         }
 
         if (parameters->codec_type == AVMEDIA_TYPE_AUDIO) {
-            audioChannel = new AudioChannel;
+            audioChannel = new AudioChannel(i);
+
         } else if (parameters->codec_type== AVMEDIA_TYPE_VIDEO) {
-            videoChannel = new VideoChannel;
+            videoChannel = new VideoChannel(i);
+
         }
     }
 
@@ -102,7 +103,40 @@ void DNFFmpeg::prepare() {
     pthread_create(&pid, nullptr, task_prepare, this);
 }
 
-void DNFFmpeg::start() {
 
+void *play_task(void *arg) {
+    DNFFmpeg *dnfFmpeg = static_cast<DNFFmpeg *>(arg);
+    dnfFmpeg->_start();
 
 }
+void DNFFmpeg::start() {
+    isPlaying = true;
+    pthread_create(&pid_play, nullptr, play_task, this);
+
+}
+
+void DNFFmpeg::_start() {
+    // 读取媒体数据包
+    int ret;
+    while (isPlaying) {
+
+        AVPacket *packet = av_packet_alloc();
+        ret = av_read_frame(avFormatContext, packet);
+        if (ret == 0) {
+            // stream_index 这一个流的一个序号
+            if (audioChannel && packet->stream_index == audioChannel->id) {
+
+            } else if (videoChannel && packet->stream_index == videoChannel->id) {
+                videoChannel->packets.push(packet);
+            }
+
+        } else if (ret == AVERROR_EOF) {
+
+        } else {
+
+        }
+    }
+
+    // 解码
+}
+

@@ -13,7 +13,9 @@ using namespace std;
 template<typename T>
 class SafeQueue {
 public:
-    typedef void (*MyCallback)(T &);
+    typedef void (*MyCallback)(T*);
+
+    typedef void (*SyncHandle)(queue<T> &);
 
     SafeQueue() {
         pthread_mutex_init(mutex, 0);
@@ -28,15 +30,17 @@ public:
 
     void push(T t) {
         pthread_mutex_lock(mutex);
-        queue.push(t);
-        pthread_cond_signal(cond);
+        if (work) {
+            queue.push(t);
+        }
         pthread_mutex_unlock(mutex);
+        pthread_cond_signal(cond);
     }
 
     int pop(T& t) {
         int ret = 0;
         pthread_mutex_lock(mutex);
-        while (queue.empty()) {
+        while (work && queue.empty()) {
             pthread_cond_wait(cond, 0);
         }
         if (!queue.empty()) {
@@ -55,7 +59,7 @@ public:
 
             T value = queue.front();
             if (myCallback) {
-                myCallback(value);
+                myCallback(&value);
             }
             queue.pop();
         }
@@ -66,12 +70,31 @@ public:
         this->myCallback = callback;
     }
 
+    void setSyncHandle(SyncHandle handle) {
+        this->handle = handle;
+    };
+
+    void sync() {
+        pthread_mutex_lock(&mutex);
+        handle(&queue);
+        pthread_mutex_unlock(&mutex);
+    }
+
+    void setWork(int work) {
+        pthread_mutex_lock(&mutex);
+        this->work = work;
+        pthread_mutex_unlock(&mutex);
+    }
+
 private:
 
     pthread_cond_t &cond;
     pthread_mutex_t &mutex;
     queue<T> queue;
+    // 是否工作的标记 1 工作 0 不工作
+    int work;
     MyCallback myCallback;
+    SyncHandle handle;
 };
 
 #endif //ANDROIDMKDEMO_SAFE_QUEUE_H

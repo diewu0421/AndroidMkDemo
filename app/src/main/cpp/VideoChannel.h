@@ -5,9 +5,11 @@
 #ifndef ANDROIDMKDEMO_VIDEOCHANNEL_H
 #define ANDROIDMKDEMO_VIDEOCHANNEL_H
 
-class  VideoChannel {
+#include "BaseChanel.h"
+
+class  VideoChannel : public BaseChannel{
 public:
-    VideoChannel();
+    VideoChannel(int id);
 
     ~VideoChannel();
 };

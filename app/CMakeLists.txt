@@ -28,4 +28,5 @@ target_link_libraries(
         #        native-lib
         avfilter avformat avcodec  avutil swresample swscale
         log
-        z )
+        z
+        android)

@@ -10,6 +10,7 @@
 #include <queue>
 #include <stack>
 
+#include <android/native_window_jni.h>
 #include "DNFFmpeg.h"
 
 using namespace std;
@@ -18,6 +19,8 @@ extern "C" {
 #include <libavcodec/avcodec.h>
 }
 
+ANativeWindow *window = 0;
+pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
 
 typedef void (*MyCallback)(int);
 
@@ -144,9 +147,23 @@ JNIEXPORT void JNICALL
 Java_com_example_androidmkdemo_utils_DNFFPlayer_native_1start(JNIEnv *env, jobject thiz) {
 
 
-}extern "C"
+    ffmpeg->start();
+
+}
+
+extern "C"
 JNIEXPORT void JNICALL
 Java_com_example_androidmkdemo_utils_DNFFPlayer_native_1setSurface(JNIEnv *env, jobject thiz,
                                                                    jobject surface) {
+
+    pthread_mutex_lock(&mutex);
+    if (window) {
+        ANativeWindow_release(window);
+        window = nullptr;
+    }
+
+    window = ANativeWindow_fromSurface(env, surface);
+
+    pthread_mutex_unlock(&mutex);
 
 }

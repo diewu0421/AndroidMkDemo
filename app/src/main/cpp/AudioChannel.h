@@ -5,13 +5,18 @@
 #ifndef ANDROIDMKDEMO_AUDIOCHANNEL_H
 #define ANDROIDMKDEMO_AUDIOCHANNEL_H
 
-class AudioChannel {
+#include "BaseChanel.h"
+
+class AudioChannel : public BaseChannel {
 
 
 public:
 
-    AudioChannel();
+    AudioChannel(int);
 
     ~AudioChannel();
+
+private:
+    int index;
 };
 #endif //ANDROIDMKDEMO_AUDIOCHANNEL_H
