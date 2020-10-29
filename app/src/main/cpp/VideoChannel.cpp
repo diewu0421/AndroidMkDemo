@@ -5,6 +5,12 @@
 #include "VideoChannel.h"
 #include "macro.h"
 
+extern "C" {
+
+#include "libavutil/imgutils.h"
+
+}
+
 
 VideoChannel::VideoChannel(int id, AVCodecContext *context) : BaseChannel(id, context) {
 
@@ -89,6 +95,11 @@ void VideoChannel::render() {
     uint8_t *dst_data[4];
     int dst_linesize[4];
     LOGE("render imple %d" ,isPlaying );
+    av_image_alloc(dst_data, dst_linesize,
+                   avCodecContext->width,
+                   avCodecContext->height,
+                   AV_PIX_FMT_RGBA, 1
+                   );
     while (isPlaying) {
         int ret = avFrames.pop(frame);
 
