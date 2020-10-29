@@ -80,11 +80,11 @@ void DNFFmpeg::_prepare() {
         }
 
         if (parameters->codec_type == AVMEDIA_TYPE_AUDIO) {
-            audioChannel = new AudioChannel(i);
+            audioChannel = new AudioChannel(i, avCodecContext);
 
         } else if (parameters->codec_type== AVMEDIA_TYPE_VIDEO) {
-            videoChannel = new VideoChannel(i);
-
+            videoChannel = new VideoChannel(i, avCodecContext);
+            videoChannel->setRenderCallback(renderCallback);
         }
     }
 
@@ -94,9 +94,7 @@ void DNFFmpeg::_prepare() {
         return;
     }
 
-    avformat_close_input(&avFormatContext);
     helper->onPrepare(THREAD_CHILD);
-    LOGE("close file");
 }
 
 void DNFFmpeg::prepare() {
@@ -105,12 +103,23 @@ void DNFFmpeg::prepare() {
 
 
 void *play_task(void *arg) {
+    LOGE("play_task");
     DNFFmpeg *dnfFmpeg = static_cast<DNFFmpeg *>(arg);
     dnfFmpeg->_start();
+    return 0;
 
 }
 void DNFFmpeg::start() {
     isPlaying = true;
+    if (videoChannel) {
+
+        LOGE("videochannel");
+        videoChannel->packets.setWork(1);
+        videoChannel->play();
+    } else {
+
+        LOGE("Videochannel is nullptr");
+    }
     pthread_create(&pid_play, nullptr, play_task, this);
 
 }
@@ -118,6 +127,7 @@ void DNFFmpeg::start() {
 void DNFFmpeg::_start() {
     // 读取媒体数据包
     int ret;
+    LOGE("_start %d",isPlaying );
     while (isPlaying) {
 
         AVPacket *packet = av_packet_alloc();
@@ -138,5 +148,9 @@ void DNFFmpeg::_start() {
     }
 
     // 解码
+}
+
+void DNFFmpeg::setRenderCallback(RenderCallback callback) {
+    this->renderCallback = callback;
 }
 

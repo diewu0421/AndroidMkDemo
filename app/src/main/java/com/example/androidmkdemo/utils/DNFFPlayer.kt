@@ -50,7 +50,7 @@ class DNFFPlayer : IPlay, PlayCallback, SurfaceHolder.Callback {
     }
 
     override fun play() {
-
+        native_start()
     }
 
     override fun stop() {
@@ -63,10 +63,7 @@ class DNFFPlayer : IPlay, PlayCallback, SurfaceHolder.Callback {
     }
 
     override fun onPrepare() {
-        (mContext as Activity).runOnUiThread {
-            Toast.makeText(mContext, "onPrepare", Toast.LENGTH_SHORT).show()
-
-        }
+        onPlayerStateChangeListener?.onPrepare()
     }
 
     override fun onError(errorId: Int) {
@@ -90,5 +87,17 @@ class DNFFPlayer : IPlay, PlayCallback, SurfaceHolder.Callback {
     }
 
     override fun surfaceDestroyed(holder: SurfaceHolder) {
+    }
+
+    private var onPlayerStateChangeListener: OnPlayerStateChangeListener? = null
+
+    fun setOnPlayerStateChangeListener(onPlayerStateChangeListener: OnPlayerStateChangeListener) {
+        this.onPlayerStateChangeListener = onPlayerStateChangeListener
+    }
+
+
+    interface OnPlayerStateChangeListener {
+
+        fun onPrepare()
     }
 }

@@ -21,4 +21,15 @@
         android:id="@+id/play_btn"
         app:layout_constraintTop_toTopOf="@id/prepare_btn"
         android:layout_marginTop="100dp"/>
+
+    <SurfaceView
+    android:id="@+id/surfaceView"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="300dp"
+    />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

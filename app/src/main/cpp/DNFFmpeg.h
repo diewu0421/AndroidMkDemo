@@ -29,9 +29,7 @@ public:
 
     void _start();
 
-    void test() {
-
-    }
+    void setRenderCallback(RenderCallback callback);
 private:
     bool isPlaying;
     AudioChannel *audioChannel = 0;
@@ -41,5 +39,6 @@ private:
     JavaHelper *helper;
     pthread_t pid;
     pthread_t pid_play;
+    RenderCallback renderCallback;
 };
 #endif

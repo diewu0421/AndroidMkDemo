@@ -9,20 +9,21 @@
 
 extern "C" {
 #include "../cmake/include/libavcodec/avcodec.h"
+#include "../cmake/include/libswscale/swscale.h"
 };
 
 class BaseChannel {
 
 public:
-    BaseChannel(int id) :id(id) {};
+    BaseChannel(int id, AVCodecContext *codecContext) :id(id) {};
 
     virtual ~BaseChannel() {
         packets.setCallback(releaseAvPacket);
         packets.clear();
     }
 
-    static void releaseAvPacket(AVPacket** packet){
-        if (packet) {
+    static void releaseAvPacket(AVPacket **packet){
+        if (packet && *packet) {
             av_packet_free(packet);
             /*
              * 为什么要用指针的指针？
@@ -31,9 +32,17 @@ public:
             *packet = 0;
         }
     }
+    static void releaseAvFrames(AVFrame **avFrame) {
+        if (avFrame && *avFrame) {
+            av_frame_free(avFrame);
+            *avFrame = 0;
+        }
+    }
+    virtual void play() = 0;
 
     int id;
     SafeQueue<AVPacket *> packets;
+    AVCodecContext *avCodecContext;
 
 };
 #endif //ANDROIDMKDEMO_BASECHANEL_H

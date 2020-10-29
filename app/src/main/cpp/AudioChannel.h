@@ -11,10 +11,11 @@ class AudioChannel : public BaseChannel {
 
 
 public:
-
-    AudioChannel(int);
+    AudioChannel(int index, AVCodecContext *avCodecContext);
 
     ~AudioChannel();
+
+    void play();
 
 private:
     int index;

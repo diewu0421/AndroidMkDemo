@@ -17,14 +17,19 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        dnFFmpegPlayer.setOnPlayerStateChangeListener(object :
+            DNFFPlayer.OnPlayerStateChangeListener {
+            override fun onPrepare() {
+//                runOnUiThread {
+//                    Toast.makeText(this@MainActivity, "开始播放", Toast.LENGTH_SHORT).show()
+//                }
+                dnFFmpegPlayer.play()
+            }
 
+        })
 
         prepare_btn.setOnClickListener {
-
-            Log.e("MainActivity","onCreate ${File(externalCacheDir?.absolutePath + "/big_buck_bunny.mp4").exists()}")
             dnFFmpegPlayer.prepare()
-            dnFFmpegPlayer.play()
-
         }
 
         play_btn.setOnClickListener {
@@ -44,5 +49,25 @@ class MainActivity : AppCompatActivity() {
 
     fun reflectMethod(str:String) {
         Toast.makeText(this, "我是toast $str", Toast.LENGTH_SHORT).show()
+    }
+
+    override fun onResume() {
+        super.onResume()
+//        dnFFmpegPlayer.prepare()
+    }
+
+    override fun onStop() {
+        super.onStop()
+        dnFFmpegPlayer.stop()
+    }
+
+    override fun onPause() {
+        super.onPause()
+        dnFFmpegPlayer.pause()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        dnFFmpegPlayer.destroy()
     }
 }
