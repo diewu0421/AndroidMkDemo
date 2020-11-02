@@ -7,6 +7,7 @@
 
 #include <pthread.h>
 #include <queue>
+#include "macro.h"
 
 using namespace std;
 
@@ -29,26 +30,36 @@ public:
     }
 
     void push(T t) {
+        LOGE("push lock");
         pthread_mutex_lock(&mutex);
         if (work) {
             queue.push(t);
+            LOGE("size = %d %d", &queue, queue.size());
+            if (queue.size() > 100) {
+                LOGE("push signal");
+                pthread_cond_signal(&cond);
+            }
         }
         pthread_mutex_unlock(&mutex);
-        pthread_cond_signal(&cond);
+        LOGE("push unlock");
     }
 
     int pop(T& t) {
-        int ret = 0;
+        LOGE("pop lock");
         pthread_mutex_lock(&mutex);
+        int ret = 0;
         while (work && queue.empty()) {
-            pthread_cond_wait(&cond, 0);
+            LOGE("pop wait");
+            pthread_cond_wait(&cond, &mutex);
         }
         if (!queue.empty()) {
             t = queue.front();
+            LOGE("pop 取出%d %d", &queue, queue.size());
             queue.pop();
             ret = 1;
         }
         pthread_mutex_unlock(&mutex);
+        LOGE("pop unlock");
         return ret;
     }
 
@@ -66,7 +77,7 @@ public:
         pthread_mutex_unlock(&mutex);
     }
 
-    void setCallback(MyCallback callback) {
+    void setReleaseCallback(MyCallback callback) {
         this->myCallback = callback;
     }
 
@@ -83,6 +94,7 @@ public:
     void setWork(int work) {
         pthread_mutex_lock(&mutex);
         this->work = work;
+        pthread_cond_signal(&cond);
         pthread_mutex_unlock(&mutex);
     }
 

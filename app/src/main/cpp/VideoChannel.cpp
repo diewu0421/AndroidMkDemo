@@ -14,7 +14,7 @@ extern "C" {
 
 VideoChannel::VideoChannel(int id, AVCodecContext *context) : BaseChannel(id, context) {
 
-    avFrames.setCallback(releaseAvFrames);
+    avFrames.setReleaseCallback(BaseChannel::releaseAvFrames);
 }
 
 VideoChannel::~VideoChannel() {
@@ -79,6 +79,7 @@ void VideoChannel::decode() {
         }
 
         // 再开一个线程
+        LOGE("frames push ");
         avFrames.push(avFrame);
 
     }

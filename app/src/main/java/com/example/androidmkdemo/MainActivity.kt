@@ -16,13 +16,14 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        dnFFmpegPlayer.setSurfaceView(surfaceView)
 
         dnFFmpegPlayer.setOnPlayerStateChangeListener(object :
             DNFFPlayer.OnPlayerStateChangeListener {
             override fun onPrepare() {
-//                runOnUiThread {
-//                    Toast.makeText(this@MainActivity, "开始播放", Toast.LENGTH_SHORT).show()
-//                }
+                runOnUiThread {
+                    Toast.makeText(this@MainActivity, "开始播放", Toast.LENGTH_SHORT).show()
+                }
                 dnFFmpegPlayer.play()
             }
 
@@ -33,6 +34,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         play_btn.setOnClickListener {
+            Toast.makeText(this, "测试有没有卡死", Toast.LENGTH_SHORT).show()
         }
     }
 

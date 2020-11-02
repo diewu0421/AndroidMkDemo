@@ -6,6 +6,7 @@ import android.os.Looper
 import android.util.Log
 import android.view.Surface
 import android.view.SurfaceHolder
+import android.view.SurfaceView
 import android.widget.ActionMenuView
 import android.widget.Toast
 import com.example.androidmkdemo.listenner.IPlay
@@ -39,7 +40,12 @@ class DNFFPlayer : IPlay, PlayCallback, SurfaceHolder.Callback {
 
     fun setSurfaceHolder(holder: SurfaceHolder): DNFFPlayer {
         this.mHolder = holder
-        holder.addCallback(this)
+        return this
+    }
+
+    fun setSurfaceView(surfaceView: SurfaceView): DNFFPlayer {
+        mHolder = surfaceView.holder
+        mHolder?.addCallback(this)
         return this
     }
 

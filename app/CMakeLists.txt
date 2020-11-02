@@ -29,4 +29,4 @@ target_link_libraries(
         avfilter avformat avcodec  avutil swresample swscale
         log
         z
-        android)
+        android OpenSLES)

@@ -125,10 +125,11 @@ DNFFmpeg *ffmpeg;
 
 void* render(uint8_t *data, int linesize, int width, int height) {
 
+    LOGE("home render")
     pthread_mutex_lock(&mutex);
-    if (window) {
-        ANativeWindow_release(window);
-        window = 0;
+    if (!window) {
+        pthread_mutex_unlock(&mutex);
+        return nullptr;
     }
 //设置窗口属性
     ANativeWindow_setBuffersGeometry(window,

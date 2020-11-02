@@ -45,6 +45,7 @@ void DNFFmpeg::_prepare() {
     }
     unsigned int streams = avFormatContext->nb_streams;
 
+    LOGE("streams sizei = %d ", streams);
     for (int i = 0; i < streams; ++i) {
         AVStream *avStream = avFormatContext->streams[i];
         AVCodecParameters *parameters = avStream->codecpar;
@@ -83,6 +84,7 @@ void DNFFmpeg::_prepare() {
             audioChannel = new AudioChannel(i, avCodecContext);
 
         } else if (parameters->codec_type== AVMEDIA_TYPE_VIDEO) {
+            LOGE("new Videochannel");
             videoChannel = new VideoChannel(i, avCodecContext);
             videoChannel->setRenderCallback(renderCallback);
         }
@@ -136,7 +138,9 @@ void DNFFmpeg::_start() {
             // stream_index 这一个流的一个序号
             if (audioChannel && packet->stream_index == audioChannel->id) {
 
+                LOGE("获取音频流 %d", packet->stream_index);
             } else if (videoChannel && packet->stream_index == videoChannel->id) {
+                LOGE("获取到的是视频流 %d", packet->stream_index);
                 videoChannel->packets.push(packet);
             }
 

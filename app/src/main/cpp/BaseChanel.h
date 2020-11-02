@@ -15,10 +15,11 @@ extern "C" {
 class BaseChannel {
 
 public:
-    BaseChannel(int id, AVCodecContext *codecContext) :id(id) {};
+    BaseChannel(int id, AVCodecContext *codecContext) :id(id), avCodecContext(codecContext) {};
 
     virtual ~BaseChannel() {
-        packets.setCallback(releaseAvPacket);
+//        packets.setCallback(releaseAvPacket);
+        packets.setReleaseCallback(BaseChannel::releaseAvPacket);
         packets.clear();
     }
 
