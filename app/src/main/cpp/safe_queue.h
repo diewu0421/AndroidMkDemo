@@ -35,10 +35,8 @@ public:
         if (work) {
             queue.push(t);
             LOGE("size = %d %d", &queue, queue.size());
-            if (queue.size() > 100) {
-                LOGE("push signal");
-                pthread_cond_signal(&cond);
-            }
+            LOGE("push signal");
+            pthread_cond_signal(&cond);
         }
         pthread_mutex_unlock(&mutex);
         LOGE("push unlock");
