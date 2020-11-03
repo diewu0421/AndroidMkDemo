@@ -1,0 +1,1591 @@
+--------- beginning of main
+11-03 17:47:55.272  2041  2300 I HwPacketFilterBypass: isBypassAllowed not allowed reason: DATA_OFF
+11-03 17:47:55.272  2041  2300 I HwPacketFilterBypass: kernelAddTrackUid uid:10216 allowed:false
+11-03 17:47:55.297 25998 26170 I SecureX509TrustManager: checkServerTrusted: begin
+11-03 17:47:55.297 25998 26170 I SecureX509TrustManager: checkServerTrusted: check server i : 0
+11-03 17:47:55.459 25998 26170 I HiAdKit.Response:  setNetDuration1 305
+11-03 17:47:55.460 25998 26170 I HiAdKit.HiAdResponseDataLogger:  response data: {"retcode":200}
+11-03 17:47:55.460 25998 26170 I HiAdKit.Response:  setNetDuration2 305
+11-03 17:47:55.460 25998 26170 I HiAdKit.OkHttpCaller:  end request
+11-03 17:47:55.461 25998 26170 I HiAdKit.HttpCall:  response http code: 200 exception: 
+11-03 17:47:55.475 16502 16502 D RcsPackageManagerUtils: onReceive action:android.intent.action.PACKAGE_ADDED
+11-03 17:47:55.475 16502 16502 D RcsPackageManagerUtils: onReceive packageName:com.example.androidmkdemo
+11-03 17:47:55.475 16502 16502 D RcsPackageManagerUtils: not native rcs app added
+11-03 17:47:55.548  1364  1658 I TrafficMonitor: update:rxPkts:34,txPkts:18,rxBytes:12987,txBytes:2806
+11-03 17:47:55.548  1364  1658 I TrafficMonitor: start expired. level:-1
+11-03 17:47:55.548  1364  1658 I TrafficMonitor: gettimer:interval=2000
+11-03 17:47:55.556 25998 26181 I TaskRunMonitor: DEC - task count: 10
+11-03 17:47:55.556 25998 26181 I TaskRunMonitor: DEC - task count: 9
+11-03 17:47:55.556 25998 26181 I TaskRunMonitor: DEC - task count: 8
+11-03 17:47:55.556 25998 26181 I TaskRunMonitor: DEC - task count: 7
+11-03 17:47:55.556 25998 26181 I TaskRunMonitor: DEC - task count: 6
+11-03 17:47:55.556 25998 26181 I TaskRunMonitor: DEC - task count: 5
+11-03 17:47:55.556 25998 26181 I TaskRunMonitor: DEC - task count: 4
+11-03 17:47:55.556 25998 26181 I TaskRunMonitor: DEC - task count: 3
+11-03 17:47:55.556 25998 26181 I TaskRunMonitor: DEC - task count: 2
+11-03 17:47:55.556 25998 26181 I TaskRunMonitor: DEC - task count: 1
+11-03 17:47:55.556 25998 26181 I TaskRunMonitor: startTimerTask
+11-03 17:47:55.556 25998 26181 I TaskRunMonitor: schedule at 5000
+11-03 17:47:55.556 25998 26181 I TaskRunMonitor: DEC - task count: 0
+11-03 17:47:55.675   884  3249 E LOGSERVER_UTILS: [ERecovery]ReadEvent: ERecoveryEventManager ReadEvent 0
+11-03 17:47:56.273  2041  4194 D ConnCureStateMonitor: handleMessage: msg[4]
+11-03 17:47:56.274  2041  4194 D ConnCureStateMonitor: canPerformConnCure: network is not in service.
+11-03 17:47:56.363   634   634 E WifiHAL : enter wifi_get_link_stats
+11-03 17:47:56.368  1364  1659 E WificondControl: Noise: 0, Snr: 0, Chload: -1
+11-03 17:47:56.370  1364  1659 V HwWifiServiceFactory: get AllImpl object = com.android.server.wifi.HwWifiServiceFactoryImpl@91d5c64
+11-03 17:47:56.373  1364  1659 D TelephonyManager: getAllCellInfo calling app is android
+11-03 17:47:56.374  2195  2783 W PhoneInterfaceManager: shouldBlockLocation running ...
+11-03 17:47:56.374  2195  2783 I PhoneInterfaceManager: shouldBlockLocation  ret:false
+11-03 17:47:56.460   852   878 D AwareLog: iawared: WorkingsetProcessCommand subCmd = 357, userId=10216, pid=26030, com.example.androidmkdemo
+11-03 17:47:56.460   852   878 D AwareLog: iawared: WorkingsetPauseCollect com.example.androidmkdemo
+11-03 17:47:56.543  1364  1658 I TrafficMonitor: expired arrive. level:-1
+11-03 17:47:56.543  1364  1658 I TrafficMonitor: during_ms:2004,period_ms:2000
+11-03 17:47:56.543  1364  1658 I TrafficMonitor: count:892,rx_sum:34,tx_sum:18,rxBytes:12987,during_ms:2004,rx_speed:6480.538922155689,tx_speed:1400.1996007984033,rto:1.8888888888888888
+11-03 17:47:56.715   884  3249 E LOGSERVER_UTILS: [ERecovery]ReadEvent: ERecoveryEventManager ReadEvent 0
+11-03 17:47:56.720   852 30002 I Pged-IPgedBinderService: ****action is 2, pid num is 2***
+11-03 17:47:56.721   852 30002 I Pged-Freezer: thawPids
+11-03 17:47:56.722  2169  2751 D PgedBinderAdapter: unF_Z ok, pid: [19727]
+--------- beginning of system
+11-03 17:47:56.742  1364  1495 I ActivityManager: App 10037/com.android.packageinstaller targets O+, restricted
+11-03 17:47:56.742  1364  1495 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.example.androidmkdemo flg=0x4000010 (has extras) } to com.android.packageinstaller/.PackageInstalledReceiver
+11-03 17:47:56.749 21930 21930 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1674 android.content.ContextWrapper.startService:669 android.content.ContextWrapper.startService:669 com.android.settings.applications.BlackListReceiver.onReceive:42 android.app.ActivityThread.handleReceiver:4349 
+11-03 17:47:56.751 28709 28709 E HwLauncher: HwAppMarketDownloadModel handleInstallAction op: 2
+11-03 17:47:56.761 28709 28709 W HwLauncher: HwAppMarketDownloadModel get getBundleExtra with downloadtask all return null!
+11-03 17:47:56.764 21930 21930 W BlackListService: settings app is pulled up, onCreate is called
+11-03 17:47:56.766  1364  1495 I ActivityManager: App 10099/com.huawei.gameassistant targets O+, restricted
+11-03 17:47:56.774 26040 26040 I HwGameAssistant-10.1.2.300-InstallPackageIntentReceiver: packagename=com.example.androidmkdemo
+11-03 17:47:56.775 21930 21930 W BlackListService: settings app is pulled up, onDestroy is called
+11-03 17:47:56.783  1364  1706 D HwConnectivityServiceEx: set cache by key is 10099 interfaceName iswlan0 value is false
+11-03 17:47:56.784 26176 26176 I HiDecision: PackageRecevier: PackageReceiver: action is: android.intent.action.PACKAGE_ADDED, pkg：com.example.androidmkdemo
+11-03 17:47:56.784 26040 26192 I HwGameAssistant-10.1.2.300-ProtocolManager: user not agree local protocol.
+11-03 17:47:56.785 26040 26192 I HwGameAssistant-10.1.2.300-GameDataManager: has not AgreeAccessNetwork.
+11-03 17:47:56.786 26040 26192 I HwGameAssistant-10.1.2.300-GameDataManager: query iawaresdk req:[com.example.androidmkdemo]
+11-03 17:47:56.789 26040 26192 I HwGameAssistant-10.1.2.300-GameDataManager: query iawaresdk res:{com.example.androidmkdemo=-1}
+11-03 17:47:56.798 26176 17628 W HiDecision: PackageRecevier: pkg is not hiboard or intelligent
+11-03 17:47:56.798 19727 19795 E HiApp.InstalledAppDataMgr: main{1} <<< ERROR >>> the installed app list is not initial yet. it's useless to update!
+11-03 17:47:56.826 20049 20117 W HSM_UI  : TrafficProcessToPackage:The component info list is null
+11-03 17:47:56.829  1364  2112 V ActivityManager: Successfully start provider ContentProviderRecord{2950b4c u0 com.huawei.systemmanager/.netassistant.db.traffic.TrafficDBProvider} launchingApp=null caller pid= 20049
+11-03 17:47:56.830  1364  1706 D HwConnectivityServiceEx: set cache by key is 10022 interfaceName iswlan0 value is false
+11-03 17:47:56.837 20049 20049 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1674 android.content.ContextWrapper.startService:669 android.content.ContextWrapper.startService:669 com.huawei.securitycenter.antivirus.utils.c.r:73 com.huawei.securitycenter.antivirus.AntiVirusReceiver.onReceive:46 
+11-03 17:47:56.840  1364  1706 D ConnectivityService: get Network state from cache, cacheBlock is 0
+11-03 17:47:56.844  2075  2075 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1674 android.content.ContextWrapper.startService:669 com.huawei.securitycenter.antivirus.AntiVirusService.s:33 com.huawei.securitycenter.antivirus.AntiVirusService.onStartCommand:72 android.app.ActivityThread.handleServiceArgs:4663 
+11-03 17:47:56.826 20049 20117 W HSM_UI  : TrafficProcessToPackage:The component info list is null
+11-03 17:47:56.845  1364  1706 I DeviceIdentifiers: udid has been read success, return!
+11-03 17:47:56.851  1364  1706 D ConnectivityService: get Network state from cache, cacheBlock is 0
+11-03 17:47:56.864  1364  1710 D HwConnectivityServiceEx: set cache by key is 1000 interfaceName iswlan0 value is false
+11-03 17:47:56.870  1364 20936 D ConnectivityService: get Network state from cache, cacheBlock is 0
+11-03 17:47:56.871 20096 20135 D QVS_SDK_TAG: in install() curNum 1
+11-03 17:47:56.872 20096 20135 D QVS_SDK_TAG: install()
+11-03 17:47:56.872 20096 20135 D QVS_SDK_TAG: install() bind service
+11-03 17:47:56.872 20096 20135 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.bindService:1753 android.content.ContextWrapper.bindService:705 com.qihoo.qvssdk.AntivirusEngineImpl.install:44 com.qihoo.qvssdk.AntivirusProviderImpl.install:213 com.huawei.securitycenter.antivirus.newengine.b$c.call:118 
+11-03 17:47:56.873  1364  1986 V BroadcastQueue: Finished with ordered broadcast BroadcastRecord{54e920a u0 android.intent.action.PACKAGE_ADDED}
+11-03 17:47:56.887  1364 20936 D ConnectivityService: get Network state from cache, cacheBlock is 0
+11-03 17:47:56.889 20096 20135 D QVS_SDK_TAG: install: DeepScan prepare init, thread: Thread[NewEngineUtils_146568888,5,main]
+11-03 17:47:56.889 20096 20135 D QVS_SDK_TAG: install: DeepScan wait: 0
+11-03 17:47:56.890 20096 20096 D QVS_SDK_TAG: com.huawei.systemmanager/com.qihoo.security.services.DeepScanService connected! thread: Thread[main,5,main]
+11-03 17:47:56.892  1364 20936 D ConnectivityService: get Network state from cache, cacheBlock is 0
+11-03 17:47:56.908 21930 21930 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1674 android.content.ContextWrapper.startService:669 android.content.ContextWrapper.startService:669 com.android.settings.applications.BlackListReceiver.onReceive:42 android.app.ActivityThread.handleReceiver:4349 
+11-03 17:47:56.924 21930 21930 W BlackListService: settings app is pulled up, onCreate is called
+11-03 17:47:56.927 26176 26176 I HiDecision: PackageRecevier: PackageReceiver: action is: android.intent.action.PACKAGE_REPLACED, pkg：com.example.androidmkdemo
+11-03 17:47:56.928 21930 21930 W BlackListService: settings app is pulled up, onDestroy is called
+11-03 17:47:56.928 26176 17684 W HiDecision: SystemUtil: operate: 1, pkg: com.example.androidmkdemo, has record!
+11-03 17:47:56.928 26176 17684 W HiDecision: PackageRecevier: pkg is not hiboard or intelligent
+11-03 17:47:56.952  1364  1706 V BroadcastQueue: Finished with ordered broadcast BroadcastRecord{6762770 u0 android.intent.action.PACKAGE_REPLACED}
+11-03 17:47:56.964  2075  2490 E HSC_SEC_BG: AppChangeReceiver:handlePackageReplace DbPermissionItem is null for com.example.androidmkdemo
+11-03 17:47:56.967  2075  2075 W HSM_BG  : HsmIntentService:still has some task running, don't stop service.
+11-03 17:47:56.983 26040 26192 E HwGameAssistant-10.1.2.300-GameDataManager: appDataTss is null!
+11-03 17:47:56.985 26040 26192 E HwGameAssistant-10.1.2.300-BuoyDataManager: appDataTss is null!
+11-03 17:47:56.985  2075  2490 E HSC_SEC_BG: AddViewAppManager:updateDataToFramework blackListItems is null or empty
+11-03 17:47:56.988 26040 26202 E HwGameAssistant-10.1.2.300-GameDataManager: HTTP-REQUEST access store Server failed: httpStatusCode = -2, exception = null
+11-03 17:47:56.989 20096 20135 D QVS_SDK_TAG: install: DeepScan wait: 100
+11-03 17:47:56.990 20096 20135 D QVS_SDK_TAG: install: DeepScan init finished
+11-03 17:47:56.990 20096 20135 D QVS_SDK_TAG: scanInstalledPackage()
+11-03 17:47:56.992 20096 26205 D QVS_SDK_TAG: doSingleScan type:3 engine:6 param:com.example.androidmkdemo
+11-03 17:47:56.992 20096 26205 I qvs-i   : se.ct
+11-03 17:47:56.993 20096 26205 I qvs-i   : mc.reg
+11-03 17:47:56.993 20096 26205 I ao      : mc.init 1
+11-03 17:47:56.995 20096 26205 I qvs-i   : se.it
+11-03 17:47:56.995 26040 26192 I meassistant:br: System.exit called, status: 0
+11-03 17:47:56.995 26040 26192 I AndroidRuntime: VM exiting with result code 0, cleanup skipped.
+11-03 17:47:57.021 20096 26205 I qvs-i   : se.it
+11-03 17:47:57.023 20096 26205 I qvs-i   : se.it
+11-03 17:47:57.024 20096 26205 D QVS_SDK_TAG: [2331022]Scan onReady
+11-03 17:47:57.068 20096 26198 W AVLSDK-3.1.25: ExtraUtil:getKeyHashFail, path:/data/app/com.example.androidmkdemo-H2n6UUPR2hh9SeP0FZR5fg==/base.apk
+11-03 17:47:57.069  1364 14540 I ActivityManager: Process com.huawei.gameassistant:brd (pid 26040) has died: cch+15 CEM 
+11-03 17:47:57.069  1364  1706 D ConnectivityService: get Network state from cache, cacheBlock is 0
+11-03 17:47:57.069   570   570 I Zygote  : Process 26040 exited cleanly (0)
+11-03 17:47:57.069  1364  1497 I libprocessgroup: Successfully killed process cgroup uid 10099 pid 26040 in 0ms
+11-03 17:47:57.072  1364  1490 I HwPowerManagerService: appdie release wakelock, pid = 26040, uid = 10099
+11-03 17:47:57.072  1364 14540 D ActivityManager: cleanUpApplicationRecord app: ProcessRecord{8e1d754 26040:com.huawei.gameassistant:brd/u0a99}, app.bad: false, restarting: false, allowRestart: true
+11-03 17:47:57.076  2041 23504 I BoosterSwitchP: notifyUidState do nothing
+11-03 17:47:57.076  2041 23504 I DeepNoDisturbP: notifyUidState
+11-03 17:47:57.076  2041 23504 I BrowserChrP: notifyUidState
+11-03 17:47:57.079  2041 17985 E HsmCoreServiceImpl: onTransact in code is: 102
+11-03 17:47:57.080  2041 17985 I MediaProcessHandler: processOp opType: 1, uid: 10099, pid: 26040
+11-03 17:47:57.080  2041 17985 W MediaProcessHandler: remove target not exist, maybe the UI process: uid: 10099, pid: 26040
+11-03 17:47:57.080  2041 17985 I MediaProcessHandler: executedCallBack opType: 1 mMediaStatusObservers.size=0
+11-03 17:47:57.086   569  1066 W /system/bin/netd: A binder object at 0x72f2379480 is being transacted on, however, this object is in the same process as its proxy. Transacting with this binder is expensive compared to just calling the corresponding functionality in the same process.
+11-03 17:47:57.087   569  1066 I PreDnsController: canPreDnsQuery,persist.sys.predns is false!
+11-03 17:47:57.116  1364  1706 D ConnectivityService: get Network state from cache, cacheBlock is 0
+11-03 17:47:57.119  1364  1706 I DeviceIdentifiers: udid has been read success, return!
+11-03 17:47:57.117  1364  1706 D ConnectivityService: get Network state from cache, cacheBlock is 0
+11-03 17:47:57.162  1364  1706 D HwConnectivityServiceEx: set cache by key is 1000 interfaceName isNULL value is false
+11-03 17:47:57.163  1364  1706 D ConnectivityService: get Network state from cache, cacheBlock is 0
+11-03 17:47:57.179 20096 26206 D QVS_SDK_TAG: [2331022]Scan Process
+11-03 17:47:57.274  1364  1745 W Binder  : Outgoing transactions from this process must be FLAG_ONEWAY
+11-03 17:47:57.274  1364  1745 W Binder  : java.lang.Throwable
+11-03 17:47:57.274  1364  1745 W Binder  : 	at android.os.BinderProxy.transact(BinderProxy.java:496)
+11-03 17:47:57.274  1364  1745 W Binder  : 	at com.android.server.hidata.hinetwork.IAppNetService$Stub$Proxy.getEstablishedInfo(IAppNetService.java:147)
+11-03 17:47:57.274  1364  1745 W Binder  : 	at com.android.server.hidata.hinetwork.HwHiNetworkManager.getEstablishedInfo(HwHiNetworkManager.java:632)
+11-03 17:47:57.274  1364  1745 W Binder  : 	at com.android.server.hidata.hinetwork.HwHiNetworkManager.onAppStartEx(HwHiNetworkManager.java:383)
+11-03 17:47:57.274  1364  1745 W Binder  : 	at com.android.server.hidata.hinetwork.HwHiNetworkManager.access$900(HwHiNetworkManager.java:47)
+11-03 17:47:57.274  1364  1745 W Binder  : 	at com.android.server.hidata.hinetwork.HwHiNetworkManager$3.handleMessage(HwHiNetworkManager.java:283)
+11-03 17:47:57.274  1364  1745 W Binder  : 	at android.os.Handler.dispatchMessage(Handler.java:107)
+11-03 17:47:57.274  1364  1745 W Binder  : 	at android.os.Looper.loop(Looper.java:213)
+11-03 17:47:57.274  1364  1745 W Binder  : 	at android.os.HandlerThread.run(HandlerThread.java:67)
+11-03 17:47:57.277 17040 17146 I HwGameAssistant-10.1.2.300-ProtocolManager: user not agree local protocol.
+11-03 17:47:57.278 17040 26211 I HwGameAssistant-10.1.2.300-BoosterModelValidHelper: access JXS server
+11-03 17:47:57.279 17040 26211 E HwGameAssistant-10.1.2.300-BoosterModelValidHelper: access JXS Server failed: httpStatusCode = -2, exception = null
+11-03 17:47:57.392   842   842 E Thermal-daemon: [ap] temp_new :35  temp_old :34
+11-03 17:47:57.393   842   842 E Thermal-daemon: Report temperature: [ap] temp :35  report_threshold:1
+11-03 17:47:57.398   569  1066 W /system/bin/netd: A binder object at 0x72f2379480 is being transacted on, however, this object is in the same process as its proxy. Transacting with this binder is expensive compared to just calling the corresponding functionality in the same process.
+11-03 17:47:57.398   569  1066 I PreDnsController: canPreDnsQuery,persist.sys.predns is false!
+11-03 17:47:57.392  1364  1706 I chatty  : uid=1000(system) Binder:1364_3 identical 49 lines
+11-03 17:47:57.393  1364  1706 D ConnectivityService: get Network state from cache, cacheBlock is 0
+11-03 17:47:57.466  1364 14540 D ConnectivityService: get Network state from cache, cacheBlock is 0
+11-03 17:47:57.508 20096 26210 I qvs-i   : mc.task.done false
+11-03 17:47:57.513 20096 26210 I qvs-i   : mc.taskq.fin
+11-03 17:47:57.524  7577  7577 I HiBoard_10.0.6.300_LauncherOverlayService: onUnbind
+11-03 17:47:57.524  7577  7577 I HiBoard_10.0.6.300_LauncherOverlayService: onDestroy
+11-03 17:47:57.552  1364  1658 I TrafficMonitor: update:rxPkts:32,txPkts:28,rxBytes:9490,txBytes:5857
+11-03 17:47:57.552  1364  1658 I TrafficMonitor: start expired. level:-1
+11-03 17:47:57.552  1364  1658 I TrafficMonitor: gettimer:interval=2000
+11-03 17:47:57.572   605 23049 I audio_hw_primary: usb_ext_get_parameters: check show hires (false)
+11-03 17:47:57.614 19727 19742 W System  : A resource failed to call close. 
+11-03 17:47:57.755   884  3249 E LOGSERVER_UTILS: [ERecovery]ReadEvent: ERecoveryEventManager ReadEvent 0
+11-03 17:47:57.777 20096 26215 I qvs-i   : mc.task.done false
+11-03 17:47:57.777 20096 26215 I qvs-i   : mc.taskq.fin
+11-03 17:47:57.785 20096 26206 D QVS_SDK_TAG: [2331022]Scan Process
+11-03 17:47:57.945   569  7556 I netd    : trafficSwapActiveStatsMap() <11.81ms>
+11-03 17:47:57.951  2169  3915 I DownloadState: singleUid: 10059 [com.huawei.hwid] speed: 1262 real speed: 1250 (rxB:4334 txB:1977 rxP:9 txP:9) scroff: false
+11-03 17:47:57.953  2169  3915 E AppInfoMgr: not find pkgs by uid: 1051
+11-03 17:47:57.956  2169  3915 I DownloadState: singleUid: 10022 [com.huawei.appmarket] speed: 546 real speed: 541 (rxB:759 txB:1973 rxP:2 txP:4) scroff: false
+11-03 17:47:57.978 20096 26206 I qvs-i   : pm.fin
+11-03 17:47:57.982  2169  3915 I DownloadState: shareUid: 0 default_socket transmitting data speed : 54 bytes/s (rxB:40 txB:231 rxP:1 txP:5 iface:1) scroff: false
+11-03 17:47:57.982  2169  3915 I DownloadState: shareUid: 1000 com.huawei.iaware transmitting data speed : 240 bytes/s (rxB:559 txB:641 rxP:3 txP:5 iface:1) scroff: false
+11-03 17:47:57.982  2169  3915 I DownloadState: shareUid: 0 default_sk transmitting data speed : 73 bytes/s (rxB:365 txB:0 rxP:1 txP:0 iface:1) scroff: false
+11-03 17:47:57.982  2169  3915 I DownloadState: shareUid: 0 /system/bin/netd transmitting data speed : 118 bytes/s (rxB:400 txB:192 rxP:3 txP:3 iface:1) scroff: false
+11-03 17:47:57.982  2169  3915 I DownloadState: shareUid: 1000 com.huawei.systemmanager transmitting data speed : 1738 bytes/s (rxB:4971 txB:3720 rxP:14 txP:21 iface:1) scroff: false
+11-03 17:47:57.994 20096 26206 I qvs-i   : mc.fin com.qihoo.qvssdk.VirusScanCallback@23918e
+11-03 17:47:57.994 20096 26206 D QVS_SDK_TAG: [2331022]Scan onFinished hasMore: false
+11-03 17:47:57.994 20096 26206 D QVS_SDK_TAG: [2331022]Scan consume time 970ms from callerId 27521
+11-03 17:47:57.994 20096 26205 I QVS_SDK_TAG: [2331022]reset: called
+11-03 17:47:57.994 20096 26205 I qvs-i   : mc.reset
+11-03 17:47:57.480  1364 14540 D ConnectivityService: get Network state from cache, cacheBlock is 0
+11-03 17:47:58.005  1364  1706 D ConnectivityService: get Network state from cache, cacheBlock is 0
+11-03 17:47:58.016 20096 26218 I qvs-i   : mc.cl
+11-03 17:47:58.016 20096 26218 I qvs-i   : enum.eng.sp
+11-03 17:47:58.016 20096 20135 D QVS_SDK_TAG: in uninstall() curNum 0
+11-03 17:47:58.016 20096 20135 D QVS_SDK_TAG: uninstall()
+11-03 17:47:58.016 20096 20135 D QVS_SDK_TAG: ScanTask Cancel Sync Scan 20402949
+11-03 17:47:58.016 20096 26218 I qvs-i   : mc.unreg
+11-03 17:47:58.016 20096 26218 I qvs-i   : mc.unit 0
+11-03 17:47:58.016 20096 26218 I qvs-i   : tqm.cl
+11-03 17:47:58.018 20096 20135 I QVS_SDK_TAG: [2331022]reset: called
+11-03 17:47:58.008  1364  1706 I chatty  : uid=1000(system) Binder:1364_3 identical 1 line
+11-03 17:47:58.009  1364  1706 D ConnectivityService: get Network state from cache, cacheBlock is 0
+11-03 17:47:58.018  1364  1710 D ConnectivityService: get Network state from cache, cacheBlock is 0
+11-03 17:47:58.019 20096 26218 I qvs-i   : mc.taskq.cl
+11-03 17:47:58.020 20096 26218 I qvs-i   : se.unit
+11-03 17:47:58.020 20096 26218 I NetQuery: Cancel handle: 479635405824
+11-03 17:47:58.021 20096 26218 I CloudHttpClient: Cancel called. id:245900683
+11-03 17:47:58.021 20096 26218 I NetQuery: Destroy handle: 479635405824
+11-03 17:47:58.021 20096 26218 I qvs-i   : Destroy handle: 0
+11-03 17:47:58.024  1364 14540 D ConnectivityService: get Network state from cache, cacheBlock is 0
+11-03 17:47:58.031 20096 20135 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.stopService:1686 android.content.ContextWrapper.stopService:679 com.qihoo.qvssdk.AntivirusEngineImpl.uninstall:41 com.qihoo.qvssdk.AntivirusProviderImpl.uninstall:40 com.huawei.securitycenter.antivirus.newengine.b$c.Th:7 
+11-03 17:47:58.033 20096 20135 D QVS_SDK_TAG: susiu
+11-03 17:47:58.034  1364  2112 I AlarmManager: remove alarm:Alarm{efe042a type 1 when 1604396949132 PendingIntent{3218244: PendingIntentRecord{d950cc5 com.huawei.systemmanager broadcastIntent}}com.huawei.systemmanager procName com.huawei.systemmanager:security_scan} according to operation:2dbd915
+11-03 17:47:58.041  1364  2112 D ConnectivityService: get Network state from cache, cacheBlock is 0
+11-03 17:47:58.043  1364  2112 I chatty  : uid=1000(system) Binder:1364_B identical 1 line
+11-03 17:47:58.077  1364  2112 D ConnectivityService: get Network state from cache, cacheBlock is 0
+11-03 17:47:58.118  1364  2112 V ActivityManager: Successfully start provider ContentProviderRecord{51ec38c u0 com.huawei.systemmanager/.rainbow.db.RainbowDBProvider} launchingApp=null caller pid= 20096
+11-03 17:47:58.226  1364  2112 V ActivityManager: Successfully start provider ContentProviderRecord{c1f7e8c u0 com.huawei.systemmanager/com.huawei.library.push.PushFileProvider} launchingApp=null caller pid= 20096
+11-03 17:47:58.228  2075 22874 W HSM_BG  : PushFileProvider:file does not exist which uri is content://com.huawei.systemmanager.push.provider/HwSystemManager/hsm_virus_pkgs.xml
+11-03 17:47:58.229 20096 20472 E HSC_SEC : VirusPkgParser:parse InputStream is null
+11-03 17:47:58.231  1364  2112 V ActivityManager: Successfully start provider ContentProviderRecord{e3fb9d5 u0 com.huawei.systemmanager/com.huawei.securitycenter.antivirus.db.AntiVirusDBProvider} launchingApp=null caller pid= 20096
+11-03 17:47:58.247  1364  2112 V ActivityManager: Successfully start provider ContentProviderRecord{dfa2c76 u0 com.huawei.systemmanager/.comm.preferenceprovider.SharedPreferenceProvider} launchingApp=null caller pid= 20096
+11-03 17:47:58.583   884  1005 D ScreemCommon: <LOGMGR> <SceneEnd> [Entry]
+11-03 17:47:58.583   884  1005 D ScreemCommon: <LOGMGR> <SceneEnd> [scene status ok,status:1 lastId:-1762529028]
+11-03 17:47:58.584   884  1005 D ScreemCommon: <LOGMGR> <SceneClose> [Entry]
+11-03 17:47:58.584   884  1005 D ScreemCommon: <LOGMGR> <SceneClose> [scene status ok,status:2 lastId:-1762529028]
+11-03 17:47:58.703 25998 25998 D AwareBitmapCacher: handleInit disable com.huawei.hwid.pps
+11-03 17:47:58.779   884  3249 E LOGSERVER_UTILS: [ERecovery]ReadEvent: ERecoveryEventManager ReadEvent 0
+11-03 17:47:58.813  1364  2112 I PackageManager: getInstalledPackages cost 4 ms, flags: 786432, userId: 0, callingUid: 1000, callingPid: 2169
+11-03 17:47:58.821  2169  2347 I AppTypeRecogManager: refresh app type start.
+11-03 17:47:58.825  1364 14540 I PackageManager: getInstalledPackages cost 4 ms, flags: 786432, userId: 0, callingUid: 1000, callingPid: 2169
+11-03 17:47:58.882  2169  2347 I AppTypeRecogManager: refresh app type, spent: 61
+11-03 17:47:58.984 26030 26030 D AwareBitmapCacher: handleInit switch not opened pid=26030
+11-03 17:47:59.331  1364  1492 D ZrHung.AppEyeTransparentWindow: handleMessage CHECK_TRANS_WINDOW_ERROR_MSG
+11-03 17:47:59.381   634   634 E WifiHAL : enter wifi_get_link_stats
+11-03 17:47:59.387  1364  1659 E WificondControl: Noise: 0, Snr: 0, Chload: -1
+11-03 17:47:59.390  1364  1659 V HwWifiServiceFactory: get AllImpl object = com.android.server.wifi.HwWifiServiceFactoryImpl@91d5c64
+11-03 17:47:59.397  1364  1659 D TelephonyManager: getAllCellInfo calling app is android
+11-03 17:47:59.398  2195  2783 W PhoneInterfaceManager: shouldBlockLocation running ...
+11-03 17:47:59.399  2195  2783 I PhoneInterfaceManager: shouldBlockLocation  ret:false
+11-03 17:47:59.557  1364  1658 I TrafficMonitor: update:rxPkts:19,txPkts:4,rxBytes:6373,txBytes:375
+11-03 17:47:59.557  1364  1658 I TrafficMonitor: start expired. level:-1
+11-03 17:47:59.558  1364  1658 I TrafficMonitor: gettimer:interval=2000
+11-03 17:47:59.819   884  3249 E LOGSERVER_UTILS: [ERecovery]ReadEvent: ERecoveryEventManager ReadEvent 0
+11-03 17:48:00.011  1364  1611 I HwAlarmManagerService: hwSetAlarm listenerTag: TIME_TICK
+11-03 17:48:00.020  1808  1808 W ClockView1:  action android.intent.action.TIME_TICK
+11-03 17:48:00.020  1808  1808 W ClockView1:  action android.intent.action.TIME_TICK
+11-03 17:48:00.037  1808  1808 E DateView: DateView,mCurrentTime: 1604396880037
+11-03 17:48:00.064  1808  1808 E ndroid.systemu: No package ID ff found for ID 0xffffffff.
+11-03 17:48:00.066  1808  1808 W ClockView1: onreceive tz is Asia/Shanghai time:Tue Nov 03 17:48:00 GMT+08:00 2020 timezone:libcore.util.ZoneInfo[id="Asia/Shanghai",mRawOffset=28800000,mEarliestRawOffset=28800000,mUseDst=false,mDstSavings=0,transitions=28]
+11-03 17:48:00.068  1808  1808 E ndroid.systemu: No package ID ff found for ID 0xffffffff.
+11-03 17:48:00.069  1808  1808 W ClockView1: onreceive tz is Asia/Shanghai time:Tue Nov 03 17:48:00 GMT+08:00 2020 timezone:libcore.util.ZoneInfo[id="Asia/Shanghai",mRawOffset=28800000,mEarliestRawOffset=28800000,mUseDst=false,mDstSavings=0,transitions=28]
+11-03 17:48:00.106  2195  2195 E HwModemCapability: isCapabilitySupport java.lang.StringIndexOutOfBoundsException: length=7; index=7
+11-03 17:48:00.110  1364 14540 E HwModemCapability: isCapabilitySupport java.lang.StringIndexOutOfBoundsException: length=7; index=7
+11-03 17:48:00.120  1808  1808 W HwLockScreenPanel: Handle message: 133
+11-03 17:48:00.122  1808  1808 W HwLockScreenPanel: Handle message: 133
+11-03 17:48:00.556 25998 26183 I TaskRunMonitor: cancelTask
+11-03 17:48:00.557 25998 26183 I TaskRunMonitor: clear memory
+11-03 17:48:00.564 25998 26183 I HiAdKit.SystemUtil:  exit process: com.huawei.hwid.pps
+11-03 17:48:00.564 25998 26183 I Process : Sending signal. PID: 25998 SIG: 9
+11-03 17:48:00.637   570   570 I Zygote  : Process 25998 exited due to signal 9 (Killed)
+11-03 17:48:00.638  1364  1706 I ActivityManager: Process com.huawei.hwid.pps (pid 25998) has died: prev LAST
+11-03 17:48:00.638  1364  1497 I libprocessgroup: Successfully killed process cgroup uid 10059 pid 25998 in 0ms
+11-03 17:48:00.638  1364  1706 D ActivityManager: cleanUpApplicationRecord app: ProcessRecord{2fc6afb 25998:com.huawei.hwid.pps/u0a59}, app.bad: false, restarting: false, allowRestart: true
+11-03 17:48:00.640  1364  1490 I HwPowerManagerService: appdie release wakelock, pid = 25998, uid = 10059
+11-03 17:48:00.643  2041 17985 E HsmCoreServiceImpl: onTransact in code is: 102
+11-03 17:48:00.643  2041 17985 I MediaProcessHandler: processOp opType: 1, uid: 10059, pid: 25998
+11-03 17:48:00.643  2041 17985 W MediaProcessHandler: remove target not exist, maybe the UI process: uid: 10059, pid: 25998
+11-03 17:48:00.643  2041 17985 I MediaProcessHandler: executedCallBack opType: 1 mMediaStatusObservers.size=0
+11-03 17:48:00.644  2041 23504 I BoosterSwitchP: notifyUidState do nothing
+11-03 17:48:00.644  2041 23504 I DeepNoDisturbP: notifyUidState
+11-03 17:48:00.644  2041 23504 I BrowserChrP: notifyUidState
+11-03 17:48:00.827   884  3249 E LOGSERVER_UTILS: [ERecovery]ReadEvent: ERecoveryEventManager ReadEvent 0
+11-03 17:48:00.880   717   717 I aptouch_daemon: check_afe_status, idle out.
+11-03 17:48:00.882   717   717 I aptouch_daemon: print_log, touch:1, down:1 (+0)
+11-03 17:48:00.892  1364  1505 D DisplayPowerController: mPowerState.mScreenChangedReason: 65537 mPendingRequestLocked.mScreenChangeReason 65537
+11-03 17:48:00.894  1364  1505 V DisplayPowerController: Brightness [73] reason changing to: 'automatic', previous reason: 'automatic [ dim ]'.
+11-03 17:48:00.895 26030 26030 W Settings: Setting device_provisioned has moved from android.provider.Settings.Secure to android.provider.Settings.Global.
+11-03 17:48:00.897 26030 26030 V HiTouch_HiTouchSensor: User setup is finished.
+11-03 17:48:00.898  1364  1505 D HwNormalizedRampAnimator: hbm_dimming target=2862 rate=180 duration=0.5
+11-03 17:48:00.971   717   717 I aptouch_daemon: print_log, touch:0, down:0 
+11-03 17:48:01.141   605 23049 I audio_hw_primary: usb_ext_get_parameters: check show hires (false)
+11-03 17:48:01.400  1364  1505 D DisplayPowerController: mPowerState.mScreenChangedReason: 65537 mPendingRequestLocked.mScreenChangeReason 65537
+11-03 17:48:01.403  1364  1505 D FpDataCollector: case xxx, not a fingerprint unlock 
+11-03 17:48:01.550   717   717 I aptouch_daemon: copy_frame, grid_data is nullptr
+11-03 17:48:01.550   717   717 I aptouch_daemon: check_afe_status, idle in. 300
+11-03 17:48:01.563  1364  1658 I TrafficMonitor: update:rxPkts:30,txPkts:4,rxBytes:7089,txBytes:191
+11-03 17:48:01.563  1364  1658 I TrafficMonitor: start expired. level:-1
+11-03 17:48:01.563  1364  1658 I TrafficMonitor: gettimer:interval=2000
+11-03 17:48:01.620   717   717 I aptouch_daemon: check_afe_status, idle out.
+11-03 17:48:01.638   717   717 I aptouch_daemon: print_log, touch:1, down:1 (+0)
+11-03 17:48:01.650  1364  1659 E WificondControl: Noise: 0, Snr: 0, Chload: -1
+11-03 17:48:01.655  1364  1752 D HuaweiWifiWatchdogStateMachine: nothing to do
+11-03 17:48:01.656  1364  1658 D WiFi_PRO: MSG_RETURN_AP_CURRY_RSSI rssi = -67
+11-03 17:48:01.656  1364  1658 I QosMonitor: queryRtt: rttType = 3
+11-03 17:48:01.656  1364  1658 I HwWifiProServiceProxy: ctrlHwWifiNetwork pkgName: WIFIPRO_SERVICE interfaceId: 8
+11-03 17:48:01.656  1364 26234 I HwUidTcpMonitor: TcpStatisticsRun run
+11-03 17:48:01.657  1364  1752 I HuaweiWifiWatchdogStateMachine: POta txb txg rxg:0, 80, 0. Lr =0% Totpkt=80
+11-03 17:48:01.657  1364  1658 I QosMonitor: postEventFromNative: msg=100,arg1=4,arg2=10
+11-03 17:48:01.657  1364  1658 I HwWifiProServiceProxy: ctrlHwWifiNetwork pkgName: WIFIPRO_SERVICE interfaceId: 8
+11-03 17:48:01.658  1364  1658 I QosMonitor: postEventFromNative: msg=100,arg1=0,arg2=10
+11-03 17:48:01.658  1364  1658 D HuaweiWifiWatchdogStateMachine: nothing to do
+11-03 17:48:01.658  1364 26234 I HwWifiProServiceProxy: ctrlHwWifiNetwork pkgName: WIFIPRO_SERVICE interfaceId: 79
+11-03 17:48:01.658  1364  9200 D HwConnectivityServiceEx: set cache by key is 1000 interfaceName iswlan0 value is false
+11-03 17:48:01.659  1364  1752 I HuaweiWifiWatchdogStateMachine: PTcp RTT:424, rtt pkt=17, tcp_rx=31, tcp_tx=54, tcp_reTran=1, rtRate=0.02
+11-03 17:48:01.659  1364  1752 D HuaweiWifiWatchdogStateMachine: rssi bad, mrssi=-67 < TargetRssi=-67
+11-03 17:48:01.659  1364  1658 I MQoS    : rtt=424,tcpTxPkts=2470660,tcpRxPkts=3333846
+11-03 17:48:01.659  1364  1658 I QosMonitor: resetRtt: rttType = 3
+11-03 17:48:01.659  1364  1658 I HwWifiProServiceProxy: ctrlHwWifiNetwork pkgName: WIFIPRO_SERVICE interfaceId: 8
+11-03 17:48:01.661  1364 26235 I HwWifiProServiceProxy: TcpStatisticsRun run
+11-03 17:48:01.662  1364 26235 D HwUidTcpMonitor: parseWlanUidTcpStatistics lastUidTcpStatInfo = [ mUid = 1051 mPacketName = com.example.androidmkdemo mSendSegs = 63 mResendSegs = 0 mRcvSegs = 0 ]
+11-03 17:48:01.662  1364 26235 D HwUidTcpMonitor: parseWlanUidTcpStatistics lastUidTcpStatInfo = [ mUid = 10059 mPacketName = com.example.androidmkdemo mSendSegs = 85 mResendSegs = 1 mRcvSegs = 77 ]
+11-03 17:48:01.662  1364 26235 D HwUidTcpMonitor: parseWlanUidTcpStatistics lastUidTcpStatInfo = [ mUid = 10022 mPacketName = com.huawei.android.launcher mSendSegs = 123 mResendSegs = 1 mRcvSegs = 108 ]
+11-03 17:48:01.663  1364  9200 I MQoS    : QOS_level:0(0),wifi-link;SIM error;use level-0
+11-03 17:48:01.701 26030 26030 I HwViewRootImpl: removeInvalidNode all the node in jank list is out of time
+11-03 17:48:01.720   717   717 I aptouch_daemon: print_log, touch:0, down:0 
+11-03 17:48:01.725 26030 26030 V AudioManager: querySoundEffectsEnabled...
+11-03 17:48:01.728 26030 26030 E FFMPEG  : 22222222
+11-03 17:48:01.729 26030 26240 E FFMPEG  : 视频url http://ivi.bupt.edu.cn/hls/cctv1hd.m3u8
+11-03 17:48:01.731   569  1066 W /system/bin/netd: A binder object at 0x72f2379480 is being transacted on, however, this object is in the same process as its proxy. Transacting with this binder is expensive compared to just calling the corresponding functionality in the same process.
+11-03 17:48:01.731   569  1066 I PreDnsController: canPreDnsQuery,persist.sys.predns is false!
+11-03 17:48:01.867   884  3249 E LOGSERVER_UTILS: [ERecovery]ReadEvent: ERecoveryEventManager ReadEvent 0
+11-03 17:48:01.952   569  1066 W /system/bin/netd: A binder object at 0x72f2379480 is being transacted on, however, this object is in the same process as its proxy. Transacting with this binder is expensive compared to just calling the corresponding functionality in the same process.
+11-03 17:48:01.952   569  1066 I PreDnsController: canPreDnsQuery,persist.sys.predns is false!
+11-03 17:48:02.137   569  1066 W /system/bin/netd: A binder object at 0x72f2379480 is being transacted on, however, this object is in the same process as its proxy. Transacting with this binder is expensive compared to just calling the corresponding functionality in the same process.
+11-03 17:48:02.137   569  1066 I PreDnsController: canPreDnsQuery,persist.sys.predns is false!
+11-03 17:48:02.300   717   717 I aptouch_daemon: copy_frame, grid_data is nullptr
+11-03 17:48:02.300   717   717 I aptouch_daemon: check_afe_status, idle in. 300
+11-03 17:48:02.403   634   634 E WifiHAL : enter wifi_get_link_stats
+11-03 17:48:02.406  1364  1659 E WificondControl: Noise: 0, Snr: 0, Chload: -1
+11-03 17:48:02.410  1364  1659 V HwWifiServiceFactory: get AllImpl object = com.android.server.wifi.HwWifiServiceFactoryImpl@91d5c64
+11-03 17:48:02.417  1364  1659 D TelephonyManager: getAllCellInfo calling app is android
+11-03 17:48:02.418  2195  2783 W PhoneInterfaceManager: shouldBlockLocation running ...
+11-03 17:48:02.418  2195  2783 I PhoneInterfaceManager: shouldBlockLocation  ret:false
+11-03 17:48:02.461   852   878 D AwareLog: iawared: WorkingsetProcessCommand subCmd = 352, userId=10216, pid=26030, com.example.androidmkdemo
+11-03 17:48:02.462   852   878 D AwareLog: iawared: WorkingsetStop com.example.androidmkdemo
+11-03 17:48:02.554  1364  1658 I TrafficMonitor: expired arrive. level:-1
+11-03 17:48:02.554  1364  1658 I TrafficMonitor: during_ms:2005,period_ms:2000
+11-03 17:48:02.554  1364  1658 I TrafficMonitor: count:895,rx_sum:30,tx_sum:4,rxBytes:7089,during_ms:2005,rx_speed:3535.6608478802996,tx_speed:95.26184538653366,rto:7.5
+11-03 17:48:02.907   884  3249 E LOGSERVER_UTILS: [ERecovery]ReadEvent: ERecoveryEventManager ReadEvent 0
+11-03 17:48:03.007   569  7556 I netd    : trafficSwapActiveStatsMap() <23.09ms>
+11-03 17:48:03.013  2169  3915 E AppInfoMgr: not find pkgs by uid: 0
+11-03 17:48:03.013  2169  3915 I DownloadState: singleUid: 10059 [com.huawei.hwid] speed: 24 real speed: 23 (rxB:40 txB:80 rxP:1 txP:2) scroff: false
+11-03 17:48:03.017  2169  3915 I DownloadState: singleUid: 10216 [com.example.androidmkdemo] speed: 51168 real speed: 50651 (rxB:247450 txB:8393 rxP:194 txP:197) scroff: false
+11-03 17:48:03.027  2169  3915 I DownloadState: shareUid: 0 default_socket transmitting data speed : 52 bytes/s (rxB:40 txB:222 rxP:1 txP:4 iface:1) scroff: false
+11-03 17:48:03.027  2169  3915 I DownloadState: shareUid: 1000 com.huawei.systemmanager transmitting data speed : 78 bytes/s (rxB:157 txB:233 rxP:1 txP:2 iface:1) scroff: false
+11-03 17:48:03.512  2169  2347 I ApplistMgr: Scene strict ctrl apps: []
+11-03 17:48:03.566  1364  1658 I TrafficMonitor: update:rxPkts:246,txPkts:232,rxBytes:296991,txBytes:9824
+11-03 17:48:03.566  1364  1658 I TrafficMonitor: no expired. level:5
+11-03 17:48:03.566  1364  1658 I TrafficMonitor: gettimer:interval=2000
+11-03 17:48:03.567  1364  1658 I TrafficMonitor: during_ms:2004,period_ms:2000
+11-03 17:48:03.567  1364  1658 I TrafficMonitor: count:896,rx_sum:246,tx_sum:232,rxBytes:296991,during_ms:2004,rx_speed:148199.1017964072,tx_speed:4902.195608782436,rto:1.0603448275862069
+11-03 17:48:03.567  1364  1658 D HuaweiWifiWatchdogStateMachine: checkGoodSpd at rssi:-67, spd:144K > 80K, unit:20K, score:0.82
+11-03 17:48:03.740   569  7556 I netd    : trafficSwapActiveStatsMap() <14.85ms>
+11-03 17:48:03.948   884  3249 E LOGSERVER_UTILS: [ERecovery]ReadEvent: ERecoveryEventManager ReadEvent 0
+11-03 17:48:04.621  2075  2075 W StorageMonitorS: type=1400 audit(0.0:5138721): avc: granted { getattr } for pid=2075 name="/" dev="sdcardfs" ino=109 scontext=u:r:system_app:s0 tcontext=u:object_r:sdcardfs:s0 tclass=filesystem
+11-03 17:48:04.897   634   634 E WifiHAL : enter wifi_get_link_stats
+11-03 17:48:04.904  1364  1501 D TelephonyManager: requestModemActivityInfo calling app is android
+11-03 17:48:04.904  1364  1501 E BatteryExternalStatsWorker: no controller energy info supplied for bluetooth
+11-03 17:48:04.955   884  3249 E LOGSERVER_UTILS: [ERecovery]ReadEvent: ERecoveryEventManager ReadEvent 0
+11-03 17:48:04.963   569  7556 I netd    : trafficSwapActiveStatsMap() <20.24ms>
+11-03 17:48:04.965   569  7556 W IptablesRestoreController: command: *filter
+11-03 17:48:04.965   569  7556 W IptablesRestoreController: -nvx -L tetherctrl_counters
+11-03 17:48:04.965   569  7556 W IptablesRestoreController: COMMIT
+11-03 17:48:04.965   569  7556 W IptablesRestoreController: .
+11-03 17:48:04.995 26245 26245 I         : iptables cmd:iptables-restore
+11-03 17:48:04.997   569  7556 W IptablesRestoreController: command: *filter
+11-03 17:48:04.997   569  7556 W IptablesRestoreController: -nvx -L tetherctrl_counters
+11-03 17:48:04.997   569  7556 W IptablesRestoreController: COMMIT
+11-03 17:48:04.997   569  7556 W IptablesRestoreController: .
+11-03 17:48:05.019 26246 26246 I         : iptables cmd:ip6tables-restore
+11-03 17:48:05.021   569  7556 I netd    : tetherGetStats() <55.17ms>
+11-03 17:48:05.025  1364  1501 W BatteryExternalStatsWorker: modem info is invalid: ModemActivityInfo{ mTimestamp=0 mSleepTimeMs=0 mIdleTimeMs=0 mTxTimeMs[]=[0, 0, 0, 0, 0] mRxTimeMs=0 mEnergyUsed=0}
+11-03 17:48:05.423   634   634 E WifiHAL : enter wifi_get_link_stats
+11-03 17:48:05.427  1364  1659 E WificondControl: Noise: 0, Snr: 0, Chload: -1
+11-03 17:48:05.430  1364  1659 V HwWifiServiceFactory: get AllImpl object = com.android.server.wifi.HwWifiServiceFactoryImpl@91d5c64
+11-03 17:48:05.438  1364  1659 D TelephonyManager: getAllCellInfo calling app is android
+11-03 17:48:05.439  2195  2783 W PhoneInterfaceManager: shouldBlockLocation running ...
+11-03 17:48:05.440  2195  2783 I PhoneInterfaceManager: shouldBlockLocation  ret:false
+11-03 17:48:05.570  1364  1658 I TrafficMonitor: update:rxPkts:300,txPkts:190,rxBytes:372131,txBytes:7600
+11-03 17:48:05.571  1364  1658 I TrafficMonitor: start expired. level:5
+11-03 17:48:05.571  1364  1658 I TrafficMonitor: gettimer:interval=2000
+11-03 17:48:05.700 26030 26240 E FFMPEG  : streams sizei = 2 
+11-03 17:48:05.701 26030 26240 E FFMPEG  : new Videochannel
+11-03 17:48:05.707 26030 26240 E zenglw  : native start
+11-03 17:48:05.707 26030 26240 E FFMPEG  : videochannel
+11-03 17:48:05.707 26030 26240 E FFMPEG  : play
+11-03 17:48:05.708 26030 26247 E FFMPEG  : Deocde task0
+11-03 17:48:05.708 26030 26247 E FFMPEG  : pop lock
+11-03 17:48:05.708 26030 26247 E FFMPEG  : pop wait
+11-03 17:48:05.709 26030 26250 E FFMPEG  : render_task
+11-03 17:48:05.718 26030 26250 E FFMPEG  : render imple 1
+11-03 17:48:05.718 26030 26251 E FFMPEG  : pop lock
+11-03 17:48:05.718 26030 26251 E FFMPEG  : pop wait
+11-03 17:48:05.720 26030 26253 E FFMPEG  : play_task
+11-03 17:48:05.720 26030 26253 E FFMPEG  : _start 1
+11-03 17:48:05.720 26030 26253 E FFMPEG  : 获取音频流 1
+11-03 17:48:05.720 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.720 26030 26250 E FFMPEG  : pop lock
+11-03 17:48:05.720 26030 26250 E FFMPEG  : pop wait
+11-03 17:48:05.720 26030 26253 E FFMPEG  : size = -362901104 1
+11-03 17:48:05.720 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.720 26030 26253 E FFMPEG  : 获取音频流 1
+11-03 17:48:05.720 26030 26251 E FFMPEG  : pop 取出-362901104 1
+11-03 17:48:05.720 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.720 26030 26251 E FFMPEG  : pop unlock
+11-03 17:48:05.720 26030 26253 E FFMPEG  : size = -362901104 1
+11-03 17:48:05.720 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.721 26030 26253 E FFMPEG  : 获取音频流 1
+11-03 17:48:05.721 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.721 26030 26253 E FFMPEG  : size = -362901104 2
+11-03 17:48:05.721 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.721 26030 26253 E FFMPEG  : 获取音频流 1
+11-03 17:48:05.721 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.721 26030 26253 E FFMPEG  : size = -362901104 3
+11-03 17:48:05.721 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.721 26030 26253 E FFMPEG  : 获取音频流 1
+11-03 17:48:05.721 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.721 26030 26253 E FFMPEG  : size = -362901104 4
+11-03 17:48:05.721 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.721 26030 26253 E FFMPEG  : 获取到的是视频流 0
+11-03 17:48:05.721 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.721 26030 26253 E FFMPEG  : size = -866829168 1
+11-03 17:48:05.721 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.721 26030 26253 E FFMPEG  : 获取到的是视频流 0
+11-03 17:48:05.721 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.721 26030 26253 E FFMPEG  : size = -866829168 2
+11-03 17:48:05.721 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.721 26030 26253 E FFMPEG  : 获取到的是视频流 0
+11-03 17:48:05.721 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.721 26030 26253 E FFMPEG  : size = -866829168 3
+11-03 17:48:05.721 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.721 26030 26253 E FFMPEG  : 获取到的是视频流 0
+11-03 17:48:05.721 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.721 26030 26253 E FFMPEG  : size = -866829168 4
+11-03 17:48:05.721 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.721 26030 26253 E FFMPEG  : 获取音频流 1
+11-03 17:48:05.721 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.721 26030 26253 E FFMPEG  : size = -362901104 5
+11-03 17:48:05.721 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.721 26030 26253 E FFMPEG  : 获取音频流 1
+11-03 17:48:05.721 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.721 26030 26253 E FFMPEG  : size = -362901104 6
+11-03 17:48:05.721 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.721 26030 26253 E FFMPEG  : 获取音频流 1
+11-03 17:48:05.721 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.721 26030 26251 E FFMPEG  : push lock
+11-03 17:48:05.721 26030 26253 E FFMPEG  : size = -362901104 7
+11-03 17:48:05.721 26030 26247 E FFMPEG  : pop 取出-866829168 4
+11-03 17:48:05.721 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.721 26030 26247 E FFMPEG  : pop unlock
+11-03 17:48:05.721 26030 26253 E FFMPEG  : 获取音频流 1
+11-03 17:48:05.721 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.721 26030 26251 E FFMPEG  : size = -362901060 1
+11-03 17:48:05.721 26030 26253 E FFMPEG  : size = -362901104 8
+11-03 17:48:05.721 26030 26251 E FFMPEG  : push signal
+11-03 17:48:05.721 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.721 26030 26251 E FFMPEG  : pop lock
+11-03 17:48:05.721 26030 26253 E FFMPEG  : 获取音频流 1
+11-03 17:48:05.721 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.721 26030 26251 E FFMPEG  : pop 取出-362901104 8
+11-03 17:48:05.721 26030 26251 E FFMPEG  : pop unlock
+11-03 17:48:05.721 26030 26253 E FFMPEG  : size = -362901104 8
+11-03 17:48:05.721 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.721 26030 26253 E FFMPEG  : 获取音频流 1
+11-03 17:48:05.721 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.721 26030 26253 E FFMPEG  : size = -362901104 9
+11-03 17:48:05.721 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.721 26030 26253 E FFMPEG  : 获取音频流 1
+11-03 17:48:05.721 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.721 26030 26253 E FFMPEG  : size = -362901104 10
+11-03 17:48:05.721 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.721 26030 26253 E FFMPEG  : 获取音频流 1
+11-03 17:48:05.721 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.721 26030 26253 E FFMPEG  : size = -362901104 11
+11-03 17:48:05.721 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.721 26030 26253 E FFMPEG  : 获取到的是视频流 0
+11-03 17:48:05.721 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.721 26030 26253 E FFMPEG  : size = -866829168 4
+11-03 17:48:05.721 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.721 26030 26253 E FFMPEG  : 获取到的是视频流 0
+11-03 17:48:05.721 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.721 26030 26253 E FFMPEG  : size = -866829168 5
+11-03 17:48:05.722 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.722 26030 26253 E FFMPEG  : 获取到的是视频流 0
+11-03 17:48:05.722 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.722 26030 26253 E FFMPEG  : size = -866829168 6
+11-03 17:48:05.722 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.722 26030 26253 E FFMPEG  : 获取到的是视频流 0
+11-03 17:48:05.722 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.722 26030 26253 E FFMPEG  : size = -866829168 7
+11-03 17:48:05.722 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.722 26030 26253 E FFMPEG  : 获取音频流 1
+11-03 17:48:05.722 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.722 26030 26253 E FFMPEG  : size = -362901104 12
+11-03 17:48:05.722 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.722 26030 26253 E FFMPEG  : 获取音频流 1
+11-03 17:48:05.722 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.722 26030 26253 E FFMPEG  : size = -362901104 13
+11-03 17:48:05.722 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.722 26030 26253 E FFMPEG  : 获取音频流 1
+11-03 17:48:05.722 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.722 26030 26251 E FFMPEG  : push lock
+11-03 17:48:05.722 26030 26253 E FFMPEG  : size = -362901104 14
+11-03 17:48:05.722 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.722 26030 26251 E FFMPEG  : size = -362901060 2
+11-03 17:48:05.722 26030 26251 E FFMPEG  : push signal
+11-03 17:48:05.722 26030 26253 E FFMPEG  : 获取音频流 1
+11-03 17:48:05.722 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.722 26030 26251 E FFMPEG  : pop lock
+11-03 17:48:05.722 26030 26253 E FFMPEG  : size = -362901104 15
+11-03 17:48:05.722 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.722 26030 26253 E FFMPEG  : 获取音频流 1
+11-03 17:48:05.722 26030 26251 E FFMPEG  : pop 取出-362901104 15
+11-03 17:48:05.722 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.722 26030 26251 E FFMPEG  : pop unlock
+11-03 17:48:05.722 26030 26253 E FFMPEG  : size = -362901104 15
+11-03 17:48:05.722 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.722 26030 26253 E FFMPEG  : 获取音频流 1
+11-03 17:48:05.722 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.722 26030 26253 E FFMPEG  : size = -362901104 16
+11-03 17:48:05.722 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.722 26030 26253 E FFMPEG  : 获取音频流 1
+11-03 17:48:05.722 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.722 26030 26253 E FFMPEG  : size = -362901104 17
+11-03 17:48:05.722 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.722 26030 26253 E FFMPEG  : 获取音频流 1
+11-03 17:48:05.722 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.722 26030 26253 E FFMPEG  : size = -362901104 18
+11-03 17:48:05.722 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.722 26030 26253 E FFMPEG  : 获取到的是视频流 0
+11-03 17:48:05.722 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.722 26030 26253 E FFMPEG  : size = -866829168 8
+11-03 17:48:05.722 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.722 26030 26253 E FFMPEG  : 获取到的是视频流 0
+11-03 17:48:05.722 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.722 26030 26253 E FFMPEG  : size = -866829168 9
+11-03 17:48:05.722 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.722 26030 26253 E FFMPEG  : 获取到的是视频流 0
+11-03 17:48:05.722 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.722 26030 26253 E FFMPEG  : size = -866829168 10
+11-03 17:48:05.722 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.722 26030 26253 E FFMPEG  : 获取到的是视频流 0
+11-03 17:48:05.722 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.722 26030 26253 E FFMPEG  : size = -866829168 11
+11-03 17:48:05.722 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.722 26030 26253 E FFMPEG  : 获取到的是视频流 0
+11-03 17:48:05.722 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.722 26030 26253 E FFMPEG  : size = -866829168 12
+11-03 17:48:05.722 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.722 26030 26251 E FFMPEG  : push lock
+11-03 17:48:05.722 26030 26253 E FFMPEG  : 获取音频流 1
+11-03 17:48:05.722 26030 26251 E FFMPEG  : size = -362901060 3
+11-03 17:48:05.722 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.722 26030 26251 E FFMPEG  : push signal
+11-03 17:48:05.722 26030 26253 E FFMPEG  : size = -362901104 19
+11-03 17:48:05.722 26030 26251 E FFMPEG  : pop lock
+11-03 17:48:05.722 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.723 26030 26253 E FFMPEG  : 获取音频流 1
+11-03 17:48:05.723 26030 26251 E FFMPEG  : pop 取出-362901104 19
+11-03 17:48:05.723 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.723 26030 26253 E FFMPEG  : size = -362901104 19
+11-03 17:48:05.723 26030 26251 E FFMPEG  : pop unlock
+11-03 17:48:05.723 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.723 26030 26253 E FFMPEG  : 获取音频流 1
+11-03 17:48:05.723 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.723 26030 26253 E FFMPEG  : size = -362901104 20
+11-03 17:48:05.723 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.723 26030 26253 E FFMPEG  : 获取音频流 1
+11-03 17:48:05.723 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.723 26030 26253 E FFMPEG  : size = -362901104 21
+11-03 17:48:05.723 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.723 26030 26253 E FFMPEG  : 获取音频流 1
+11-03 17:48:05.723 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.723 26030 26253 E FFMPEG  : size = -362901104 22
+11-03 17:48:05.723 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.723 26030 26253 E FFMPEG  : 获取音频流 1
+11-03 17:48:05.723 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.723 26030 26253 E FFMPEG  : size = -362901104 23
+11-03 17:48:05.723 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.723 26030 26253 E FFMPEG  : 获取音频流 1
+11-03 17:48:05.723 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.723 26030 26253 E FFMPEG  : size = -362901104 24
+11-03 17:48:05.723 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.723 26030 26253 E FFMPEG  : 获取音频流 1
+11-03 17:48:05.723 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.723 26030 26253 E FFMPEG  : size = -362901104 25
+11-03 17:48:05.723 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.723 26030 26253 E FFMPEG  : 获取到的是视频流 0
+11-03 17:48:05.723 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.723 26030 26253 E FFMPEG  : size = -866829168 13
+11-03 17:48:05.723 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.723 26030 26251 E FFMPEG  : push lock
+11-03 17:48:05.723 26030 26253 E FFMPEG  : 获取到的是视频流 0
+11-03 17:48:05.723 26030 26251 E FFMPEG  : size = -362901060 4
+11-03 17:48:05.723 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.723 26030 26251 E FFMPEG  : push signal
+11-03 17:48:05.723 26030 26253 E FFMPEG  : size = -866829168 14
+11-03 17:48:05.723 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.723 26030 26251 E FFMPEG  : pop lock
+11-03 17:48:05.723 26030 26253 E FFMPEG  : 获取到的是视频流 0
+11-03 17:48:05.723 26030 26251 E FFMPEG  : pop 取出-362901104 25
+11-03 17:48:05.723 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.723 26030 26251 E FFMPEG  : pop unlock
+11-03 17:48:05.723 26030 26253 E FFMPEG  : size = -866829168 15
+11-03 17:48:05.723 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.723 26030 26253 E FFMPEG  : 获取到的是视频流 0
+11-03 17:48:05.723 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.723 26030 26253 E FFMPEG  : size = -866829168 16
+11-03 17:48:05.723 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.723 26030 26253 E FFMPEG  : 获取音频流 1
+11-03 17:48:05.723 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.723 26030 26253 E FFMPEG  : size = -362901104 25
+11-03 17:48:05.723 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.723 26030 26253 E FFMPEG  : 获取音频流 1
+11-03 17:48:05.723 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.723 26030 26253 E FFMPEG  : size = -362901104 26
+11-03 17:48:05.723 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.723 26030 26253 E FFMPEG  : 获取音频流 1
+11-03 17:48:05.723 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.723 26030 26253 E FFMPEG  : size = -362901104 27
+11-03 17:48:05.723 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.723 26030 26253 E FFMPEG  : 获取音频流 1
+11-03 17:48:05.723 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.723 26030 26253 E FFMPEG  : size = -362901104 28
+11-03 17:48:05.723 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.723 26030 26253 E FFMPEG  : 获取音频流 1
+11-03 17:48:05.723 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.723 26030 26253 E FFMPEG  : size = -362901104 29
+11-03 17:48:05.723 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.723 26030 26253 E FFMPEG  : 获取音频流 1
+11-03 17:48:05.724 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.724 26030 26253 E FFMPEG  : size = -362901104 30
+11-03 17:48:05.724 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.724 26030 26253 E FFMPEG  : 获取音频流 1
+11-03 17:48:05.724 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.724 26030 26253 E FFMPEG  : size = -362901104 31
+11-03 17:48:05.724 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.724 26030 26251 E FFMPEG  : push lock
+11-03 17:48:05.724 26030 26253 E FFMPEG  : 获取音频流 1
+11-03 17:48:05.724 26030 26251 E FFMPEG  : size = -362901060 5
+11-03 17:48:05.724 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.724 26030 26251 E FFMPEG  : push signal
+11-03 17:48:05.724 26030 26253 E FFMPEG  : size = -362901104 32
+11-03 17:48:05.724 26030 26251 E FFMPEG  : pop lock
+11-03 17:48:05.724 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.724 26030 26253 E FFMPEG  : 获取到的是视频流 0
+11-03 17:48:05.724 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.724 26030 26251 E FFMPEG  : pop 取出-362901104 32
+11-03 17:48:05.724 26030 26253 E FFMPEG  : size = -866829168 17
+11-03 17:48:05.724 26030 26251 E FFMPEG  : pop unlock
+11-03 17:48:05.724 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.724 26030 26253 E FFMPEG  : 获取到的是视频流 0
+11-03 17:48:05.724 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.724 26030 26253 E FFMPEG  : size = -866829168 18
+11-03 17:48:05.724 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.724 26030 26253 E FFMPEG  : 获取到的是视频流 0
+11-03 17:48:05.724 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.724 26030 26253 E FFMPEG  : size = -866829168 19
+11-03 17:48:05.724 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.724 26030 26253 E FFMPEG  : 获取到的是视频流 0
+11-03 17:48:05.724 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.724 26030 26253 E FFMPEG  : size = -866829168 20
+11-03 17:48:05.724 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.724 26030 26251 E FFMPEG  : push lock
+11-03 17:48:05.724 26030 26251 E FFMPEG  : size = -362901060 6
+11-03 17:48:05.724 26030 26251 E FFMPEG  : push signal
+11-03 17:48:05.724 26030 26251 E FFMPEG  : pop lock
+11-03 17:48:05.724 26030 26251 E FFMPEG  : pop 取出-362901104 31
+11-03 17:48:05.724 26030 26251 E FFMPEG  : pop unlock
+11-03 17:48:05.724 26030 26253 E FFMPEG  : 获取音频流 1
+11-03 17:48:05.724 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.724 26030 26253 E FFMPEG  : size = -362901104 31
+11-03 17:48:05.724 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.724 26030 26253 E FFMPEG  : 获取音频流 1
+11-03 17:48:05.724 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.724 26030 26253 E FFMPEG  : size = -362901104 32
+11-03 17:48:05.724 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.724 26030 26253 E FFMPEG  : 获取音频流 1
+11-03 17:48:05.724 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.725 26030 26253 E FFMPEG  : size = -362901104 33
+11-03 17:48:05.725 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.725 26030 26253 E FFMPEG  : 获取音频流 1
+11-03 17:48:05.725 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.725 26030 26253 E FFMPEG  : size = -362901104 34
+11-03 17:48:05.725 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.725 26030 26253 E FFMPEG  : 获取音频流 1
+11-03 17:48:05.725 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.725 26030 26253 E FFMPEG  : size = -362901104 35
+11-03 17:48:05.725 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.725 26030 26253 E FFMPEG  : 获取音频流 1
+11-03 17:48:05.725 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.725 26030 26253 E FFMPEG  : size = -362901104 36
+11-03 17:48:05.725 26030 26251 E FFMPEG  : push lock
+11-03 17:48:05.725 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.725 26030 26251 E FFMPEG  : size = -362901060 7
+11-03 17:48:05.725 26030 26251 E FFMPEG  : push signal
+11-03 17:48:05.725 26030 26253 E FFMPEG  : 获取音频流 1
+11-03 17:48:05.725 26030 26251 E FFMPEG  : pop lock
+11-03 17:48:05.725 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.725 26030 26251 E FFMPEG  : pop 取出-362901104 36
+11-03 17:48:05.725 26030 26251 E FFMPEG  : pop unlock
+11-03 17:48:05.725 26030 26253 E FFMPEG  : size = -362901104 36
+11-03 17:48:05.725 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.725 26030 26253 E FFMPEG  : 获取音频流 1
+11-03 17:48:05.725 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.725 26030 26253 E FFMPEG  : size = -362901104 37
+11-03 17:48:05.725 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.725 26030 26251 E FFMPEG  : push lock
+11-03 17:48:05.725 26030 26251 E FFMPEG  : size = -362901060 8
+11-03 17:48:05.725 26030 26251 E FFMPEG  : push signal
+11-03 17:48:05.725 26030 26251 E FFMPEG  : pop lock
+11-03 17:48:05.725 26030 26251 E FFMPEG  : pop 取出-362901104 37
+11-03 17:48:05.725 26030 26251 E FFMPEG  : pop unlock
+11-03 17:48:05.726 26030 26251 E FFMPEG  : push lock
+11-03 17:48:05.726 26030 26251 E FFMPEG  : size = -362901060 9
+11-03 17:48:05.726 26030 26251 E FFMPEG  : push signal
+11-03 17:48:05.726 26030 26251 E FFMPEG  : pop lock
+11-03 17:48:05.726 26030 26251 E FFMPEG  : pop 取出-362901104 36
+11-03 17:48:05.726 26030 26251 E FFMPEG  : pop unlock
+11-03 17:48:05.726 26030 26251 E FFMPEG  : push lock
+11-03 17:48:05.726 26030 26251 E FFMPEG  : size = -362901060 10
+11-03 17:48:05.726 26030 26251 E FFMPEG  : push signal
+11-03 17:48:05.726 26030 26251 E FFMPEG  : pop lock
+11-03 17:48:05.726 26030 26251 E FFMPEG  : pop 取出-362901104 35
+11-03 17:48:05.726 26030 26251 E FFMPEG  : pop unlock
+11-03 17:48:05.727 26030 26251 E FFMPEG  : push lock
+11-03 17:48:05.727 26030 26251 E FFMPEG  : size = -362901060 11
+11-03 17:48:05.727 26030 26251 E FFMPEG  : push signal
+11-03 17:48:05.727 26030 26251 E FFMPEG  : pop lock
+11-03 17:48:05.727 26030 26251 E FFMPEG  : pop 取出-362901104 34
+11-03 17:48:05.727 26030 26251 E FFMPEG  : pop unlock
+11-03 17:48:05.727   636   776 D AudioFlinger: thread 0x79f8125540 type 0 TID 776 waking up
+11-03 17:48:05.727   636   780 D AudioFlinger: thread 0x79f81ac5c0 type 0 TID 780 waking up
+11-03 17:48:05.727 26030 26251 E FFMPEG  : push lock
+11-03 17:48:05.727 26030 26251 E FFMPEG  : size = -362901060 12
+11-03 17:48:05.727 26030 26251 E FFMPEG  : push signal
+11-03 17:48:05.727 26030 26251 E FFMPEG  : pop lock
+11-03 17:48:05.727 26030 26251 E FFMPEG  : pop 取出-362901104 33
+11-03 17:48:05.727 26030 26251 E FFMPEG  : pop unlock
+11-03 17:48:05.727 26030 26252 D         : PlayerBase::PlayerBase()
+11-03 17:48:05.728 26030 26251 E FFMPEG  : push lock
+11-03 17:48:05.728 26030 26251 E FFMPEG  : size = -362901060 13
+11-03 17:48:05.728 26030 26251 E FFMPEG  : push signal
+11-03 17:48:05.728 26030 26251 E FFMPEG  : pop lock
+11-03 17:48:05.728 26030 26251 E FFMPEG  : pop 取出-362901104 32
+11-03 17:48:05.728   636   776 D AudioFlinger: acquireWakeLock_l() AudioOut_D status 0 mWakeLockToken 0x79f6e0e8c0
+11-03 17:48:05.728   636   780 D AudioFlinger: acquireWakeLock_l() AudioOut_15 status 0 mWakeLockToken 0x79f6e0e980
+11-03 17:48:05.728 26030 26251 E FFMPEG  : pop unlock
+11-03 17:48:05.728 26030 26251 E FFMPEG  : push lock
+11-03 17:48:05.728 26030 26251 E FFMPEG  : size = -362901060 14
+11-03 17:48:05.728 26030 26251 E FFMPEG  : push signal
+11-03 17:48:05.728 26030 26251 E FFMPEG  : pop lock
+11-03 17:48:05.728 26030 26251 E FFMPEG  : pop 取出-362901104 31
+11-03 17:48:05.728 26030 26251 E FFMPEG  : pop unlock
+11-03 17:48:05.729 26030 26251 E FFMPEG  : push lock
+11-03 17:48:05.729 26030 26251 E FFMPEG  : size = -362901060 15
+11-03 17:48:05.729 26030 26251 E FFMPEG  : push signal
+11-03 17:48:05.729 26030 26251 E FFMPEG  : pop lock
+11-03 17:48:05.729 26030 26251 E FFMPEG  : pop 取出-362901104 30
+11-03 17:48:05.729 26030 26251 E FFMPEG  : pop unlock
+11-03 17:48:05.729 26030 26251 E FFMPEG  : push lock
+11-03 17:48:05.729 26030 26251 E FFMPEG  : size = -362901060 16
+11-03 17:48:05.729 26030 26251 E FFMPEG  : push signal
+11-03 17:48:05.729 26030 26251 E FFMPEG  : pop lock
+11-03 17:48:05.729 26030 26251 E FFMPEG  : pop 取出-362901104 29
+11-03 17:48:05.729 26030 26251 E FFMPEG  : pop unlock
+11-03 17:48:05.729 26030 26251 E FFMPEG  : push lock
+11-03 17:48:05.730 26030 26251 E FFMPEG  : size = -362901060 17
+11-03 17:48:05.730 26030 26251 E FFMPEG  : push signal
+11-03 17:48:05.730 26030 26251 E FFMPEG  : pop lock
+11-03 17:48:05.730 26030 26251 E FFMPEG  : pop 取出-362901104 28
+11-03 17:48:05.730 26030 26251 E FFMPEG  : pop unlock
+11-03 17:48:05.730 26030 26251 E FFMPEG  : push lock
+11-03 17:48:05.730 26030 26251 E FFMPEG  : size = -362901060 18
+11-03 17:48:05.730 26030 26251 E FFMPEG  : push signal
+11-03 17:48:05.730 26030 26251 E FFMPEG  : pop lock
+11-03 17:48:05.730 26030 26251 E FFMPEG  : pop 取出-362901104 27
+11-03 17:48:05.730 26030 26251 E FFMPEG  : pop unlock
+11-03 17:48:05.730 26030 26252 D         : TrackPlayerBase::TrackPlayerBase()
+11-03 17:48:05.730 26030 26252 I libOpenSLES: Emulating old channel mask behavior (ignoring positional mask 0x3, using default mask 0x3 based on channel count of 2)
+11-03 17:48:05.730 26030 26251 E FFMPEG  : push lock
+11-03 17:48:05.730 26030 26251 E FFMPEG  : size = -362901060 19
+11-03 17:48:05.730 26030 26251 E FFMPEG  : push signal
+11-03 17:48:05.730 26030 26251 E FFMPEG  : pop lock
+11-03 17:48:05.730 26030 26251 E FFMPEG  : pop 取出-362901104 26
+11-03 17:48:05.730 26030 26251 E FFMPEG  : pop unlock
+11-03 17:48:05.731 26030 26251 E FFMPEG  : push lock
+11-03 17:48:05.731 26030 26251 E FFMPEG  : size = -362901060 20
+11-03 17:48:05.731 26030 26251 E FFMPEG  : push signal
+11-03 17:48:05.731 26030 26251 E FFMPEG  : pop lock
+11-03 17:48:05.731 26030 26251 E FFMPEG  : pop 取出-362901104 25
+11-03 17:48:05.731 26030 26251 E FFMPEG  : pop unlock
+11-03 17:48:05.731 26030 26251 E FFMPEG  : push lock
+11-03 17:48:05.731 26030 26251 E FFMPEG  : size = -362901060 21
+11-03 17:48:05.731 26030 26251 E FFMPEG  : push signal
+11-03 17:48:05.731 26030 26251 E FFMPEG  : pop lock
+11-03 17:48:05.731 26030 26251 E FFMPEG  : pop 取出-362901104 24
+11-03 17:48:05.731 26030 26251 E FFMPEG  : pop unlock
+11-03 17:48:05.732 26030 26251 E FFMPEG  : push lock
+11-03 17:48:05.732 26030 26251 E FFMPEG  : size = -362901060 22
+11-03 17:48:05.732 26030 26251 E FFMPEG  : push signal
+11-03 17:48:05.732 26030 26251 E FFMPEG  : pop lock
+11-03 17:48:05.732 26030 26251 E FFMPEG  : pop 取出-362901104 23
+11-03 17:48:05.732 26030 26251 E FFMPEG  : pop unlock
+11-03 17:48:05.732 26030 26251 E FFMPEG  : push lock
+11-03 17:48:05.732 26030 26251 E FFMPEG  : size = -362901060 23
+11-03 17:48:05.732 26030 26251 E FFMPEG  : push signal
+11-03 17:48:05.732 26030 26251 E FFMPEG  : pop lock
+11-03 17:48:05.732 26030 26251 E FFMPEG  : pop 取出-362901104 22
+11-03 17:48:05.732 26030 26251 E FFMPEG  : pop unlock
+11-03 17:48:05.733 26030 26251 E FFMPEG  : push lock
+11-03 17:48:05.733 26030 26251 E FFMPEG  : size = -362901060 24
+11-03 17:48:05.733 26030 26251 E FFMPEG  : push signal
+11-03 17:48:05.733 26030 26251 E FFMPEG  : pop lock
+11-03 17:48:05.733 26030 26251 E FFMPEG  : pop 取出-362901104 21
+11-03 17:48:05.733 26030 26251 E FFMPEG  : pop unlock
+11-03 17:48:05.733 26030 26251 E FFMPEG  : push lock
+11-03 17:48:05.733 26030 26251 E FFMPEG  : size = -362901060 25
+11-03 17:48:05.733 26030 26251 E FFMPEG  : push signal
+11-03 17:48:05.733 26030 26251 E FFMPEG  : pop lock
+11-03 17:48:05.733 26030 26251 E FFMPEG  : pop 取出-362901104 20
+11-03 17:48:05.733 26030 26251 E FFMPEG  : pop unlock
+11-03 17:48:05.734 26030 26251 E FFMPEG  : push lock
+11-03 17:48:05.734 26030 26251 E FFMPEG  : size = -362901060 26
+11-03 17:48:05.734 26030 26251 E FFMPEG  : push signal
+11-03 17:48:05.734 26030 26251 E FFMPEG  : pop lock
+11-03 17:48:05.734 26030 26251 E FFMPEG  : pop 取出-362901104 19
+11-03 17:48:05.734 26030 26251 E FFMPEG  : pop unlock
+11-03 17:48:05.734 26030 26251 E FFMPEG  : push lock
+11-03 17:48:05.734 26030 26251 E FFMPEG  : size = -362901060 27
+11-03 17:48:05.734 26030 26251 E FFMPEG  : push signal
+11-03 17:48:05.734 26030 26251 E FFMPEG  : pop lock
+11-03 17:48:05.734 26030 26251 E FFMPEG  : pop 取出-362901104 18
+11-03 17:48:05.734 26030 26251 E FFMPEG  : pop unlock
+11-03 17:48:05.734   636 15117 I AudioPolicyManagerCustomImpl: sample rate: 44100, format: 0x1, channel_mask: 0x3usage=1 content=0 flags=0x0 tags=bitsPerSample: 16, channelCount = 2 streamType =3
+11-03 17:48:05.735 26030 26251 E FFMPEG  : push lock
+11-03 17:48:05.735 26030 26251 E FFMPEG  : size = -362901060 28
+11-03 17:48:05.735 26030 26251 E FFMPEG  : push signal
+11-03 17:48:05.735 26030 26251 E FFMPEG  : pop lock
+11-03 17:48:05.735 26030 26251 E FFMPEG  : pop 取出-362901104 17
+11-03 17:48:05.735 26030 26251 E FFMPEG  : pop unlock
+11-03 17:48:05.735 26030 26251 E FFMPEG  : push lock
+11-03 17:48:05.735 26030 26251 E FFMPEG  : size = -362901060 29
+11-03 17:48:05.735 26030 26251 E FFMPEG  : push signal
+11-03 17:48:05.735 26030 26251 E FFMPEG  : pop lock
+11-03 17:48:05.735 26030 26251 E FFMPEG  : pop 取出-362901104 16
+11-03 17:48:05.735 26030 26251 E FFMPEG  : pop unlock
+11-03 17:48:05.735 26030 26251 E FFMPEG  : push lock
+11-03 17:48:05.736 26030 26251 E FFMPEG  : size = -362901060 30
+11-03 17:48:05.736 26030 26251 E FFMPEG  : push signal
+11-03 17:48:05.736 26030 26251 E FFMPEG  : pop lock
+11-03 17:48:05.736 26030 26251 E FFMPEG  : pop 取出-362901104 15
+11-03 17:48:05.736 26030 26251 E FFMPEG  : pop unlock
+11-03 17:48:05.736 26030 26251 E FFMPEG  : push lock
+11-03 17:48:05.736 26030 26251 E FFMPEG  : size = -362901060 31
+11-03 17:48:05.736 26030 26251 E FFMPEG  : push signal
+11-03 17:48:05.736 26030 26251 E FFMPEG  : pop lock
+11-03 17:48:05.736 26030 26251 E FFMPEG  : pop 取出-362901104 14
+11-03 17:48:05.736 26030 26251 E FFMPEG  : pop unlock
+11-03 17:48:05.736  1364  9045 W ProcBatteryStats: timer is running , not start, name: audioserver, uid: 1041, tag: AudioMix
+11-03 17:48:05.736   636 15117 I AudioPolicyManagerCustomImpl: isInLowLatency() 0
+11-03 17:48:05.736 26030 26251 E FFMPEG  : push lock
+11-03 17:48:05.736 26030 26251 E FFMPEG  : size = -362901060 32
+11-03 17:48:05.736 26030 26251 E FFMPEG  : push signal
+11-03 17:48:05.736 26030 26251 E FFMPEG  : pop lock
+11-03 17:48:05.736 26030 26251 E FFMPEG  : pop 取出-362901104 13
+11-03 17:48:05.736 26030 26251 E FFMPEG  : pop unlock
+11-03 17:48:05.737   605 23049 I DspAudioAlgo: get_parameter_from_dsp input para null : path = direct, name = devices, key = (null)
+11-03 17:48:05.737 26030 26251 E FFMPEG  : push lock
+11-03 17:48:05.737   605 23049 I audio_hw_primary: adev_get_direct_devices_parameters: get direct_devices (536870912)
+11-03 17:48:05.737 26030 26251 E FFMPEG  : size = -362901060 33
+11-03 17:48:05.737 26030 26251 E FFMPEG  : push signal
+11-03 17:48:05.737 26030 26251 E FFMPEG  : pop lock
+11-03 17:48:05.737 26030 26251 E FFMPEG  : pop 取出-362901104 12
+11-03 17:48:05.737 26030 26251 E FFMPEG  : pop unlock
+11-03 17:48:05.737 26030 26251 E FFMPEG  : push lock
+11-03 17:48:05.737 26030 26251 E FFMPEG  : size = -362901060 34
+11-03 17:48:05.737 26030 26251 E FFMPEG  : push signal
+11-03 17:48:05.737 26030 26251 E FFMPEG  : pop lock
+11-03 17:48:05.737 26030 26251 E FFMPEG  : pop 取出-362901104 11
+11-03 17:48:05.737 26030 26251 E FFMPEG  : pop unlock
+11-03 17:48:05.737   636 15117 W AudioPolicyManagerCustomImpl: isDirectOutputSupported: headset is not onsite, not support
+11-03 17:48:05.737   636 15117 W AudioPolicyManagerCustomImpl: isDirectOutputSupported: is unsupport stream
+11-03 17:48:05.738 26030 26251 E FFMPEG  : push lock
+11-03 17:48:05.738 26030 26251 E FFMPEG  : size = -362901060 35
+11-03 17:48:05.738 26030 26251 E FFMPEG  : push signal
+11-03 17:48:05.738 26030 26251 E FFMPEG  : pop lock
+11-03 17:48:05.738 26030 26251 E FFMPEG  : pop 取出-362901104 10
+11-03 17:48:05.738 26030 26251 E FFMPEG  : pop unlock
+11-03 17:48:05.738 26030 26251 E FFMPEG  : push lock
+11-03 17:48:05.738 26030 26251 E FFMPEG  : size = -362901060 36
+11-03 17:48:05.738 26030 26251 E FFMPEG  : push signal
+11-03 17:48:05.738 26030 26251 E FFMPEG  : pop lock
+11-03 17:48:05.738 26030 26251 E FFMPEG  : pop 取出-362901104 9
+11-03 17:48:05.738 26030 26251 E FFMPEG  : pop unlock
+11-03 17:48:05.739 26030 26251 E FFMPEG  : push lock
+11-03 17:48:05.739 26030 26251 E FFMPEG  : size = -362901060 37
+11-03 17:48:05.739 26030 26251 E FFMPEG  : push signal
+11-03 17:48:05.739 26030 26251 E FFMPEG  : pop lock
+11-03 17:48:05.739 26030 26251 E FFMPEG  : pop 取出-362901104 8
+11-03 17:48:05.739 26030 26251 E FFMPEG  : pop unlock
+11-03 17:48:05.739 26030 26251 E FFMPEG  : push lock
+11-03 17:48:05.739 26030 26251 E FFMPEG  : size = -362901060 38
+11-03 17:48:05.739 26030 26251 E FFMPEG  : push signal
+11-03 17:48:05.739 26030 26251 E FFMPEG  : pop lock
+11-03 17:48:05.739 26030 26251 E FFMPEG  : pop 取出-362901104 7
+11-03 17:48:05.739 26030 26251 E FFMPEG  : pop unlock
+11-03 17:48:05.740   636 15117 D AudioPolicyIntefaceImpl: getOutputForAttr() session 1841, attr->flags 0x0, flags 0x104, selectedDeviceId 0, pid 26030, uid 10216
+11-03 17:48:05.740 26030 26251 E FFMPEG  : push lock
+11-03 17:48:05.740 26030 26251 E FFMPEG  : size = -362901060 39
+11-03 17:48:05.740 26030 26251 E FFMPEG  : push signal
+11-03 17:48:05.740 26030 26251 E FFMPEG  : pop lock
+11-03 17:48:05.740 26030 26251 E FFMPEG  : pop 取出-362901104 6
+11-03 17:48:05.740 26030 26251 E FFMPEG  : pop unlock
+11-03 17:48:05.740 26030 26251 E FFMPEG  : push lock
+11-03 17:48:05.740 26030 26251 E FFMPEG  : size = -362901060 40
+11-03 17:48:05.740 26030 26251 E FFMPEG  : push signal
+11-03 17:48:05.740 26030 26251 E FFMPEG  : pop lock
+11-03 17:48:05.740 26030 26251 E FFMPEG  : pop 取出-362901104 5
+11-03 17:48:05.740 26030 26251 E FFMPEG  : pop unlock
+11-03 17:48:05.740 26030 26251 E FFMPEG  : push lock
+11-03 17:48:05.741 26030 26251 E FFMPEG  : size = -362901060 41
+11-03 17:48:05.741 26030 26251 E FFMPEG  : push signal
+11-03 17:48:05.741 26030 26251 E FFMPEG  : pop lock
+11-03 17:48:05.741 26030 26251 E FFMPEG  : pop 取出-362901104 4
+11-03 17:48:05.741 26030 26251 E FFMPEG  : pop unlock
+11-03 17:48:05.741 26030 26251 E FFMPEG  : push lock
+11-03 17:48:05.741 26030 26251 E FFMPEG  : size = -362901060 42
+11-03 17:48:05.741 26030 26251 E FFMPEG  : push signal
+11-03 17:48:05.741 26030 26251 E FFMPEG  : pop lock
+11-03 17:48:05.741 26030 26251 E FFMPEG  : pop 取出-362901104 3
+11-03 17:48:05.741 26030 26251 E FFMPEG  : pop unlock
+11-03 17:48:05.741 26030 26251 E FFMPEG  : push lock
+11-03 17:48:05.741 26030 26251 E FFMPEG  : size = -362901060 43
+11-03 17:48:05.741 26030 26251 E FFMPEG  : push signal
+11-03 17:48:05.741 26030 26251 E FFMPEG  : pop lock
+11-03 17:48:05.741 26030 26251 E FFMPEG  : pop 取出-362901104 2
+11-03 17:48:05.741 26030 26251 E FFMPEG  : pop unlock
+11-03 17:48:05.741   636 15117 I APM_AudioPolicyManager: queryLowlatencyUid=10216 mpClientInterface->getParameters with result false
+11-03 17:48:05.742   636 15117 I APM_AudioPolicyManager: getOutputForDevice() stream 3, flags 100, forceMutingHaptic 0
+11-03 17:48:05.742   636 15117 I APM_AudioPolicyManager: getOutputForDevice() returns output 13
+11-03 17:48:05.742   636 15117 D APM_AudioPolicyManager: getOutputForAttr() returns output 13 requestedPortId 0 selectedDeviceId 3 for port ID 179
+11-03 17:48:05.742 26030 26251 E FFMPEG  : push lock
+11-03 17:48:05.742 26030 26251 E FFMPEG  : size = -362901060 44
+11-03 17:48:05.742 26030 26251 E FFMPEG  : push signal
+11-03 17:48:05.742 26030 26251 E FFMPEG  : pop lock
+11-03 17:48:05.742 26030 26251 E FFMPEG  : pop 取出-362901104 1
+11-03 17:48:05.742 26030 26251 E FFMPEG  : pop unlock
+11-03 17:48:05.742 26030 26251 E FFMPEG  : push lock
+11-03 17:48:05.742 26030 26251 E FFMPEG  : size = -362901060 45
+11-03 17:48:05.742 26030 26251 E FFMPEG  : push signal
+11-03 17:48:05.742 26030 26251 E FFMPEG  : pop lock
+11-03 17:48:05.742 26030 26251 E FFMPEG  : pop wait
+11-03 17:48:05.743   636 15117 I AudioFlinger: createTrack() sessionId: 1841
+11-03 17:48:05.743   636 15117 W AudioFlinger: createTrack_l(): mismatch between requested flags (00000104) and output flags (00000002)
+11-03 17:48:05.743   636 15117 D AudioFlinger: Client defaulted notificationFrames to 590 for frameCount 1772
+11-03 17:48:05.743   636 15117 D AudioFlinger: createTrack_l : sharedBuffer=0x0 requestframeCnt=0 actualframeCnt=1772 format=0x1 mFormat=0x1 channelMask=0x3 sampleRate=44100 mSampleRate=48000 requestflags=0x104 actualflags=0 outputflags=0x2 requestnotificationFrameCount=0, notificationFrameCount=590, hasFastMixer=0 pid=26030 tid=26254
+11-03 17:48:05.745   636 15117 D AF::TrackHandle: OpPlayAudio: track:218 usage:1 not muted
+11-03 17:48:05.747   636 15117 D AudioFlinger: DevSched: uid is 10216, factor is 1.000000, mode_eq is 0
+11-03 17:48:05.750 26030 26252 W AudioTrack: createTrack_l(0): AUDIO_OUTPUT_FLAG_FAST denied by server; frameCount 0 -> 1772
+11-03 17:48:05.751  2169  2347 I PGAudioState: AUDIO_CREATAE_TRACK, audioInfo : [trackId : 218, sessionId : 1841, type : audio_out, threadType : MIXER, streamType : MUSIC, pid : 26030, uid : 10216, createState : new, playState : stop, audioTrackVolume: 1.0, finalVolume : 0.0, loop : false, stopByZeroTime : 0]
+11-03 17:48:05.752   636 15117 I AudioFlinger: start output session(1841) pid(26030) 
+11-03 17:48:05.753   636   738 I HuaweiAudioFlinger: karaoke white list size=0
+11-03 17:48:05.753  1364  1364 D AudioManager: dispatching onPlaybackConfigChanged()
+11-03 17:48:05.753  1364  1364 D AudioPlayerStateMonitor: Found a new active media playback. ID:1999 -- type:OpenSL ES AudioPlayer (Buffer Queue) -- u/pid:10216/26030 -- state:started -- attr:AudioAttributes: usage=USAGE_MEDIA content=CONTENT_TYPE_UNKNOWN flags=0x0 tags= bundle=null
+11-03 17:48:05.753 27015 28431 D AudioManager: dispatching onPlaybackConfigChanged()
+11-03 17:48:05.753  1364  1364 D MediaSessionStack: updateMediaButtonSessionIfNeeded, callers=com.android.server.media.MediaSessionService.lambda$onStart$0$MediaSessionService:203 com.android.server.media.-$$Lambda$MediaSessionService$za_9dlUSlnaiZw6eCdPVEZq0XLw.onAudioPlayerActiveStateChanged:2 
+11-03 17:48:05.754   605 23049 I audio_hw_effect: get streamType fail: -2
+11-03 17:48:05.754   605 23049 I audio_hw_primary: start stream 3, 8, need change to soc
+11-03 17:48:05.754   605 23049 I audio_hw_primary: update stream types 8
+11-03 17:48:05.755   636 15117 I APM_AudioPolicyManager: startOutput() output 13, stream 3, session 1841, portId 179, phoneState 0, communiCf 0, mediaCf 0
+11-03 17:48:05.755   636 15117 D APM::AudioOutputDescriptor: IOprofile maxActiveCount == 0 curActiveCount = 0
+11-03 17:48:05.755   636 15117 D APM::AudioOutputDescriptor: start, profile name: primary out,  curActiveCount: 1
+11-03 17:48:05.756   636 15117 I APM_AudioPolicyManager: getNewOutputDevices selected devices {type:0x2} connectdeDevices(10003)
+11-03 17:48:05.756   636 15117 I APM_AudioPolicyManager: setOutputDevices device {type:0x2} delayMs 0 force 0 outputDesc 13
+11-03 17:48:05.756   636   738 I stereoWidening_frame: SwsParamsSetFloat volumeDb = -23.000000
+11-03 17:48:05.756   636   738 I HuaweiAudioFlinger: karaoke white list size=0
+11-03 17:48:05.758   605 23049 I audio_hw_effect: get streamType fail: -2
+11-03 17:48:05.758   605 23049 I audio_hw_primary: update stream types 8
+11-03 17:48:05.760   636 15117 I APM_AudioPolicyManager: setOutputDevices: suppressing checkDeviceMuteStrategies
+11-03 17:48:05.760   636 15117 I APM_AudioPolicyManager: setOutputDevices setting same device {type:0x2} or null device, force=0, patch handle=5
+11-03 17:48:05.760   636 15117 I APM::AudioOutputDescriptor: do not setVolume.
+11-03 17:48:05.760   636 15117 I APM_AudioPolicyManager: checkAndSetVolume volumeSource 6, index 8, device 00000002, volumeDb -23.000000, output 13 
+11-03 17:48:05.763   636   738 I stereoWidening_frame: SwsParamsSetFloat volumeDb = -23.000000
+11-03 17:48:05.763   636   738 I HuaweiAudioFlinger: karaoke white list size=0
+11-03 17:48:05.764   605 23049 I audio_hw_effect: get streamType fail: -2
+11-03 17:48:05.764   605 23049 I audio_hw_effect: sws current device is speaker: 2
+11-03 17:48:05.764   605 23049 I audio_hw_primary: update stream types 8
+11-03 17:48:05.763  2169  2764 I PG_ash  : view add pid:26030 uid:10216
+11-03 17:48:05.766   636   738 I HuaweiAudioFlinger: karaoke white list size=0
+11-03 17:48:05.767   605 23049 I audio_hw_effect: voice enhance volume index value: 8
+11-03 17:48:05.767   605 23049 I audio_hw_primary: update stream types 8
+11-03 17:48:05.769   636 15117 D AudioPolicyManagerCustomImpl: virtual audio log:getDeviceForOutVirtualAudio,after instead  device 2
+11-03 17:48:05.770   636   738 I HuaweiAudioFlinger: karaoke white list size=0
+11-03 17:48:05.770  1364  9045 V WindowManager: addWindow: Window{f426fc4 u0 Toast}
+11-03 17:48:05.771   605 23049 I audio_hw_effect: get streamType fail: -2
+11-03 17:48:05.771   605 23049 I virtual_btn_hal: audio is run
+11-03 17:48:05.772   636 15117 I APM_AudioPolicyManager: sendAudioCloseOrOpen changed isAudioOpen=1
+11-03 17:48:05.772   636   776 I AudioMixer: Pid:636 add track, name 218
+11-03 17:48:05.773 26030 26127 D OpenGLRenderer: disableOutlineDraw is true
+11-03 17:48:05.774  2169  2347 I PGAudioState: AUDIO_ADD_ACTIVE_TRACK, track id : 218
+11-03 17:48:05.774  2169  2347 I PGAudioState: not start audio out because audio inactive pid: 26030 uid:10216
+11-03 17:48:05.776   605 17712 I audio_hw_primary: start_output_stream++:type=0, device=0x2,pcm=NULL, voice_pcm=NULL
+11-03 17:48:05.777   605 17712 I audio_hw_primary: select_devices++ mode[0]
+11-03 17:48:05.777   605 17712 I audio_hw_primary: soundtrigger_standing wakeup path no need to open, standby = 1, mode = 0
+11-03 17:48:05.777   605 17712 I audio_hw_primary: input_source_id 0, output_device_id 0x2
+11-03 17:48:05.777   605 17712 I audio_hw_primary: select_devices d:0x2 is:0 or:media-speaker ir:none id:0
+11-03 17:48:05.777   605 17712 E spk_dev_interface_V2: _dev_power_off is :0x0 
+11-03 17:48:05.777   605 17712 I dsp_common: dsp_common_control_algo:set device = 2
+11-03 17:48:05.777   605 17712 D audio_route: Apply path: media-speaker
+11-03 17:48:05.777   605 17712 I audio_hw_primary: soundtrigger_standing wakeup path no need to open, standby = 1, mode = 0
+11-03 17:48:05.778   605 17712 D audio_route: Apply path: media-speaker
+11-03 17:48:05.778   605 17712 I audio_hw_primary: soundtrigger_standing wakeup path no need to open, standby = 1, mode = 0
+11-03 17:48:05.779 26030 26252 E FFMPEG  : audio 
+11-03 17:48:05.779 26030 26252 E FFMPEG  : pop lock
+11-03 17:48:05.779 26030 26252 E FFMPEG  : pop 取出-362901060 45
+11-03 17:48:05.779 26030 26252 E FFMPEG  : pop unlock
+11-03 17:48:05.779 26030 26254 D         : PlayerBase::stop() from IPlayer
+11-03 17:48:05.779 26030 26254 D AudioTrack: stop(179): called with 0 frames delivered
+11-03 17:48:05.780 26030 26252 E FFMPEG  : audio dataSize = 3700
+11-03 17:48:05.781  1364  1364 D AudioManager: dispatching onPlaybackConfigChanged()
+11-03 17:48:05.781 27015 28431 D AudioManager: dispatching onPlaybackConfigChanged()
+11-03 17:48:05.782  1364  1364 D MediaSessionStack: updateMediaButtonSessionIfNeeded, callers=com.android.server.media.MediaSessionService.lambda$onStart$0$MediaSessionService:203 com.android.server.media.-$$Lambda$MediaSessionService$za_9dlUSlnaiZw6eCdPVEZq0XLw.onAudioPlayerActiveStateChanged:2 
+11-03 17:48:05.785 26030 26247 E FFMPEG  : frames push 
+11-03 17:48:05.785 26030 26247 E FFMPEG  : push lock
+11-03 17:48:05.785 26030 26247 E FFMPEG  : size = -866829060 1
+11-03 17:48:05.785 26030 26247 E FFMPEG  : push signal
+11-03 17:48:05.785 26030 26247 E FFMPEG  : pop lock
+11-03 17:48:05.785 26030 26247 E FFMPEG  : pop 取出-866829168 20
+11-03 17:48:05.785 26030 26247 E FFMPEG  : pop unlock
+11-03 17:48:05.785 26030 26250 E FFMPEG  : pop 取出-866829060 1
+11-03 17:48:05.785 26030 26250 E FFMPEG  : pop unlock
+--------- beginning of crash
+11-03 17:48:05.786 26030 26247 F libc    : Fatal signal 11 (SIGSEGV), code 1 (SEGV_MAPERR), fault addr 0xffe3ffee in tid 26247 (Thread-3), pid 26030 (e.androidmkdemo)
+11-03 17:48:05.790  1364 14540 I WindowManager: relayoutVisibleWindow: set isFormatChanged
+11-03 17:48:05.799   605 17712 I dsp_common: dsp_common_control_algo:set device = 2
+11-03 17:48:05.799   605 17712 E spk_dev_interface_V2: _dev_power_on is :0x0 
+11-03 17:48:05.799   605 17712 I audio_hw_primary: select_devices--
+11-03 17:48:05.799   605 17712 I audio_hw_primary: start_output_stream--
+11-03 17:48:05.799   605 17712 I falling_pop_elim: pop_device_open succeed, falling num = 384, bytes = 3840, output_type = 0, format = 1
+11-03 17:48:05.802 26030 26250 E zenglw  : home render
+11-03 17:48:05.805   589   589 I GRALLOC : getCallingPid=640, shrFd=10,fmt=0x1,intFmt=0x1,btStrd=7680,size=8294400,pid=589 
+11-03 17:48:05.805   589   589 I GRALLOC : 	 yuv=2,w=1920,h=1080,Stride u=0 v=0,offset u=0 v=0 
+11-03 17:48:05.805   589   589 I GRALLOC : 	 iova_size=8294400,conUsg=0x906,proUsg=0x966,	 strd=1920,[afbc]HdrStrd=0 PyldStrd=0 Scrmbl=0,ionhnd = 0 
+11-03 17:48:05.805 26030 26127 D mali_winsys: EGLint new_window_surface(egl_winsys_display *, void *, EGLSurface, EGLConfig, egl_winsys_surface **, EGLBoolean) returns 0x3000
+11-03 17:48:05.806 26030 26250 E ion     : ioctl c0044901 failed with code -1: Not a typewriter
+11-03 17:48:05.807   589   589 I GRALLOC : getCallingPid=640, shrFd=10,fmt=0x1,intFmt=0x1,btStrd=1280,size=192512,pid=589 
+11-03 17:48:05.807   589   589 I GRALLOC : 	 yuv=2,w=312,h=147,Stride u=0 v=0,offset u=0 v=0 
+11-03 17:48:05.807   589   589 I GRALLOC : 	 iova_size=192512,conUsg=0xb00,proUsg=0xb00,	 strd=320,[afbc]HdrStrd=0 PyldStrd=0 Scrmbl=0,ionhnd = 0 
+11-03 17:48:05.809   589   589 I chatty  : uid=1000(system) allocator@2.0-s identical 1 line
+11-03 17:48:05.810   589   589 I GRALLOC : getCallingPid=640, shrFd=10,fmt=0x1,intFmt=0x1,btStrd=1280,size=192512,pid=589 
+11-03 17:48:05.810   589   589 I GRALLOC : 	 yuv=2,w=312,h=147,Stride u=0 v=0,offset u=0 v=0 
+11-03 17:48:05.810   589   589 I GRALLOC : 	 iova_size=192512,conUsg=0xb00,proUsg=0xb00,	 strd=320,[afbc]HdrStrd=0 PyldStrd=0 Scrmbl=0,ionhnd = 0 
+11-03 17:48:05.813 26030 26250 E FFMPEG  : pop lock
+11-03 17:48:05.813 26030 26250 E FFMPEG  : pop wait
+11-03 17:48:05.828 26030 26253 E FFMPEG  : 获取到的是视频流 0
+11-03 17:48:05.828 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.828 26030 26253 E FFMPEG  : size = -866829168 20
+11-03 17:48:05.828 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.828 26030 26253 E FFMPEG  : 获取到的是视频流 0
+11-03 17:48:05.828 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.828 26030 26253 E FFMPEG  : size = -866829168 21
+11-03 17:48:05.828 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.828 26030 26253 E FFMPEG  : 获取到的是视频流 0
+11-03 17:48:05.828 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.828 26030 26253 E FFMPEG  : size = -866829168 22
+11-03 17:48:05.828 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.828 26030 26253 E FFMPEG  : 获取到的是视频流 0
+11-03 17:48:05.828 26030 26253 E FFMPEG  : push lock
+11-03 17:48:05.828 26030 26253 E FFMPEG  : size = -866829168 23
+11-03 17:48:05.828 26030 26253 E FFMPEG  : push signal
+11-03 17:48:05.833   636   776 I AudioFlinger: stop output session(1841) pid(26030) 
+11-03 17:48:05.833  1364  1710 D BatteryStatsService: begin noteStopAudio
+11-03 17:48:05.833  1364  1710 D BatteryStatsService: end noteStopAudio
+11-03 17:48:05.834   636   738 I HuaweiAudioFlinger: karaoke white list size=0
+11-03 17:48:05.834   605 16916 I audio_hw_effect: get streamType fail: -2
+11-03 17:48:05.834   605 16916 I audio_hw_primary: update stream types 0
+11-03 17:48:05.834  2169  2347 I PGAudioState: AUDIO_REMOVE_ACTIVE_TRACK, trackId : 218
+11-03 17:48:05.834   636   739 I APM_AudioPolicyManager: stopOutput() output 13, stream 3, session 1841, portId 179
+11-03 17:48:05.834   636   739 I APM_AudioPolicyManager: getNewOutputDevices selected devices AUDIO_DEVICE_NONE connectdeDevices(10003)
+11-03 17:48:05.834   636   739 I APM_AudioPolicyManager: setOutputDevices device AUDIO_DEVICE_NONE delayMs 80 force 0 outputDesc 13
+11-03 17:48:05.835   636   739 D AudioPolicyManagerCustomImpl: virtual audio log:getDeviceForOutVirtualAudio,after instead  device 2
+11-03 17:48:05.835   636   739 I APM_AudioPolicyManager: setOutputDevices setting same device AUDIO_DEVICE_NONE or null device, force=0, patch handle=5
+11-03 17:48:05.835  2169  2347 I DeviceMonitor: last release audio mix uid:10216 pid:-2
+11-03 17:48:05.835   636   739 D AudioPolicyManagerCustomImpl: virtual audio log:getDeviceForOutVirtualAudio,after instead  device 2
+11-03 17:48:05.836   636   739 I APM_AudioPolicyManager: getNewOutputDevices selected devices AUDIO_DEVICE_NONE connectdeDevices(10003)
+11-03 17:48:05.836   636   739 D APM::AudioOutputDescriptor: stop, profile name: primary out,  curActiveCount: 0
+11-03 17:48:05.837   636   738 I HuaweiAudioFlinger: karaoke white list size=0
+11-03 17:48:05.837   605 16916 I audio_hw_effect: get streamType fail: -2
+11-03 17:48:05.837   605 16916 I virtual_btn_hal: audio is off
+11-03 17:48:05.838   636   739 I APM_AudioPolicyManager: sendAudioCloseOrOpen changed isAudioOpen=0
+11-03 17:48:05.851 26258 26258 I crash_dump32: obtaining output fd from tombstoned, type: kDebuggerdTombstone
+11-03 17:48:05.854   885   885 I /system/bin/tombstoned: received crash request for pid 26247
+11-03 17:48:05.855 26258 26258 I crash_dump32: performing dump of process 26030 (target tid = 26247)
+11-03 17:48:05.867 26258 26258 F DEBUG   : *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+11-03 17:48:05.868 26258 26258 F DEBUG   : Build fingerprint: 'HONOR/HRY-AL00a/HWHRY-HF:10/HONORHRY-AL00a/10.0.0.168C00:user/release-keys'
+11-03 17:48:05.868 26258 26258 F DEBUG   : Revision: '0'
+11-03 17:48:05.868 26258 26258 F DEBUG   : ABI: 'arm'
+11-03 17:48:05.868 26258 26258 F DEBUG   : Timestamp: 2020-11-03 17:48:05+0800
+11-03 17:48:05.868 26258 26258 F DEBUG   : pid: 26030, tid: 26247, name: Thread-3  >>> com.example.androidmkdemo <<<
+11-03 17:48:05.868 26258 26258 F DEBUG   : uid: 10216
+11-03 17:48:05.868 26258 26258 F DEBUG   : signal 11 (SIGSEGV), code 1 (SEGV_MAPERR), fault addr 0xffe3ffee
+11-03 17:48:05.868 26258 26258 F DEBUG   :     r0  ffe3ffe6  r1  cc54b2f0  r2  00000002  r3  baf2c458
+11-03 17:48:05.868 26258 26258 F DEBUG   :     r4  00000000  r5  cc54b2f0  r6  ffe3ffe6  r7  bb0f6d80
+11-03 17:48:05.868 26258 26258 F DEBUG   :     r8  00006680  r9  000065ae  r10 b7856490  r11 bb88f230
+11-03 17:48:05.868 26258 26258 F DEBUG   :     ip  b9643ef0  sp  bb88f1a0  lr  b908e4cd  pc  b9081532
+11-03 17:48:05.869 26258 26258 F DEBUG   : 
+11-03 17:48:05.869 26258 26258 F DEBUG   : backtrace:
+11-03 17:48:05.869 26258 26258 F DEBUG   :       #00 pc 0015b532  /data/app/com.example.androidmkdemo-H2n6UUPR2hh9SeP0FZR5fg==/lib/arm/libtestffmpeg.so (av_bsf_send_packet+6) (BuildId: 1e8ab96ef83439313a6228a683fbac33e7e5d281)
+11-03 17:48:05.869 26258 26258 F DEBUG   :       #01 pc 001684c9  /data/app/com.example.androidmkdemo-H2n6UUPR2hh9SeP0FZR5fg==/lib/arm/libtestffmpeg.so (avcodec_send_packet+64) (BuildId: 1e8ab96ef83439313a6228a683fbac33e7e5d281)
+11-03 17:48:05.869 26258 26258 F DEBUG   :       #02 pc 000b45f3  /data/app/com.example.androidmkdemo-H2n6UUPR2hh9SeP0FZR5fg==/lib/arm/libtestffmpeg.so (VideoChannel::decode()+90) (BuildId: 1e8ab96ef83439313a6228a683fbac33e7e5d281)
+11-03 17:48:05.869 26258 26258 F DEBUG   :       #03 pc 000b4585  /data/app/com.example.androidmkdemo-H2n6UUPR2hh9SeP0FZR5fg==/lib/arm/libtestffmpeg.so (decode_task(void*)+44) (BuildId: 1e8ab96ef83439313a6228a683fbac33e7e5d281)
+11-03 17:48:05.869 26258 26258 F DEBUG   :       #04 pc 0009c1b7  /apex/com.android.runtime/lib/bionic/libc.so (__pthread_start(void*)+20) (BuildId: a4512dbc201a034f375ebdf7a21495c8)
+11-03 17:48:05.869 26258 26258 F DEBUG   :       #05 pc 00055657  /apex/com.android.runtime/lib/bionic/libc.so (__start_thread+30) (BuildId: a4512dbc201a034f375ebdf7a21495c8)
+11-03 17:48:05.930  1364  1483 I DebugKeepScreenOn: setHoldScreenLocked newHoldScreen:Session{6b791ba 26030:u0a10216} currentHoldScreen:null wakeLockState:false
+11-03 17:48:05.930  1364  1483 I DebugKeepScreenOn: Acquiring screen wakelock due to Window{f426fc4 u0 Toast}
+11-03 17:48:05.954  1364  1682 I HwAudioServiceEx: restart dms isMusicActive : false, isRingActive : false, isAlarmActive : false
+11-03 17:48:05.995   884  3249 E LOGSERVER_UTILS: [ERecovery]ReadEvent: ERecoveryEventManager ReadEvent 0
+11-03 17:48:06.031 26030 26253 E FFMPEG  : 获取到的是视频流 0
+11-03 17:48:06.031 26030 26253 E FFMPEG  : push lock
+11-03 17:48:06.031 26030 26253 E FFMPEG  : size = -866829168 24
+11-03 17:48:06.031 26030 26253 E FFMPEG  : push signal
+11-03 17:48:06.032 26030 26253 E FFMPEG  : 获取音频流 1
+11-03 17:48:06.032 26030 26253 E FFMPEG  : push lock
+11-03 17:48:06.032 26030 26253 E FFMPEG  : size = -362901104 1
+11-03 17:48:06.032 26030 26253 E FFMPEG  : push signal
+11-03 17:48:06.032 26030 26253 E FFMPEG  : 获取音频流 1
+11-03 17:48:06.032 26030 26251 E FFMPEG  : pop 取出-362901104 1
+11-03 17:48:06.032 26030 26253 E FFMPEG  : push lock
+11-03 17:48:06.032 26030 26251 E FFMPEG  : pop unlock
+11-03 17:48:06.032 26030 26253 E FFMPEG  : size = -362901104 1
+11-03 17:48:06.032 26030 26253 E FFMPEG  : push signal
+11-03 17:48:06.032 26030 26253 E FFMPEG  : 获取音频流 1
+11-03 17:48:06.032 26030 26253 E FFMPEG  : push lock
+11-03 17:48:06.033 26030 26253 E FFMPEG  : size = -362901104 2
+11-03 17:48:06.033 26030 26253 E FFMPEG  : push signal
+11-03 17:48:06.033 26030 26253 E FFMPEG  : 获取音频流 1
+11-03 17:48:06.033 26030 26253 E FFMPEG  : push lock
+11-03 17:48:06.033 26030 26253 E FFMPEG  : size = -362901104 3
+11-03 17:48:06.033 26030 26253 E FFMPEG  : push signal
+11-03 17:48:06.033 26030 26253 E FFMPEG  : 获取音频流 1
+11-03 17:48:06.033 26030 26253 E FFMPEG  : push lock
+11-03 17:48:06.033 26030 26253 E FFMPEG  : size = -362901104 4
+11-03 17:48:06.033 26030 26253 E FFMPEG  : push signal
+11-03 17:48:06.033 26030 26253 E FFMPEG  : 获取音频流 1
+11-03 17:48:06.033 26030 26253 E FFMPEG  : push lock
+11-03 17:48:06.033 26030 26253 E FFMPEG  : size = -362901104 5
+11-03 17:48:06.033 26030 26253 E FFMPEG  : push signal
+11-03 17:48:06.033 26030 26253 E FFMPEG  : 获取音频流 1
+11-03 17:48:06.033 26030 26253 E FFMPEG  : push lock
+11-03 17:48:06.033 26030 26253 E FFMPEG  : size = -362901104 6
+11-03 17:48:06.033 26030 26253 E FFMPEG  : push signal
+11-03 17:48:06.033 26030 26253 E FFMPEG  : 获取音频流 1
+11-03 17:48:06.033 26030 26253 E FFMPEG  : push lock
+11-03 17:48:06.033 26030 26253 E FFMPEG  : size = -362901104 7
+11-03 17:48:06.034 26030 26253 E FFMPEG  : push signal
+11-03 17:48:06.034 26030 26253 E FFMPEG  : 获取到的是视频流 0
+11-03 17:48:06.034 26030 26253 E FFMPEG  : push lock
+11-03 17:48:06.034 26030 26253 E FFMPEG  : size = -866829168 25
+11-03 17:48:06.034 26030 26253 E FFMPEG  : push signal
+11-03 17:48:06.035 26030 26253 E FFMPEG  : 获取到的是视频流 0
+11-03 17:48:06.035 26030 26253 E FFMPEG  : push lock
+11-03 17:48:06.035 26030 26253 E FFMPEG  : size = -866829168 26
+11-03 17:48:06.035 26030 26253 E FFMPEG  : push signal
+11-03 17:48:06.111  2195  2195 E HwModemCapability: isCapabilitySupport java.lang.StringIndexOutOfBoundsException: length=7; index=7
+11-03 17:48:06.119  1364  1710 E HwModemCapability: isCapabilitySupport java.lang.StringIndexOutOfBoundsException: length=7; index=7
+11-03 17:48:06.170 26030 26253 E FFMPEG  : 获取到的是视频流 0
+11-03 17:48:06.170 26030 26253 E FFMPEG  : push lock
+11-03 17:48:06.170 26030 26253 E FFMPEG  : size = -866829168 27
+11-03 17:48:06.170 26030 26253 E FFMPEG  : push signal
+11-03 17:48:06.170 26030 26253 E FFMPEG  : 获取到的是视频流 0
+11-03 17:48:06.170 26030 26253 E FFMPEG  : push lock
+11-03 17:48:06.170 26030 26253 E FFMPEG  : size = -866829168 28
+11-03 17:48:06.170 26030 26253 E FFMPEG  : push signal
+11-03 17:48:06.171 26030 26253 E FFMPEG  : 获取音频流 1
+11-03 17:48:06.171 26030 26253 E FFMPEG  : push lock
+11-03 17:48:06.171 26030 26253 E FFMPEG  : size = -362901104 8
+11-03 17:48:06.171 26030 26253 E FFMPEG  : push signal
+11-03 17:48:06.171 26030 26253 E FFMPEG  : 获取音频流 1
+11-03 17:48:06.171 26030 26253 E FFMPEG  : push lock
+11-03 17:48:06.171 26030 26253 E FFMPEG  : size = -362901104 9
+11-03 17:48:06.171 26030 26253 E FFMPEG  : push signal
+11-03 17:48:06.171 26030 26253 E FFMPEG  : 获取音频流 1
+11-03 17:48:06.171 26030 26253 E FFMPEG  : push lock
+11-03 17:48:06.171 26030 26253 E FFMPEG  : size = -362901104 10
+11-03 17:48:06.171 26030 26253 E FFMPEG  : push signal
+11-03 17:48:06.171 26030 26253 E FFMPEG  : 获取音频流 1
+11-03 17:48:06.171 26030 26253 E FFMPEG  : push lock
+11-03 17:48:06.171 26030 26253 E FFMPEG  : size = -362901104 11
+11-03 17:48:06.171 26030 26253 E FFMPEG  : push signal
+11-03 17:48:06.171 26030 26253 E FFMPEG  : 获取音频流 1
+11-03 17:48:06.171 26030 26253 E FFMPEG  : push lock
+11-03 17:48:06.171 26030 26253 E FFMPEG  : size = -362901104 12
+11-03 17:48:06.171 26030 26253 E FFMPEG  : push signal
+11-03 17:48:06.172 26030 26253 E FFMPEG  : 获取音频流 1
+11-03 17:48:06.172 26030 26253 E FFMPEG  : push lock
+11-03 17:48:06.172 26030 26253 E FFMPEG  : size = -362901104 13
+11-03 17:48:06.172 26030 26253 E FFMPEG  : push signal
+11-03 17:48:06.172 26030 26253 E FFMPEG  : 获取音频流 1
+11-03 17:48:06.172 26030 26253 E FFMPEG  : push lock
+11-03 17:48:06.172 26030 26253 E FFMPEG  : size = -362901104 14
+11-03 17:48:06.172 26030 26253 E FFMPEG  : push signal
+11-03 17:48:06.172 26030 26253 E FFMPEG  : 获取音频流 1
+11-03 17:48:06.172 26030 26253 E FFMPEG  : push lock
+11-03 17:48:06.172 26030 26253 E FFMPEG  : size = -362901104 15
+11-03 17:48:06.172 26030 26253 E FFMPEG  : push signal
+11-03 17:48:06.305 26030 26253 E FFMPEG  : 获取到的是视频流 0
+11-03 17:48:06.305 26030 26253 E FFMPEG  : push lock
+11-03 17:48:06.305 26030 26253 E FFMPEG  : size = -866829168 29
+11-03 17:48:06.305 26030 26253 E FFMPEG  : push signal
+11-03 17:48:06.305 26030 26253 E FFMPEG  : 获取到的是视频流 0
+11-03 17:48:06.305 26030 26253 E FFMPEG  : push lock
+11-03 17:48:06.305 26030 26253 E FFMPEG  : size = -866829168 30
+11-03 17:48:06.305 26030 26253 E FFMPEG  : push signal
+11-03 17:48:06.305 26030 26253 E FFMPEG  : 获取到的是视频流 0
+11-03 17:48:06.305 26030 26253 E FFMPEG  : push lock
+11-03 17:48:06.305 26030 26253 E FFMPEG  : size = -866829168 31
+11-03 17:48:06.305 26030 26253 E FFMPEG  : push signal
+11-03 17:48:06.351  1364 26261 W ActivityTaskManager:   finishTopCrashedActivityLocked Force finishing activity com.example.androidmkdemo/.MainActivity
+11-03 17:48:06.351  1364 26262 I DropBoxManagerService: add tag=data_app_native_crash isTagEnabled=true flags=0x2
+11-03 17:48:06.351   885   885 E /system/bin/tombstoned: Tombstone written to: /data/tombstones/tombstone_01
+11-03 17:48:06.351  1364 26261 V ActivityTaskManager: positionChild stackId=0 to top.
+11-03 17:48:06.352  1364 26261 W HwActivityTaskManagerServiceEx: setResumedActivityUncheckLocked start call, from: ActivityRecord{2b277ad u0 com.example.androidmkdemo/.MainActivity t822 f}, to: ActivityRecord{7162dad u0 com.huawei.android.launcher/.unihome.UniHomeLauncher t1}
+11-03 17:48:06.352  1364 26261 W HwActivityTaskManagerServiceEx: appSwitch from: com.example.androidmkdemo to: com.huawei.android.launcher
+11-03 17:48:06.354  1364 26261 D ZrHung.AppEyeFocusWindow: FocusWindowErrorScene CheckFreezeScreen
+11-03 17:48:06.355  2041 23504 D AssistantService-1011301: registerHwActivityNotifier call fromPackage:com.example.androidmkdemo, toPackage:com.huawei.android.launcher
+11-03 17:48:06.357  1364  1491 D HwGameAssistantController: UPDATE: mCurFgPkg=com.huawei.android.launcher, mCurFgPid=28709, mCurIsGame=false
+11-03 17:48:06.358  2041 10431 D AssistantService-1011301: handleMessage app switch fromPackage:com.example.androidmkdemo, toPackage:com.huawei.android.launcher
+11-03 17:48:06.359  2041 10431 D AssistantService-1011301: package:com.example.androidmkdemo inAppAssistant:false
+11-03 17:48:06.363  2041 10431 D AssistantService-1011301: package:com.huawei.android.launcher inAppAssistant:false
+11-03 17:48:06.374  2169  3447 E AwareLog: SPKSchedFeature: Uid has been sent, ignore.
+11-03 17:48:06.375  1364  1480 W ActivityManager: Skipping native crash dialog of ProcessRecord{8107242 26030:com.example.androidmkdemo/u0a216}
+11-03 17:48:06.376   884  3110 E iMonitor: FaultDetect: DumptoolPrintf return.
+11-03 17:48:06.376   884  3111 E iMonitor: FaultDetect: FaultEngineTracePrintf return.
+11-03 17:48:06.377   884  3110 E iMonitor: FaultDetect: DumptoolPrintf return.
+11-03 17:48:06.379  2169  2347 D ScenarioService: front pkg : com.huawei.android.launcher launcher: true
+11-03 17:48:06.379  2169  2347 I AppManager: handleAppFrontEvent: com.huawei.android.launcher
+11-03 17:48:06.379  2169  2764 I PG_ash  : front pkg : com.huawei.android.launcher launcher: true
+11-03 17:48:06.379  2169  2347 I AppsUsage: scnOff:false FgAPP:com.huawei.android.launcher BgAPP:com.example.androidmkdemo
+11-03 17:48:06.379  2169  2764 I PG_ash  : keep window pkg front laucher, multiWin: null , pipWim:null
+11-03 17:48:06.379  2169  2910 I PGServer: report state:10000 event type:2 pid:0 uid:0 pkg:com.example.androidmkdemo to pid: 2041
+11-03 17:48:06.379  1364  2112 V WindowManager: notifyAppResumed: wasStopped=true AppWindowToken{794f7a9 token=Token{b67f30 ActivityRecord{7162dad u0 com.huawei.android.launcher/.unihome.UniHomeLauncher t1}}}
+11-03 17:48:06.379  2169  2910 I PGServer: report state:10000 event type:2 pid:0 uid:0 pkg:com.example.androidmkdemo to pid: 2169
+11-03 17:48:06.379  2169  2910 I SceneReceiver: state type: 10000 eventType:2 pid:0 uid:0 pkg:com.example.androidmkdemo
+11-03 17:48:06.385  2169  2910 I PGServer: report state:10000 event type:2 pid:0 uid:0 pkg:com.example.androidmkdemo to pid: 1364
+11-03 17:48:06.386  2169  2910 I PGServer: report state:10010 event type:1 pid:0 uid:0 pkg:com.huawei.android.launcher to pid: 2041
+11-03 17:48:06.386  2041 23504 D HicomMonitor: notifyForegroundAppChanged: pkg:com.huawei.android.launcher
+11-03 17:48:06.386  2041 23504 D Hicom_EmcomManagerService: onForegroundAppChanged, pkgName:com.huawei.android.launcher
+11-03 17:48:06.386  2041 23504 D SmartcareProc: onForegroundAppChanged, pkgName:com.huawei.android.launcher
+11-03 17:48:06.387  2041 23504 W FIControl: Failed to find configuration for com.huawei.android.launcher
+11-03 17:48:06.387  2041 23504 D Hicom_SysEnvMonitor: onForegroundAppChanged, pkgName: com.huawei.android.launcher
+11-03 17:48:06.389  1364  1490 W SecurityProfileService: Activity life state callback extras get package null!
+11-03 17:48:06.390  1364  1710 I HwWindowManagerServiceEx: set app win exit info, bundle = Bundle[{isLandscape=false, launcherPkgName=com.huawei.android.launcher, iconWidth=170, pivotX=666.0, pivotY=1176.0, iconHeight=170, flag=0}], iconBitmap = android.graphics.Bitmap@a7d9960
+11-03 17:48:06.390  2041  2778 D Hicom_PolicyCenterService: policencenterservice receive handleMessage: 88
+11-03 17:48:06.390  2041  2778 D Hicom_PolicyCenterService: handleForegroundAppChanged new foreground app 10061
+11-03 17:48:06.390  2041  2778 D Hicom_AppLifeCycleManager: sAppAllSocketClosed NOT contain: 10216
+11-03 17:48:06.390  2041  2778 D Hicom_PolicyCenterService: mCurrentForegroundUid is not policy exist
+11-03 17:48:06.392  2041  2778 D Hicom_MpFlowDecisionSystem: handleForegroundAppChanged try start MPFlow for cur app: com.huawei.android.launcher, uid:10061
+11-03 17:48:06.392  2041  2778 E Hicom_MpFlowDecisionSystem: getMultipathFlowByPkgName. multipathPolicy is illegal
+11-03 17:48:06.392  2041  2778 E Hicom_MpFlowDecisionSystem: startMpFlow. multipathFlow is illegal
+11-03 17:48:06.392  2041  4195 D DollieActivityManagerAdapter: [Paused] pid:26030 uid:10216 ComponentInfo{com.example.androidmkdemo/com.example.androidmkdemo.MainActivity} uidState:2
+11-03 17:48:06.392  1364  1490 I HwAudioServiceEx: ComponentInfo : className = com.example.androidmkdemo.MainActivity, flag=onPause, isHomeActivity=, isTop=false
+11-03 17:48:06.394 29479 16685 I AppLifeChangeSensor: CAWARENESS: activityPaused componentName = ComponentInfo{com.example.androidmkdemo/com.example.androidmkdemo.MainActivity}
+11-03 17:48:06.405  7577  7577 I HiBoard_10.0.6.300_Workspace: onWindowVisibilityChanged：0 isOverlayClosed:true
+11-03 17:48:06.406  1364  1482 W         : Failed to UpdateQosForCgroupInner, tid=0, policy=10
+11-03 17:48:06.417   852   878 E AwareLog: iawared: change_property_content open /proc/26030/task/26127/static_vip fail errno(2)!
+11-03 17:48:06.420   884  1005 D ScreemCommon: <LOGMGR> <SceneStart> [Entry]
+11-03 17:48:06.420   884  1005 D ScreemCommon: <LOGMGR> <SceneStart> [new scene start -1762350559]
+11-03 17:48:06.427 28709 28709 I HwLauncher: Model loadWidgetsAfterUserUnlockIfNeeded, sLoadWidgetOnResume is false!
+11-03 17:48:06.434  1364  1490 W SecurityProfileService: Activity life state callback extras get package null!
+11-03 17:48:06.436  1364  1490 I HwAudioServiceEx: ComponentInfo : className = com.huawei.android.launcher.unihome.UniHomeLauncher, flag=onResume, isHomeActivity=, isTop=true
+11-03 17:48:06.436 29479 16685 I AppLifeChangeSensor: CAWARENESS: activityResumed componentName = ComponentInfo{com.huawei.android.launcher/com.huawei.android.launcher.unihome.UniHomeLauncher}
+11-03 17:48:06.437  2101 18350 I OPCollectLog: AppChangeImpl:call onAppChange.
+11-03 17:48:06.438  2101  2522 I OPCollectLog: HwForegroundAppAction:handleMessage 
+11-03 17:48:06.438  2101  2522 D OPCollectLog: HwForegroundAppAction:FG executeWithArgs
+11-03 17:48:06.438  2101  2522 I OPCollectLog: OPCollectUtils:ODMF Api Version:2.14.1
+11-03 17:48:06.438  1364  1745 I PackageManager: getInstalledPackages cost 2 ms, flags: 786432, userId: 0, callingUid: 1000, callingPid: 1364
+11-03 17:48:06.438  2101  2522 I OPCollectLog: Action:HwForegroundAppAction executed successfully
+11-03 17:48:06.438  2101  2522 D OPCollectLog: OdmfCollectScheduler:handleMessage msg: 4
+11-03 17:48:06.438  2101  2522 I OPCollectLog: OdmfHelper:opcollectCache 1
+11-03 17:48:06.438  2101  2522 I OPCollectLog: OdmfHelper:opcollectCache curTime: 4546365964, interval: 12150
+11-03 17:48:06.439 29479 29543 I FenceManager: CAWARENESS: isSatisfyFenceTime() topKey : com.huawei.recsys_1:1;11,1,1~{"column0":"com.huawei.android.launcher"} type : 11 startTime : 20H0 endTime : 22H0
+11-03 17:48:06.439 29479 29543 W FenceManager: CAWARENESS: isSatisfyFenceTime() do not satisfy fence trigger time topKey : com.huawei.recsys_1:1;11,1,1~{"column0":"com.huawei.android.launcher"}
+11-03 17:48:06.439 29479 29543 I FenceManager: CAWARENESS: doNotifyListKeyChange() topKey : com.huawei.recsys_1:1;11,1,1~{"column0":"com.huawei.android.launcher"} isSatisfy time condition: false
+11-03 17:48:06.439  2041  4195 D DollieActivityManagerAdapter: [Resumed] bg:true pid:28709 uid:10061 ComponentInfo{com.huawei.android.launcher/com.huawei.android.launcher.unihome.UniHomeLauncher}
+11-03 17:48:06.439  2169  2910 I PGServer: report state:10010 event type:1 pid:0 uid:0 pkg:com.huawei.android.launcher to pid: 2169
+11-03 17:48:06.439  2041  4195 E DollieAdapterService: notifyActivityState pkg:com.huawei.android.launcher/com.huawei.android.launcher.unihome.UniHomeLauncher state:2 fg:true mUid:10061
+11-03 17:48:06.439  2169  2910 I SceneReceiver: state type: 10010 eventType:1 pid:0 uid:0 pkg:com.huawei.android.launcher
+11-03 17:48:06.440  2041  2300 I UidCloseNrStateMachine: enter uidStateChanged, ForeGrountApp = com.huawei.android.launcher, mIsCallOn = false, mIsUsbPlugged = true
+11-03 17:48:06.441  2169  3446 D HwThermalStateManager: current foreapp pkg : com.huawei.android.launcher
+11-03 17:48:06.441  1364  1503 I BootReceiver: Copying /data/tombstones/tombstone_01 to DropBox (SYSTEM_TOMBSTONE)
+11-03 17:48:06.441  1364  1503 I DropBoxManagerService: add tag=SYSTEM_TOMBSTONE isTagEnabled=true flags=0x2
+11-03 17:48:06.442  2169  3449 D ThermalTrace_ThermalRaise: current pkg:com.example.androidmkdemo
+11-03 17:48:06.445 22507 22528 I HiSearch10.0.4.303: [LauncherOverlayService]: LAUNCHER_INTERACTION from launcher and invoke invokeId = -111
+11-03 17:48:06.445 22507 22528 I HiSearch10.0.4.303: [LauncherOverlayService]: isOverlayClosed = true
+11-03 17:48:06.445 22507 22528 I HiSearch10.0.4.303: [LauncherOverlayService]: LAUNCHER_INTERACTION from launcher and invoke, overlay closed, return. 
+11-03 17:48:06.445  2041  2041 D SmartDualCardConfig: getAppType,pkgName=com.huawei.android.launcher,appType=28
+11-03 17:48:06.446  2041  2041 D SmartDualCardSM: onUidStateUpdate isSkip,uid=10061,pkgName=com.huawei.android.launcher,pkgNameByComponentName=com.huawei.android.launcher
+11-03 17:48:06.446  2169  2910 I PGServer: report state:10010 event type:1 pid:0 uid:0 pkg:com.huawei.android.launcher to pid: 1364
+11-03 17:48:06.448  2169  3726 I PGServer: checkPkgType. calling pkg: android
+11-03 17:48:06.451  1364  2112 V HwPhoneWindowManager: updateSystemUiColorLw window=Window{ce06ddd u0 com.huawei.android.launcher/com.huawei.android.launcher.unihome.UniHomeLauncher},EmuiStyle=-1,StatusBarColor=0x0,NavigationBarColor=0x0, mForceNotchStatusBar=false
+11-03 17:48:06.451  1364  2112 D ZrHung.AppEyeFocusWindow: FocusWindowErrorScene cancelCheckFreezeScreen
+11-03 17:48:06.451  1364  2112 D ZrHung.AppEyeTransparentWindow: TransparentWindow mHungConfigStatus = 0,mHungConfigEnable = 1
+11-03 17:48:06.454 28709 30296 D mali_winsys: EGLint new_window_surface(egl_winsys_display *, void *, EGLSurface, EGLConfig, egl_winsys_surface **, EGLBoolean) returns 0x3000
+11-03 17:48:06.457   589   589 I GRALLOC : getCallingPid=640, shrFd=10,fmt=0x1,intFmt=0x200000001,btStrd=4352,size=10399744,pid=589 
+11-03 17:48:06.457   589   589 I GRALLOC : 	 yuv=2,w=1080,h=2340,Stride u=0 v=0,offset u=0 v=0 
+11-03 17:48:06.457   589   589 I GRALLOC : 	 iova_size=10399744,conUsg=0xb00,proUsg=0xb00,	 strd=1088,[afbc]HdrStrd=1088 PyldStrd=69632 Scrmbl=2,ionhnd = 0 
+11-03 17:48:06.462  7577  7793 D mali_winsys: EGLint new_window_surface(egl_winsys_display *, void *, EGLSurface, EGLConfig, egl_winsys_surface **, EGLBoolean) returns 0x3000
+11-03 17:48:06.466   589   589 I GRALLOC : getCallingPid=640, shrFd=10,fmt=0x1,intFmt=0x200000001,btStrd=4352,size=10399744,pid=589 
+11-03 17:48:06.466   589   589 I GRALLOC : 	 yuv=2,w=1080,h=2340,Stride u=0 v=0,offset u=0 v=0 
+11-03 17:48:06.466   589   589 I GRALLOC : 	 iova_size=10399744,conUsg=0xb00,proUsg=0xb00,	 strd=1088,[afbc]HdrStrd=1088 PyldStrd=69632 Scrmbl=2,ionhnd = 0 
+11-03 17:48:06.467   640  1383 E BufferQueueProducer: [GestureNavLeft#0]:1338: disconnect: not connected (req=1)
+11-03 17:48:06.468  1364  1744 W libEGL  : EGLNativeWindowType 0x70121fd4d0 disconnect failed
+11-03 17:48:06.468   589 14866 I GRALLOC : getCallingPid=640, shrFd=10,fmt=0x1,intFmt=0x200000001,btStrd=4352,size=10399744,pid=589 
+11-03 17:48:06.468   589 14866 I GRALLOC : 	 yuv=2,w=1080,h=2340,Stride u=0 v=0,offset u=0 v=0 
+11-03 17:48:06.468   589 14866 I GRALLOC : 	 iova_size=10399744,conUsg=0xb00,proUsg=0xb00,	 strd=1088,[afbc]HdrStrd=1088 PyldStrd=69632 Scrmbl=2,ionhnd = 0 
+11-03 17:48:06.473   589   589 I GRALLOC : getCallingPid=640, shrFd=10,fmt=0x1,intFmt=0x200000001,btStrd=4352,size=10399744,pid=589 
+11-03 17:48:06.473   589   589 I GRALLOC : 	 yuv=2,w=1080,h=2340,Stride u=0 v=0,offset u=0 v=0 
+11-03 17:48:06.473   589   589 I GRALLOC : 	 iova_size=10399744,conUsg=0xb00,proUsg=0xb00,	 strd=1088,[afbc]HdrStrd=1088 PyldStrd=69632 Scrmbl=2,ionhnd = 0 
+11-03 17:48:06.476  2101  2522 I OPCollectLog: OdmfHelper:isCharging: true
+11-03 17:48:06.478  2101  2115 W m.huawei.hivie: Reducing the number of considered missed Gc histogram windows from 196 to 100
+11-03 17:48:06.479 28709 28709 I HwViewRootImpl: removeInvalidNode all the node in jank list is out of time
+11-03 17:48:06.480  1364  1483 I WindowManager: New wallpaper target: Window{ce06ddd u0 com.huawei.android.launcher/com.huawei.android.launcher.unihome.UniHomeLauncher} prevTarget: null
+11-03 17:48:06.482  2041 23504 I BoosterSwitchP: notifyUidState do nothing
+11-03 17:48:06.482  2041 23504 I DeepNoDisturbP: notifyUidState
+11-03 17:48:06.482  2041 23504 I BrowserChrP: notifyUidState
+11-03 17:48:06.483  2075  2552 E HSC_SEC_BG: AiProtectionUtils:AI is not supported, current platform is:kirin710
+11-03 17:48:06.485  7577  7577 I HwViewRootImpl: removeInvalidNode all the node in jank list is out of time
+11-03 17:48:06.485 31965 31965 D HWUCD_GLWallpaper: onVisibilityChanged isPreview : false
+11-03 17:48:06.485 31965 31965 D HWUCD_GLWallpaper: onVisibilityChanged true
+11-03 17:48:06.485   589 14866 I GRALLOC : getCallingPid=640, shrFd=10,fmt=0x1,intFmt=0x200000001,btStrd=4352,size=10399744,pid=589 
+11-03 17:48:06.485   589 14866 I GRALLOC : 	 yuv=2,w=1080,h=2340,Stride u=0 v=0,offset u=0 v=0 
+11-03 17:48:06.485   589 14866 I GRALLOC : 	 iova_size=10399744,conUsg=0xb00,proUsg=0xb00,	 strd=1088,[afbc]HdrStrd=1088 PyldStrd=69632 Scrmbl=2,ionhnd = 0 
+11-03 17:48:06.487  1364  2755 W InputMethodManagerService: Got RemoteException sending setActive(false) notification to pid 26030 uid 10216
+11-03 17:48:06.487 31965 31986 D mali_winsys: EGLint new_window_surface(egl_winsys_display *, void *, EGLSurface, EGLConfig, egl_winsys_surface **, EGLBoolean) returns 0x3000
+11-03 17:48:06.488 28709  3130 D HwRecentsTaskUtils: refreshToCache
+11-03 17:48:06.488 28709  3130 D HwRecentsTaskUtils: searchFromDate
+11-03 17:48:06.488 31965 31986 D HWUCD_GLSurfaceView: onSurfaceChanged 1080, 2340
+11-03 17:48:06.488 31965 31986 D HWUCD_GLSurfaceView: onDrawFrame
+11-03 17:48:06.488  1364  1622 D HwAppTransitionImpl: windowAnimations = 0 dose not come from system, not to override it.
+11-03 17:48:06.488  1364  1622 E WindowManager: win=Window{76e74bd u0 GestureNavLeft} destroySurfaces: appStopped=true win.mWindowRemovalAllowed=false win.mRemoveOnExit=false
+11-03 17:48:06.491  1364  2112 I HwNetworkPolicy: onTransact, code = 203
+11-03 17:48:06.491  2075  2692 I HwNetworkPolicyManager: getHwUidPolicy uid = 10061 policy = 0
+11-03 17:48:06.492   589   589 I GRALLOC : getCallingPid=640, shrFd=10,fmt=0x1,intFmt=0x200000001,btStrd=4352,size=10399744,pid=589 
+11-03 17:48:06.492   589   589 I GRALLOC : 	 yuv=2,w=1080,h=2340,Stride u=0 v=0,offset u=0 v=0 
+11-03 17:48:06.492   589   589 I GRALLOC : 	 iova_size=10399744,conUsg=0xb00,proUsg=0xb00,	 strd=1088,[afbc]HdrStrd=1088 PyldStrd=69632 Scrmbl=2,ionhnd = 0 
+11-03 17:48:06.494  7577  7577 I HiBoard_10.0.6.300_LauncherOverlayService: onCreate
+11-03 17:48:06.494  1364  2230 V ActivityManager: Successfully start provider ContentProviderRecord{6535819 u0 com.android.systemui/.recents.HwRecentsLockProdiver} launchingApp=null caller pid= 28709
+11-03 17:48:06.495  7577  7577 I HiBoard_10.0.6.300_Utils: isLauncherSupportHiBoardRtl: isSupport: true
+11-03 17:48:06.495  7577  7577 I HiBoard_10.0.6.300_WorkspaceManager: initServiceOnCreate mIsWindowAttached true, mIsLauncherSupportHiBoardRtl: true
+11-03 17:48:06.495  7577  7577 I HiBoard_10.0.6.300_Utils: updateViewWidth()
+11-03 17:48:06.496  7577  7577 I HiBoard_10.0.6.300_Utils: getScreenHeightWidthInch screenHeight =2340screenWidth =1080screenInch =6.340918756517228
+11-03 17:48:06.496  7577  7577 I HiBoard_10.0.6.300_Utils: getScreenInch screenInch=6.340918756517228
+11-03 17:48:06.496  7577  7577 I HiBoard_10.0.6.300_Utils: initScreenType: screenType = 0
+11-03 17:48:06.497  7577  7577 I HiBoard_10.0.6.300_LauncherOverlayService: onBind
+11-03 17:48:06.497   589 14866 I GRALLOC : getCallingPid=640, shrFd=10,fmt=0x2,intFmt=0x200000002,btStrd=4352,size=10399744,pid=589 
+11-03 17:48:06.497   589 14866 I GRALLOC : 	 yuv=2,w=1080,h=2340,Stride u=0 v=0,offset u=0 v=0 
+11-03 17:48:06.497   589 14866 I GRALLOC : 	 iova_size=10399744,conUsg=0xb00,proUsg=0xb00,	 strd=1088,[afbc]HdrStrd=1088 PyldStrd=69632 Scrmbl=2,ionhnd = 0 
+11-03 17:48:06.498 26176 26241 I HiDecision: OdmfCollectScheduler: handleMessage msg: 6
+11-03 17:48:06.500 29479 29533 E FindCurApp: CAWARENESS: appInWhiteList illegal parameters
+11-03 17:48:06.502  1364  1483 I HwWindowManagerServiceEx: closing apps count = 1
+11-03 17:48:06.501 29479 29533 E FindCurApp: CAWARENESS: appInWhiteList illegal parameters
+11-03 17:48:06.502  2101  2522 I OPCollectLog: OdmfHelper:insert database success 
+11-03 17:48:06.503  2101  2522 I OPCollectLog: OdmfHelper:opcollectCache size: 1
+11-03 17:48:06.503  2101  2522 I OPCollectLog: OdmfHelper:opcollectCache lastTime: 4546366029
+11-03 17:48:06.503  1364  1483 D HwWindowManagerServiceEx: is app exit to launcher info: transit = 26, app = AppWindowToken{e8ed130 token=Token{873e73 ActivityRecord{2b277ad u0 com.example.androidmkdemo/.MainActivity t822}}}, window = Window{da4c861 u0 com.example.androidmkdemo/com.example.androidmkdemo.MainActivity}, mClosingApps = {AppWindowToken{e8ed130 token=Token{873e73 ActivityRecord{2b277ad u0 com.example.androidmkdemo/.MainActivity t822}}}}, topOpeningApp = AppWindowToken{794f7a9 token=Token{b67f30 ActivityRecord{7162dad u0 com.huawei.android.launcher/.unihome.UniHomeLauncher t1}}}, mExitIconBitmap = android.graphics.Bitmap@a7d9960, mExitIconHeight = 170, mExitIconWidth = 170
+11-03 17:48:06.503  1364  1483 E WindowManager: icon is null!!
+11-03 17:48:06.503   640   722 E BufferQueueProducer: [GestureNavRight#0]:1338: disconnect: not connected (req=1)
+11-03 17:48:06.504  1364  1744 W libEGL  : EGLNativeWindowType 0x6fa63a19d0 disconnect failed
+11-03 17:48:06.504  1364  1483 D HwWindowManagerServiceEx: is app exit to launcher info: transit = 26, app = AppWindowToken{794f7a9 token=Token{b67f30 ActivityRecord{7162dad u0 com.huawei.android.launcher/.unihome.UniHomeLauncher t1}}}, window = Window{ce06ddd u0 com.huawei.android.launcher/com.huawei.android.launcher.unihome.UniHomeLauncher}, mClosingApps = {AppWindowToken{e8ed130 token=Token{873e73 ActivityRecord{2b277ad u0 com.example.androidmkdemo/.MainActivity t822}}}}, topOpeningApp = AppWindowToken{794f7a9 token=Token{b67f30 ActivityRecord{7162dad u0 com.huawei.android.launcher/.unihome.UniHomeLauncher t1}}}, mExitIconBitmap = android.graphics.Bitmap@a7d9960, mExitIconHeight = 170, mExitIconWidth = 170
+11-03 17:48:06.504  1364  1483 E WindowManager: icon is null!!
+11-03 17:48:06.505 28709 28709 W HwLauncher: FolderIcondrawSelectedLabel bitmap null
+11-03 17:48:06.505  1364  1483 D HwAppTransitionImpl: windowAnimations = 0 dose not come from system, not to override it.
+11-03 17:48:06.505 28709 28709 I chatty  : uid=10061(com.huawei.android.launcher) identical 1 line
+11-03 17:48:06.506 28709 28709 W HwLauncher: FolderIcondrawSelectedLabel bitmap null
+11-03 17:48:06.509 30439 30439 I HuaweiIME: SysInfo.getSysParam: orientation=1||config d=3.0,w=1080,h=2259||metrics d=3.0,w=1080,h=2259||sdk=29,bar_h=81||appScale=3.3,sysScale=3.0||isMultiWin=false,isPadMode=false, boardw=1080, boardH=705, candH=130, boardL=0, boardR=1080, ver=8.2.8.50, realW=1080, realH=2340, isInLargeWinMode=false
+11-03 17:48:06.510   589 14866 I GRALLOC : getCallingPid=640, shrFd=10,fmt=0x1,intFmt=0x1,btStrd=3072,size=5038080,pid=589 
+11-03 17:48:06.510   589 14866 I GRALLOC : 	 yuv=2,w=756,h=1638,Stride u=0 v=0,offset u=0 v=0 
+11-03 17:48:06.510   589 14866 I GRALLOC : 	 iova_size=5038080,conUsg=0x306,proUsg=0x366,	 strd=768,[afbc]HdrStrd=0 PyldStrd=0 Scrmbl=0,ionhnd = 0 
+11-03 17:48:06.511 30439 30439 I HuaweiIME: isPortrait-adjustOffset-r: 5
+11-03 17:48:06.517  7577  7859 I HiBoard_10.0.6.300_LauncherOverlayService: windowAttached
+11-03 17:48:06.517  7577  7859 I HiBoard_10.0.6.300_WorkspaceManager: overlayStatusChanged state 1
+11-03 17:48:06.518 28709 28709 E HwLauncher: NegativeScreenClientCallBack onServiceStateChanged overlayAttached = true mServiceState = 0
+11-03 17:48:06.520  1364  1625 W InputDispatcher: channel 'f426fc4 Toast (server)' ~ Consumer closed input channel or an error occurred.  events=0x9
+11-03 17:48:06.520  1364  1625 E InputDispatcher: channel 'f426fc4 Toast (server)' ~ Channel is unrecoverably broken and will be disposed!
+11-03 17:48:06.525  1364  1364 D AudioManager: dispatching onPlaybackConfigChanged()
+11-03 17:48:06.526 27015 28431 D AudioManager: dispatching onPlaybackConfigChanged()
+11-03 17:48:06.526   571   571 I Zygote  : Process 26030 exited due to signal 11 (Segmentation fault)
+11-03 17:48:06.528  2169  2347 I PGAudioState: AUDIO_RELEASE_TRACK, 218
+11-03 17:48:06.528  2169  2347 D PGAudioState: remove from mTrackMap, 218
+11-03 17:48:06.531  1364  1480 D HwPhoneWindowManager: Transact:setSystemUIColor to status bar service
+11-03 17:48:06.532  1808  3073 I HwCommandQueue: updateBarBgColor
+11-03 17:48:06.532  1808  3073 D HwCommandQueue: CommandQueue, setBarBackgroundColor
+11-03 17:48:06.532  1364  1480 I StatusBarDisable: setFlags what=0 which=1 pkg=Window{ce06ddd u0 com.huawei.android.launcher/com.huawei.android.launcher.unihome.UniHomeLauncher}
+11-03 17:48:06.532   636   776 I AudioMixer: Pid:636 deleteTrackName(218)
+11-03 17:48:06.535  1364  1622 D HwAppTransitionImpl: windowAnimations = 0 dose not come from system, not to override it.
+11-03 17:48:06.536  1364  1622 E WindowManager: win=Window{c5fae0a u0 GestureNavRight} destroySurfaces: appStopped=true win.mWindowRemovalAllowed=false win.mRemoveOnExit=false
+11-03 17:48:06.542  1364  2230 V WindowManager: removeAppToken: AppWindowToken{e8ed130 token=Token{873e73 ActivityRecord{2b277ad u0 com.example.androidmkdemo/.MainActivity t822}}} delayed=false Callers=com.android.server.wm.DisplayContent.removeAppToken:1204 com.android.server.wm.ActivityRecord.removeWindowContainer:1298 com.android.server.wm.ActivityStack.removeActivityFromHistoryLocked:4927 com.android.server.wm.ActivityStack.destroyActivityLocked:5143 
+11-03 17:48:06.542  1364  2230 V WindowManager: removeIfPossible: Window{da4c861 u0 com.example.androidmkdemo/com.example.androidmkdemo.MainActivity} callers=com.android.server.wm.WindowState.removeIfPossible:2260 com.android.server.wm.WindowToken.removeAllWindowsIfPossible:162 com.android.server.wm.AppWindowToken.removeIfPossible:988 com.android.server.wm.AppWindowToken.onRemovedFromDisplay:1055 com.android.server.wm.DisplayContent.removeAppToken:1204 
+11-03 17:48:06.546  1364  2230 V WindowManager: postWindowRemoveCleanupLocked: Window{da4c861 u0 com.example.androidmkdemo/com.example.androidmkdemo.MainActivity}
+11-03 17:48:06.546  1364  2230 V WindowManager: Removing Window{da4c861 u0 com.example.androidmkdemo/com.example.androidmkdemo.MainActivity} from AppWindowToken{e8ed130 token=Token{873e73 ActivityRecord{2b277ad u0 com.example.androidmkdemo/.MainActivity t822}}}
+11-03 17:48:06.547  1364  1710 E InputDispatcher: Window handle Window{da4c861 u0 com.example.androidmkdemo/com.example.androidmkdemo.MainActivity} has no registered input channel
+11-03 17:48:06.555  1364  2230 V ActivityTaskManager: removeChild: detaching stackId=509 from displayId=0
+11-03 17:48:06.556  1364  1625 I WindowManager: WINDOW DIED Window{f426fc4 u0 Toast}
+11-03 17:48:06.556  1364  1625 V WindowManager: removeIfPossible: Window{f426fc4 u0 Toast} callers=com.android.server.wm.WindowState.removeIfPossible:2260 com.android.server.wm.InputManagerCallback.notifyInputChannelBroken:60 com.android.server.input.InputManagerService.notifyInputChannelBroken:1881 <bottom of call stack> <bottom of call stack> 
+11-03 17:48:06.556  1364  1625 W InputDispatcher: Attempted to unregister already unregistered input channel 'f426fc4 Toast (server)'
+11-03 17:48:06.558  1364  1625 V WindowManager: Not removing Window{f426fc4 u0 Toast EXITING} due to exit animation 
+11-03 17:48:06.561  1364  1429 I WindowManager: WIN DEATH: Window{f426fc4 u0 Toast EXITING}
+11-03 17:48:06.562  1364  1429 V WindowManager: removeIfPossible: Window{f426fc4 u0 Toast EXITING} callers=com.android.server.wm.WindowState.access$300:262 com.android.server.wm.WindowState$DeathRecipient.binderDied:2927 android.os.BinderProxy.sendDeathNotice:636 <bottom of call stack> <bottom of call stack> 
+11-03 17:48:06.562  1364  1429 V WindowManager: Not removing Window{f426fc4 u0 Toast EXITING} due to exit animation 
+11-03 17:48:06.563   884  1005 D ScreemCommon: <LOGMGR> <complete_pm> [Entry]
+11-03 17:48:06.566  1364  1811 W WindowManager: Failed looking up window callers=com.android.server.wm.WindowManagerService.windowForClientLocked:5865 com.android.server.wm.WindowState$DeathRecipient.binderDied:2910 android.os.BinderProxy.sendDeathNotice:636 
+11-03 17:48:06.566  1364  1811 I WindowManager: WIN DEATH: null
+11-03 17:48:06.572  7577  7577 I HiBoard_10.0.6.300_WorkspaceManager: handleMessage ATTACHWINDOW
+11-03 17:48:06.572  7577  7577 I HiBoard_10.0.6.300_WorkspaceManager: windowAttached mIsWindowAttached true
+11-03 17:48:06.572  7577  7577 I HiBoard_10.0.6.300_WorkspaceManager: windowAttached token is the same, no need init
+11-03 17:48:06.573  1364  9045 I HwAudioService: now type = -1,reportForegroundAppType = 28,pkg = null,systemload = -1mVoipOptimizeInGameModetrue
+11-03 17:48:06.574   639   639 W lowmemorykiller: Failed to open /proc/26030/oom_score_adj; errno=2: process 26030 might have been killed
+11-03 17:48:06.575  1364 10337 I ActivityManager: Process com.example.androidmkdemo (pid 26030) has died: prcp TRNB
+11-03 17:48:06.575   636  7779 D SwsHandle: SWS set game flag false
+11-03 17:48:06.575   636  7779 I HuaweiAudioFlinger: karaoke white list size=0
+11-03 17:48:06.575  1364 10337 D ActivityManager: cleanUpApplicationRecord app: ProcessRecord{8107242 26030:com.example.androidmkdemo/u0a216}, app.bad: false, restarting: false, allowRestart: true
+11-03 17:48:06.575  1364  1497 I libprocessgroup: Successfully killed process cgroup uid 10216 pid 26030 in 0ms
+11-03 17:48:06.575   605 16916 I audio_hw_effect: get streamType fail: -2
+11-03 17:48:06.575   605 16916 I audio_hw_primary: update stream types 0
+11-03 17:48:06.575   605 16916 I audio_cust_utils: setparam_list_search:find item game_mode=off
+11-03 17:48:06.575   605 16916 I audio_custom: game mode exit
+11-03 17:48:06.575   605 16916 I dsp_soc : set primary algo bypass 0 succ
+11-03 17:48:06.576  1364  1490 I HwPowerManagerService: appdie release wakelock, pid = 26030, uid = 10216
+11-03 17:48:06.578  2041 11759 E HsmCoreServiceImpl: onTransact in code is: 103
+11-03 17:48:06.579  2041 11759 I MediaProcessHandler: playingUids: 
+11-03 17:48:06.579  2041  2778 D HicomMonitor: notifyAppDied: uid = 10216
+11-03 17:48:06.579  2041  2677 I BoosterSwitchP: notifyUidState do nothing
+11-03 17:48:06.579  2041  2677 I DeepNoDisturbP: notifyUidState
+11-03 17:48:06.579  2041  2677 I BrowserChrP: notifyUidState
+11-03 17:48:06.580  2041  2778 I AppStatisticProc: handleAppDied: pkgName = com.example.androidmkdemo is not apk supported in Smartcare
+11-03 17:48:06.580  2041  2778 D Hicom_SysEnvMonitor: onAppDied, uid:10216
+11-03 17:48:06.580  2041  2778 D Hicom_PolicyCenterService: policencenterservice receive handleMessage: 68
+11-03 17:48:06.580  2041  2778 D Hicom_AppLifeCycleManager: sAppAllSocketClosed rm uid: 10216
+11-03 17:48:06.580  2041  2778 D Hicom_SingleTaskDecisionSystem: AllAppPolicyEmpty(), disable MobileData...
+11-03 17:48:06.580  2041  2778 D Hicom_MobileDataControl: setMobileData Mobile switch closing,mEnableSourceMask:0
+11-03 17:48:06.580  2041  2778 D Hicom_MobileDataControl: stopMobileDataNetwork
+11-03 17:48:06.580  2041  2778 D Hicom_MobileDataControl: has already stopMobileDataNetwork
+11-03 17:48:06.580  2041  2677 E HsmCoreServiceImpl: onTransact in code is: 102
+11-03 17:48:06.580  2041  2677 I MediaProcessHandler: processOp opType: 1, uid: 10216, pid: 26030
+11-03 17:48:06.580  2041  2677 W MediaProcessHandler: remove target not exist, maybe the UI process: uid: 10216, pid: 26030
+11-03 17:48:06.580  2041  2677 I MediaProcessHandler: executedCallBack opType: 1 mMediaStatusObservers.size=0
+11-03 17:48:06.580  2041  4195 D DollieActivityManagerAdapter: [UidGone]  uid:10216
+11-03 17:48:06.580  2041  4195 E DollieAdapterService: notifyActivityState pkg:com.example.androidmkdemo/com.example.androidmkdemo.MainActivity state:20 fg:false mUid:10216
+11-03 17:48:06.580   820  9118 D iTouchService: itouch currentPackageName = com.example.androidmkdemo
+11-03 17:48:06.580   820  9118 D iTouchService: itouch appType=-1 appState=0 gameMode=1
+11-03 17:48:06.580   820  9118 D iTouchService: g_itouch_reader_monitor empty
+11-03 17:48:06.580   820  9118 D iTouchService: g_itouch_reader_monitor Monitor::isReaderMonitorEnable()=0
+11-03 17:48:06.581   820  9118 D iTouchService: itouch getCurrentParmID tempPkg=com.example.xxx
+11-03 17:48:06.581   820  9118 D iTouchService: itouch:app com.example.androidmkdemo is  not game app
+11-03 17:48:06.581   820  9118 D iTouchService: itouch:app com.example.androidmkdemo is  not in StylusPenList
+11-03 17:48:06.581   820  9118 D iTouchService: itouch:styluspen_switch is disable
+11-03 17:48:06.581   820  9118 D iTouchService: itouch:currentAppTypeName =|UNKNOWN|
+11-03 17:48:06.581  2169  2764 I AppManager: remove toast view when pkg dead, pid : 26030
+11-03 17:48:06.581  2041  4195 I HidataAppQoeP: foregroundUidRemove uid: 10216 name: com.example.androidmkdemo
+11-03 17:48:06.581  2041  2300 I HwPacketFilterBypass: handleActivityUidStateChanged uid:10216 -1 foreground:0
+11-03 17:48:06.581  2041  2300 I HwPacketFilterBypass: isAllowSendSmartCureToChr false, no exceptions occur, dropCnt:0
+11-03 17:48:06.581  2041  2778 I Hicom_MpFlowDecisionSystem: stopMpFlow: pkgName:  is not a stared mp-flow app. 
+11-03 17:48:06.581  2041  2778 E Hicom_PolicyCenterService: remove bind rules with uid = 10216have no policy
+11-03 17:48:06.581  2041  2778 E Hicom_PolicyCenterService: handleAppDied. multipathPolicy
+11-03 17:48:06.582  2041  2041 D SmartDualCardConfig: getAppType,pkgName=com.example.androidmkdemo,appType=-1
+11-03 17:48:06.582  2041  2041 D SmartDualCardConfig: getAppType,pkgName=com.example.androidmkdemo,appType=-1
+11-03 17:48:06.582  2041  2041 E SmartDualCardConfig: isAppInBlackList false,items==null
+11-03 17:48:06.582  2041  2041 D SmartDualCardSM: onUidStateUpdate,uid=10216,appName=com.example.androidmkdemo,state=BACKGROUND
+11-03 17:48:06.582  2041  2041 D SmartDualCardConfig: removeAppFromList,after remove,size()=0,uid=10216
+11-03 17:48:06.583  2041  2041 D SmartDualCardConfig: getAppType,pkgName=com.example.androidmkdemo,appType=-1
+11-03 17:48:06.583  2041  2041 D SmartDualCardSM: updateAppState mAppState=1
+11-03 17:48:06.583  2041  2041 D SmartDualCardSM: IdleState:got msg.what=EVENT_APP_MOVE_BACKGROUND
+11-03 17:48:06.584  2041  2041 D SmartDualCardSM: startAppBackgroundTimer
+11-03 17:48:06.584  2041  2487 I DollieChr: handleForegroundAppUpdateMsg,mAppState=2,scenes=1,mForegroundAppName=com.example.androidmkdemo
+11-03 17:48:06.660  1364  1483 V WindowManager: Exit animation finished in Window{f426fc4 u0 Toast EXITING}: remove=true
+11-03 17:48:06.671   569  7556 I netd    : trafficSwapActiveStatsMap() <16.58ms>
+11-03 17:48:06.680  1364  1483 I DebugKeepScreenOn: setHoldScreenLocked newHoldScreen:null currentHoldScreen:Session{6b791ba 26030:u0a10216} wakeLockState:true
+11-03 17:48:06.680  1364  1483 I DebugKeepScreenOn: Releasing screen wakelock, obscured by Window{63b9b86 u0 com.huawei.ucd.walllpaper1.GLWallpaperService}
+11-03 17:48:06.682  1364  1483 V WindowManager: postWindowRemoveCleanupLocked: Window{f426fc4 u0 Toast}
+11-03 17:48:06.682  1364  1482 W ActivityManager: setHasOverlayUi called on unknown pid: 26030
+11-03 17:48:06.682  1364  1483 V WindowManager: Removing Window{f426fc4 u0 Toast} from WindowToken{41eca18 android.os.Binder@b7969fb}
+11-03 17:48:06.691   569  7556 I netd    : trafficSwapActiveStatsMap() <17.39ms>
+11-03 17:48:06.969  1364 10337 I ActivityManager: Force stopping com.example.androidmkdemo appid=10216 user=0: from pid 26269by app
+11-03 17:48:06.973  1364  1364 I AlarmManager: UninstallReceiver onReceive action:android.intent.action.PACKAGE_RESTARTED
+11-03 17:48:06.975  1364  1364 D HwBastetService: BroadcastReceiver android.intent.action.PACKAGE_RESTARTED
+11-03 17:48:06.976  2041  2041 I HwCoreAppHelperService: LocalReceiver receives:android.intent.action.PACKAGE_RESTARTED,pkg:com.example.androidmkdemo,uid:10216
+11-03 17:48:06.978  2195  2195 D CarrierSvcBindHelper: No carrier app for: 0
+11-03 17:48:06.980  2195  2195 D CarrierSvcBindHelper: No carrier app for: 1
+11-03 17:48:06.982 28709 30296 W OpenGLRenderer: Incorrectly called buildLayer on View: ShortcutAndWidgetContainer, destroying layer...
+11-03 17:48:06.985  1364 10337 D HwConnectivityServiceEx: set cache by key is 10032 interfaceName iswlan0 value is false
+11-03 17:48:06.982 28709 30296 W OpenGLRenderer: Incorrectly called buildLayer on View: ShortcutAndWidgetContainer, destroying layer...
+11-03 17:48:07.035   884  3249 E LOGSERVER_UTILS: [ERecovery]ReadEvent: ERecoveryEventManager ReadEvent 0
+11-03 17:48:07.040  1364  1578 I HwBatteryService: quick charge status : 0
+11-03 17:48:07.040  1364  1578 D HwBatteryService: onUEvent fcpStatus = 0
+11-03 17:48:07.040  1364  1578 D HwBatteryService: onUEvent scpStatus = 0 ,ovpStatus = 0
+11-03 17:48:07.041  1364  1578 I HwBatteryService: handleWirelessTxStatus
+11-03 17:48:07.041  1364  1578 I HwBatteryService: switch not open, return, mWirelessTxFlag : 0
+11-03 17:48:07.041  1364  1578 W HwBatteryService: need return. Invalid value: -1
+11-03 17:48:07.041  1364  1578 D HwBatteryService: setHwChargeTimeRemaining, time = -1 String time: -1
+11-03 17:48:07.041  1364  1578 I HwUsbDeviceManager: water_intrused state= 0
+11-03 17:48:07.076   605 16916 I audio_hw_primary: usb_ext_get_parameters: check show hires (false)
+11-03 17:48:07.134  1364  1364 D WifiClientModeImpl: mBcastReceiver: PluggedType = 2 mIsScanCtrlPluggedin = true
+11-03 17:48:07.135  1808  1808 W KeyguardUpdateMonitor: ACTION_BATTERY_CHANGED AMP: 500000; Volt: 4875000
+11-03 17:48:07.140  1364  2755 D HwConnectivityServiceEx: set cache by key is 10024 interfaceName iswlan0 value is false
+11-03 17:48:07.140  2169  2169 I MsgReceiver: intent action: android.intent.action.BATTERY_CHANGED
+11-03 17:48:07.141  2101  2522 I PowerKitApi: isUserSleeping ! pkg: com.huawei.bd
+11-03 17:48:07.145  1808  1808 W MagazineUtils: check active connect, state = 1,isMeteredWifi:false
+11-03 17:48:07.146  2169 19452 I PowerKit_Impl: pkg: com.huawei.bd check whether user is sleeping, return false
+11-03 17:48:07.146  2101  2522 I OPCollectLog: BatteryAction:onReceive action: android.intent.action.BATTERY_CHANGED
+11-03 17:48:07.146  2101  2522 I OPCollectLog: Action:battery_left executed frequently
+11-03 17:48:07.149  1364 10337 D HwGameAssistantController: isGameForeground? false
+11-03 17:48:07.161  1808  1808 W KeyguardUpdateMonitor: ChargingSpeed  Wattage: 2437500 ST: 5000000 --> 7500000
+11-03 17:48:07.161  1808  1808 I KgBattery: BatteryInfo updated:  5lPC0
+11-03 17:48:07.162  1808  1808 W KG_FDT  : isFaceUnlockEnabled 1
+11-03 17:48:07.163  1808  1808 W HwLockScreenPanel: Handle message: 100
+11-03 17:48:07.163  1808  1808 W HwLockScreenPanel: refreshBatteryInfo: null
+11-03 17:48:07.257 26176 26342 I HiDecision: RuleEngineSession: fire cost time = 109
+11-03 17:48:07.280  1364  1654 I NetworkStats: performPollLocked, pid = 1364
+11-03 17:48:07.291   569  7556 I netd    : trafficSwapActiveStatsMap() <9.40ms>
+11-03 17:48:07.293   569  7556 W IptablesRestoreController: command: *filter
+11-03 17:48:07.293   569  7556 W IptablesRestoreController: -nvx -L tetherctrl_counters
+11-03 17:48:07.293   569  7556 W IptablesRestoreController: COMMIT
+11-03 17:48:07.293   569  7556 W IptablesRestoreController: .
+11-03 17:48:07.295   569  7556 W IptablesRestoreController: command: *filter
+11-03 17:48:07.295   569  7556 W IptablesRestoreController: -nvx -L tetherctrl_counters
+11-03 17:48:07.295   569  7556 W IptablesRestoreController: COMMIT
+11-03 17:48:07.295   569  7556 W IptablesRestoreController: .
+11-03 17:48:07.297   569  7556 I netd    : tetherGetStats() <3.73ms>
+11-03 17:48:07.307  1364  1654 D HwNetworkStatsService: hwRecordUidAndProcSnapshotLocked currentTime = 1604396884972
+11-03 17:48:07.323  1364  1654 I HwNetworkManagementService: request swap success.
+11-03 17:48:07.324  1364  1654 I NetworkStatsFactoryEx: Request swap successful.
+11-03 17:48:07.324  1364  1654 I NetworkStatsFactoryEx: vars recycled successful.
+11-03 17:48:07.358  2075  2499 W HSM_BG  : TrafficNotifyDelegate:Current data imsi is null, so return.
+11-03 17:48:07.359   569  7556 I netd    : bandwidthSetGlobalAlert(2097152) <0.98ms>
+11-03 17:48:07.397   842   842 E Thermal-daemon: [charger_ic] temp_new :34  temp_old :33
+11-03 17:48:07.398   842   842 E Thermal-daemon: Report temperature: [charger_ic] temp :34  report_threshold:1
+11-03 17:48:07.399   842   842 E Thermal-daemon: [pa_0] temp_new :34  temp_old :33
+11-03 17:48:07.400   842   842 E Thermal-daemon: Report temperature: [pa_0] temp :34  report_threshold:1
+11-03 17:48:07.577  1364  1658 I TrafficMonitor: update:rxPkts:321,txPkts:184,rxBytes:408547,txBytes:7360
+11-03 17:48:07.577  1364  1658 I TrafficMonitor: start expired. level:5
+11-03 17:48:07.577  1364  1658 I TrafficMonitor: gettimer:interval=2000
+11-03 17:48:07.751  1364  1364 W NotificationService: Object died trying to hide notification android.app.ITransientNotification$Stub$Proxy@80adf8a in package com.example.androidmkdemo
+11-03 17:48:08.047   569  7556 I netd    : trafficSwapActiveStatsMap() <17.95ms>
+11-03 17:48:08.053  2169  3915 E AppInfoMgr: not find pkgs by uid: 0
+11-03 17:48:08.053  2169  3915 I DownloadState: singleUid: 10216 [com.example.androidmkdemo] speed: 161452 real speed: 160043 (rxB:791540 txB:15720 rxP:597 txP:393) scroff: false
+11-03 17:48:08.055  2169  3915 I DownloadState: 10216 dl start, speed: 160043bytes/s
+11-03 17:48:08.055  2169  3915 I DownloadState: @@@@@@@@@@@@ uid :10216 download :true
+11-03 17:48:08.055  2169  3915 I PGServer: report state:5 event type:1 pid:0 uid:10216 pkg:null to pid: 1364
+11-03 17:48:08.058  1364  1616 E AwareLog: NetManager: getPidsByUid is null!
+11-03 17:48:08.068  2169  3915 I DownloadState: shareUid: 0 default_socket transmitting data speed : 30 bytes/s (rxB:40 txB:111 rxP:1 txP:2 iface:1) scroff: false
+11-03 17:48:08.068  2169  3915 I DownloadState: shareUid: 0 /system/bin/init transmitting data speed : 120 bytes/s (rxB:0 txB:600 rxP:0 txP:15 iface:1) scroff: false
+11-03 17:48:08.068  2169  3915 I DownloadState: shareUid: 0 default_sk transmitting data speed : 4004 bytes/s (rxB:20020 txB:0 rxP:15 txP:0 iface:1) scroff: false
+11-03 17:48:08.075   884  3249 E LOGSERVER_UTILS: [ERecovery]ReadEvent: ERecoveryEventManager ReadEvent 0
+11-03 17:48:08.352 29250 29276 I HwNaturalBase: [CommonHandler]: 24801Kb ram is used.
+11-03 17:48:08.373   884   884 W RFD_TASK1: type=1400 audit(0.0:5138722): avc: denied { dac_read_search } for pid=884 capability=2 scontext=u:r:logserver:s0 tcontext=u:r:logserver:s0 tclass=capability permissive=0
+11-03 17:48:08.373   884   884 W RFD_TASK1: type=1400 audit(0.0:5138723): avc: denied { dac_override } for pid=884 capability=1 scontext=u:r:logserver:s0 tcontext=u:r:logserver:s0 tclass=capability permissive=0
+11-03 17:48:08.377   884   884 W RFD_TASK1: type=1400 audit(0.0:5138724): avc: denied { dac_read_search } for pid=884 capability=2 scontext=u:r:logserver:s0 tcontext=u:r:logserver:s0 tclass=capability permissive=0
+11-03 17:48:08.377   884   884 W RFD_TASK1: type=1400 audit(0.0:5138725): avc: denied { dac_override } for pid=884 capability=1 scontext=u:r:logserver:s0 tcontext=u:r:logserver:s0 tclass=capability permissive=0
+11-03 17:48:08.378   884  3110 E iMonitor: FaultDetect: DumptoolPrintf return.
+11-03 17:48:08.380   884  3110 I chatty  : uid=0(root) RFD_TASK1 identical 1 line
+11-03 17:48:08.381   884  3110 E iMonitor: FaultDetect: DumptoolPrintf return.
+11-03 17:48:08.381   884  3110 E iMonitor: FaultDetect: FaultEngineTracePrintf return.
+11-03 17:48:08.381   884  3110 I chatty  : uid=0(root) RFD_TASK1 identical 1 line
+11-03 17:48:08.381   884  3110 E iMonitor: FaultDetect: FaultEngineTracePrintf return.
+11-03 17:48:08.381   884  3110 E iMonitor: FaultDetect: DumptoolPrintf return.
+11-03 17:48:08.381   884  3111 E iMonitor: FaultDetect: FaultEngineTracePrintf return.
+11-03 17:48:08.382   884  3110 E iMonitor: FaultDetect: DumptoolPrintf return.
+11-03 17:48:08.445   634   634 E WifiHAL : enter wifi_get_link_stats
+11-03 17:48:08.450  1364  1659 E WificondControl: Noise: 0, Snr: 0, Chload: -1
+11-03 17:48:08.453  1364  1659 V HwWifiServiceFactory: get AllImpl object = com.android.server.wifi.HwWifiServiceFactoryImpl@91d5c64
+11-03 17:48:08.460  1364  1659 D TelephonyManager: getAllCellInfo calling app is android
+11-03 17:48:08.461  2195  2783 W PhoneInterfaceManager: shouldBlockLocation running ...
+11-03 17:48:08.462  2195  2783 I PhoneInterfaceManager: shouldBlockLocation  ret:false
+11-03 17:48:08.568  1364  1658 I TrafficMonitor: expired arrive. level:-1
+11-03 17:48:08.568  1364  1658 I TrafficMonitor: during_ms:2007,period_ms:2000
+11-03 17:48:08.569  1364  1658 I TrafficMonitor: count:898,rx_sum:321,tx_sum:184,rxBytes:408547,during_ms:2007,rx_speed:203561.03637269555,tx_speed:3667.1649227703037,rto:1.7445652173913044
+11-03 17:48:08.569  1364  1658 D HuaweiWifiWatchdogStateMachine: checkGoodSpd at rssi:-67, spd:198K > 80K, unit:20K, score:1.09
+11-03 17:48:08.732   636   780 D AudioFlinger: releaseWakeLock_l() AudioOut_15 mPowerManager(1) mWakeLockToken 0x79f6e0e980 
+11-03 17:48:08.732   636   780 D AudioFlinger: thread 0x79f81ac5c0 type 0 TID 780 going to sleep
+11-03 17:48:08.734   605 16916 I audio_hw_primary: do_out_standby standby:0,stream_type:0,out_dev:0x2
+11-03 17:48:08.748   605 16916 I audio_hw_primary: select_devices++ mode[0]
+11-03 17:48:08.749   605 16916 I audio_hw_primary: soundtrigger_standing wakeup path no need to open, standby = 1, mode = 0
+11-03 17:48:08.749   605 16916 I audio_hw_primary: input_source_id 0, output_device_id 0
+11-03 17:48:08.749   605 16916 I audio_hw_primary: select_devices d:0x2 is:0 or:none ir:none id:0
+11-03 17:48:08.749   605 16916 E spk_dev_interface_V2: _dev_power_off is :0x0 
+11-03 17:48:08.749   605 16916 I dsp_common: dsp_common_control_algo:set device = 0
+11-03 17:48:08.749   605 16916 I audio_hw_primary: soundtrigger_standing wakeup path no need to open, standby = 1, mode = 0
+11-03 17:48:08.749   605 16916 I audio_hw_primary: soundtrigger_standing wakeup path no need to open, standby = 1, mode = 0
+11-03 17:48:08.758   605 16916 I dsp_common: dsp_common_control_algo:set device = 0
+11-03 17:48:08.758   605 16916 E spk_dev_interface_V2: _dev_power_on is :0x0 
+11-03 17:48:08.758   605 16916 I audio_hw_primary: select_devices--
+11-03 17:48:08.758   605 16916 I falling_pop_elim: pop_device_close succeed, output_type = 0
+11-03 17:48:08.759   636   776 D AudioFlinger: releaseWakeLock_l() AudioOut_D mPowerManager(1) mWakeLockToken 0x79f6e0e8c0 
+11-03 17:48:08.759   636   776 D AudioFlinger: thread 0x79f8125540 type 0 TID 776 going to sleep
+11-03 17:48:08.760  1364 10337 W ProcBatteryStats: timer is not running , not stop, name: audioserver, uid: 1041, tag: AudioMix

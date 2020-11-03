@@ -1,111 +1,178 @@
 //
-// Created by zenglingwen on 2020/10/22.
+// Created by liuxiang on 2017/10/15.
 //
 
-#ifndef ANDROIDMKDEMO_SAFE_QUEUE_H
-#define ANDROIDMKDEMO_SAFE_QUEUE_H
+#ifndef DNRECORDER_SAFE_QUEUE_H
+#define DNRECORDER_SAFE_QUEUE_H
 
-#include <pthread.h>
 #include <queue>
-#include "macro.h"
+#include <pthread.h>
+
+
+//todo 宏 开关 是否使用c++11,玩玩而已。还是习惯posix标准的线程。。。。
+//#define C11
+#ifdef C11
+#include <thread>
+#endif
+
 
 using namespace std;
 
 template<typename T>
 class SafeQueue {
-public:
-    typedef void (*MyCallback)(T*);
+    typedef void (*ReleaseCallback)(T *);
 
     typedef void (*SyncHandle)(queue<T> &);
 
+public:
     SafeQueue() {
-        pthread_mutex_init(&mutex, 0);
-        pthread_cond_init(&cond, 0);
+#ifdef C11
+
+#else
+        pthread_mutex_init(&mutex, NULL);
+        pthread_cond_init(&cond, NULL);
+#endif
+
     }
 
     ~SafeQueue() {
-
+#ifdef C11
+#else
         pthread_cond_destroy(&cond);
         pthread_mutex_destroy(&mutex);
+#endif
+
     }
 
-    void push(T t) {
-        LOGE("push lock");
+    void push(const T new_value) {
+#ifdef C11
+        //锁 和智能指针原理类似，自动释放
+        lock_guard<mutex> lk(mt);
+        if (work) {
+            q.push(new_value);
+            cv.notify_one();
+        }
+#else
         pthread_mutex_lock(&mutex);
         if (work) {
-            queue.push(t);
-            LOGE("size = %d %d", &queue, queue.size());
-            LOGE("push signal");
+            q.push(new_value);
             pthread_cond_signal(&cond);
+            pthread_mutex_unlock(&mutex);
         }
         pthread_mutex_unlock(&mutex);
-        LOGE("push unlock");
+#endif
+
     }
 
-    int pop(T& t) {
-        LOGE("pop lock");
-        pthread_mutex_lock(&mutex);
+
+    int pop(T& value) {
         int ret = 0;
-        while (work && queue.empty()) {
-            LOGE("pop wait");
+#ifdef C11
+        //占用空间相对lock_guard 更大一点且相对更慢一点，但是配合条件必须使用它，更灵活
+        unique_lock<mutex> lk(mt);
+        //第二个参数 lambda表达式：false则不阻塞 往下走
+        cv.wait(lk,[this]{return !work || !q.empty();});
+        if (!q.empty()) {
+            value = q.front();
+            q.pop();
+            ret = 1;
+        }
+#else
+        pthread_mutex_lock(&mutex);
+        //在多核处理器下 由于竞争可能虚假唤醒 包括jdk也说明了
+        while (work && q.empty()) {
             pthread_cond_wait(&cond, &mutex);
         }
-        if (!queue.empty()) {
-            t = queue.front();
-            LOGE("pop 取出%d %d", &queue, queue.size());
-            queue.pop();
+        if (!q.empty()) {
+            value = q.front();
+            q.pop();
             ret = 1;
         }
         pthread_mutex_unlock(&mutex);
-        LOGE("pop unlock");
+#endif
         return ret;
     }
 
-    void clear() {
-        pthread_mutex_lock(&mutex);
-
-        while (!queue.empty()) {
-
-            T value = queue.front();
-            if (myCallback) {
-                myCallback(&value);
-            }
-            queue.pop();
-        }
-        pthread_mutex_unlock(&mutex);
-    }
-
-    void setReleaseCallback(MyCallback callback) {
-        this->myCallback = callback;
-    }
-
-    void setSyncHandle(SyncHandle handle) {
-        this->handle = handle;
-    };
-
-    void sync() {
-        pthread_mutex_lock(&mutex);
-        handle(&queue);
-        pthread_mutex_unlock(&mutex);
-    }
-
     void setWork(int work) {
+#ifdef C11
+        lock_guard<mutex> lk(mt);
+        this->work = work;
+#else
         pthread_mutex_lock(&mutex);
         this->work = work;
         pthread_cond_signal(&cond);
         pthread_mutex_unlock(&mutex);
+#endif
+
+    }
+
+    int empty() {
+        return q.empty();
+    }
+
+    int size() {
+        return q.size();
+    }
+
+    void clear() {
+#ifdef C11
+        lock_guard<mutex> lk(mt);
+        int size = q.size();
+        for (int i = 0; i < size; ++i) {
+            T value = q.front();
+            releaseHandle(value);
+            q.pop();
+        }
+#else
+        pthread_mutex_lock(&mutex);
+        int size = q.size();
+        for (int i = 0; i < size; ++i) {
+            T value = q.front();
+            releaseCallback(&value);
+            q.pop();
+        }
+        pthread_mutex_unlock(&mutex);
+#endif
+
+    }
+
+    void sync() {
+#ifdef C11
+        lock_guard<mutex> lk(mt);
+        syncHandle(q);
+#else
+        pthread_mutex_lock(&mutex);
+        //同步代码块 当我们调用sync方法的时候，能够保证是在同步块中操作queue 队列
+        syncHandle(q);
+        pthread_mutex_unlock(&mutex);
+#endif
+
+    }
+
+    void setReleaseCallback(ReleaseCallback r) {
+        releaseCallback = r;
+    }
+
+    void setSyncHandle(SyncHandle s) {
+        syncHandle = s;
     }
 
 private:
 
+#ifdef C11
+    mutex mt;
+    condition_variable cv;
+#else
     pthread_cond_t cond;
     pthread_mutex_t mutex;
-    queue<T> queue;
-    // 是否工作的标记 1 工作 0 不工作
+#endif
+
+    queue<T> q;
+    //是否工作的标记 1 ：工作 0：不接受数据 不工作
     int work;
-    MyCallback myCallback;
-    SyncHandle handle;
+    ReleaseCallback releaseCallback;
+    SyncHandle syncHandle;
 };
 
-#endif //ANDROIDMKDEMO_SAFE_QUEUE_H
 
+#endif //DNRECORDER_SAFE_QUEUE_H

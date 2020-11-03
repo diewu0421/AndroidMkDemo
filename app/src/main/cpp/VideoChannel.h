@@ -1,30 +1,43 @@
 //
-// Created by zenglingwen on 2020/10/26.
+// Created by Administrator on 2018/9/5.
 //
 
-#ifndef ANDROIDMKDEMO_VIDEOCHANNEL_H
-#define ANDROIDMKDEMO_VIDEOCHANNEL_H
+#ifndef PLAYER_VIDEOCHANNEL_H
+#define PLAYER_VIDEOCHANNEL_H
 
-#include "BaseChanel.h"
 
-typedef void* (*RenderCallback)(uint8_t *, int, int, int);
-class  VideoChannel : public BaseChannel{
+#include "BaseChannel.h"
+
+extern "C" {
+#include <libswscale/swscale.h>
+};
+
+/**
+ * 1、解码
+ * 2、播放
+ */
+typedef void (*RenderFrameCallback)(uint8_t *,int,int,int);
+class VideoChannel : public BaseChannel {
 public:
-    VideoChannel(int id, AVCodecContext* context);
+    VideoChannel(int id, AVCodecContext *avCodecContext);
 
     ~VideoChannel();
 
-    void setRenderCallback(RenderCallback callback1);
-
+    //解码+播放
     void play();
-    void decode();
-    void render();
-    pthread_t decode_pid;
-    pthread_t render_pid;
-    bool isPlaying;
 
-    SafeQueue<AVFrame *> avFrames;
-    SwsContext *swsContext;
-    RenderCallback callback;
+    void decode();
+
+    void render();
+
+    void setRenderFrameCallback(RenderFrameCallback callback);
+private:
+    pthread_t pid_decode;
+    pthread_t pid_render;
+
+    SwsContext *swsContext=0;
+    RenderFrameCallback callback;
 };
-#endif //ANDROIDMKDEMO_VIDEOCHANNEL_H
+
+
+#endif //PLAYER_VIDEOCHANNEL_H

@@ -9,7 +9,6 @@
 #include <stdio.h>
 #include <queue>
 #include <stack>
-
 #include <android/native_window_jni.h>
 #include "DNFFmpeg.h"
 
@@ -123,13 +122,13 @@ Java_com_example_androidmkdemo_utils_DNFFPlayer_00024Companion_play(JNIEnv *env,
 DNFFmpeg *ffmpeg;
 
 
-void* render(uint8_t *data, int linesize, int width, int height) {
+void render(uint8_t *data, int linesize, int width, int height) {
 
     LOGE("home render")
     pthread_mutex_lock(&mutex);
     if (!window) {
         pthread_mutex_unlock(&mutex);
-        return nullptr;
+        return;
     }
 //设置窗口属性
     ANativeWindow_setBuffersGeometry(window,
@@ -142,7 +141,7 @@ void* render(uint8_t *data, int linesize, int width, int height) {
         ANativeWindow_release(window);
         window = 0;
         pthread_mutex_unlock(&mutex);
-        return 0;
+        return;
     }
     //填充rgb数据给dst_data
     uint8_t *dst_data = static_cast<uint8_t *>(window_buffer.bits);
@@ -154,7 +153,6 @@ void* render(uint8_t *data, int linesize, int width, int height) {
 
     ANativeWindow_unlockAndPost(window);
     pthread_mutex_unlock(&mutex);
-    return 0;
 }
 
 extern "C"
@@ -167,10 +165,12 @@ Java_com_example_androidmkdemo_utils_DNFFPlayer_native_1prepare(JNIEnv *env, job
     JavaVM *vm;
     env->GetJavaVM(&vm);
 
-    JavaHelper *helper = new JavaHelper(env, vm, thiz);
+//    JavaCallHelper *helper = new JavaCallHelper(vm, env, thiz);
+
+    JavaCallHelper *helper = new JavaCallHelper(vm, env, thiz);
 
     ffmpeg = new DNFFmpeg(helper, playUrl);
-    ffmpeg->setRenderCallback(render);
+    ffmpeg->setRenderFrameCallback(render);
     ffmpeg->prepare();
 
 //    jclass jcls = env->GetObjectClass(thiz);

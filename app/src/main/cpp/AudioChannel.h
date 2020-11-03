@@ -1,23 +1,61 @@
 //
-// Created by zenglingwen on 2020/10/26.
+// Created by Administrator on 2018/9/5.
 //
 
-#ifndef ANDROIDMKDEMO_AUDIOCHANNEL_H
-#define ANDROIDMKDEMO_AUDIOCHANNEL_H
-
-#include "BaseChanel.h"
-
-class AudioChannel : public BaseChannel {
+#ifndef PLAYER_AUDIOCHANNEL_H
+#define PLAYER_AUDIOCHANNEL_H
 
 
+#include "BaseChannel.h"
+#include <SLES/OpenSLES.h>
+#include <SLES/OpenSLES_Android.h>
+extern  "C"{
+#include <libswresample/swresample.h>
+};
+
+class AudioChannel: public BaseChannel {
 public:
-    AudioChannel(int index, AVCodecContext *avCodecContext);
-
+    AudioChannel(int id,AVCodecContext *avCodecContext);
     ~AudioChannel();
-
     void play();
 
+    void decode();
+
+    void _play();
+
+    int getPcm();
+
+public:
+    uint8_t *data = 0;
+    int out_channels;
+    int out_samplesize;
+    int out_sample_rate;
 private:
-    int index;
+    pthread_t  pid_audio_decode;
+    pthread_t  pid_audio_play;
+
+
+    /**
+     * OpenSL ES
+     */
+    // 引擎与引擎接口
+    SLObjectItf engineObject = 0;
+    SLEngineItf engineInterface = 0;
+    //混音器
+    SLObjectItf outputMixObject = 0;
+    //播放器
+    SLObjectItf bqPlayerObject = 0;
+    //播放器接口
+    SLPlayItf bqPlayerInterface = 0;
+
+    SLAndroidSimpleBufferQueueItf bqPlayerBufferQueueInterface =0;
+
+
+    //重采样
+    SwrContext *swrContext = 0;
+
+
 };
-#endif //ANDROIDMKDEMO_AUDIOCHANNEL_H
+
+
+#endif //PLAYER_AUDIOCHANNEL_H

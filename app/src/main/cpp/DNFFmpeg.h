@@ -1,44 +1,42 @@
-#ifndef PLAYER_DNFFMPEG_H
+//
+// Created by Administrator on 2018/9/5.
+//
 
+#ifndef PLAYER_DNFFMPEG_H
 #define PLAYER_DNFFMPEG_H
 
-
-#include <cstring>
-#include <stdio.h>
-
-extern "C" {
-#include <libavformat/avformat.h>
-};
-#include "macro.h"
-#include "JavaHelper.h"
+#include "JavaCallHelper.h"
 #include "AudioChannel.h"
 #include "VideoChannel.h"
-#include <pthread.h>
+
+extern  "C" {
+#include <libavformat/avformat.h>
+}
+
+
 class DNFFmpeg {
-
 public:
-
-    DNFFmpeg(JavaHelper *helper, const char *playUrl);
-
+    DNFFmpeg(JavaCallHelper* callHelper,const char* dataSource);
     ~DNFFmpeg();
 
     void prepare();
-
     void _prepare();
-    void start();
 
+    void start();
     void _start();
 
-    void setRenderCallback(RenderCallback callback);
+    void setRenderFrameCallback(RenderFrameCallback callback);
 private:
-    bool isPlaying;
-    AudioChannel *audioChannel = 0;
-    VideoChannel *videoChannel = 0;
-    AVFormatContext *avFormatContext;
-    char* source;
-    JavaHelper *helper;
+    char *dataSource;
     pthread_t pid;
     pthread_t pid_play;
-    RenderCallback renderCallback;
+    AVFormatContext *formatContext = 0;
+    JavaCallHelper* callHelper;
+    AudioChannel *audioChannel = 0;
+    VideoChannel *videoChannel = 0;
+    RenderFrameCallback callback;
+    bool isPlaying;
 };
-#endif
+
+
+#endif //PLAYER_DNFFMPEG_H

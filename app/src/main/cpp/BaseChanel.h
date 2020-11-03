@@ -9,7 +9,6 @@
 
 extern "C" {
 #include "../cmake/include/libavcodec/avcodec.h"
-#include "../cmake/include/libswscale/swscale.h"
 };
 
 class BaseChannel {
@@ -43,6 +42,9 @@ public:
 
     int id;
     SafeQueue<AVPacket *> packets;
+    //解码数据包队列
+    SafeQueue<AVFrame *> frames;
+    bool isPlaying;
     AVCodecContext *avCodecContext;
 
 };
