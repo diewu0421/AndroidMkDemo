@@ -13,7 +13,7 @@
 #include "DNFFmpeg.h"
 
 using namespace std;
-#define LOGE(...) __android_log_print(ANDROID_LOG_ERROR, "zenglw", __VA_ARGS__);
+#define LOGE(...) __android_log_print(ANDROID_LOG_ERROR, "FFMPEG", __VA_ARGS__);
 extern "C" {
 #include <libavcodec/avcodec.h>
 }
@@ -155,10 +155,16 @@ void render(uint8_t *data, int linesize, int width, int height) {
     pthread_mutex_unlock(&mutex);
 }
 
+bool flag;
+
 extern "C"
 JNIEXPORT void JNICALL
 Java_com_example_androidmkdemo_utils_DNFFPlayer_native_1prepare(JNIEnv *env, jobject thiz,
                                                                 jstring play_url) {
+    if (flag) {
+        LOGE("已经prepaer过了")
+        return;
+    }
 
     const char *playUrl = env->GetStringUTFChars(play_url, JNI_FALSE);
 
@@ -172,6 +178,7 @@ Java_com_example_androidmkdemo_utils_DNFFPlayer_native_1prepare(JNIEnv *env, job
     ffmpeg = new DNFFmpeg(helper, playUrl);
     ffmpeg->setRenderFrameCallback(render);
     ffmpeg->prepare();
+    flag = true;
 
 //    jclass jcls = env->GetObjectClass(thiz);
 //    env->DeleteLocalRef(jcls);

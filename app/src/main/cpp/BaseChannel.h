@@ -15,6 +15,7 @@ extern "C" {
 class BaseChannel {
 public:
     BaseChannel(int id, AVCodecContext *avCodecContext) : id(id), avCodecContext(avCodecContext) {
+
         frames.setReleaseCallback(releaseAvFrame);
         packets.setReleaseCallback(releaseAvPacket);
     }

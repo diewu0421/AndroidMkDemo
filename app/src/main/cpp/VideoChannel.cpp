@@ -4,6 +4,7 @@
 
 extern "C"{
 #include <libavutil/imgutils.h>
+#include <libavutil/time.h>
 }
 #include "VideoChannel.h"
 #include "macro.h"
@@ -21,11 +22,11 @@ void *render_task(void *args) {
 }
 
 
+VideoChannel::VideoChannel(int id, AVCodecContext *avCodecContext, int fps) : BaseChannel(id,
+                                                                                 avCodecContext
+                                                                                 ) {
 
-VideoChannel::VideoChannel(int id, AVCodecContext *avCodecContext) : BaseChannel(id,
-                                                                                 avCodecContext) {
-
-
+    this->fps = fps;
 }
 
 VideoChannel::~VideoChannel() {
@@ -85,6 +86,9 @@ void VideoChannel::render() {
             avCodecContext->width, avCodecContext->height,avCodecContext->pix_fmt,
             avCodecContext->width, avCodecContext->height,AV_PIX_FMT_RGBA,
             SWS_BILINEAR,0,0,0);
+
+    double frame_delay = 1.0 * 1000000 / fps;
+    LOGE("延迟多少微秒 %d",frame_delay * 1000000);
     AVFrame* frame = 0;
     //指针数组
     uint8_t *dst_data[4];
@@ -103,6 +107,7 @@ void VideoChannel::render() {
                   dst_data,
                   dst_linesize);
         //回调出去进行播放
+        av_usleep(frame_delay);
         callback(dst_data[0],dst_linesize[0],avCodecContext->width, avCodecContext->height);
         releaseAvFrame(&frame);
     }

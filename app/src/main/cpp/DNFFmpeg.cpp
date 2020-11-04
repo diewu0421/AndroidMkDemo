@@ -101,7 +101,11 @@ void DNFFmpeg::_prepare() {
             audioChannel = new AudioChannel(i,context);
         } else if (codecpar->codec_type == AVMEDIA_TYPE_VIDEO) {
             //1
-            videoChannel = new VideoChannel(i,context);
+            // 帧率 : 单位时间内,需要显示多少个图像
+            AVRational avRational = stream->avg_frame_rate;
+            int fps = av_q2d(avRational);
+            LOGE("fps = %d", fps);
+            videoChannel = new VideoChannel(i, context, fps);
             videoChannel->setRenderFrameCallback(callback);
         }
     }
