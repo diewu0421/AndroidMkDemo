@@ -8,6 +8,7 @@ extern "C"{
 }
 #include "VideoChannel.h"
 #include "macro.h"
+#define DELAY_CONST 1000000
 
 void *decode_task(void *args) {
     VideoChannel *channel = static_cast<VideoChannel *>(args);
@@ -21,13 +22,22 @@ void *render_task(void *args) {
     return 0;
 }
 
+void dropFrameCallback(queue<AVFrame *> &queue) {
 
-VideoChannel::VideoChannel(int id, AVCodecContext *avCodecContext, int fps) : BaseChannel(id,
-                                                                                 avCodecContext
-                                                                                 ) {
+    if (!queue.empty()) {
+        AVFrame *frame = queue.front();
+        BaseChannel::releaseAvFrame(&frame);
+        queue.pop();
+    }
+}
+VideoChannel::VideoChannel(int id, AVCodecContext *avCodecContext, AVRational time_base, int fps)
+        : BaseChannel(
+        id, avCodecContext, time_base) {
 
     this->fps = fps;
+    frames.setSyncHandle(dropFrameCallback);
 }
+
 
 VideoChannel::~VideoChannel() {
 
@@ -87,8 +97,7 @@ void VideoChannel::render() {
             avCodecContext->width, avCodecContext->height,AV_PIX_FMT_RGBA,
             SWS_BILINEAR,0,0,0);
 
-    double frame_delay = 1.0 * 1000000 / fps;
-    LOGE("延迟多少微秒 %d",frame_delay * 1000000);
+    double frame_delay = 1.0 / fps;
     AVFrame* frame = 0;
     //指针数组
     uint8_t *dst_data[4];
@@ -106,8 +115,44 @@ void VideoChannel::render() {
                   avCodecContext->height,
                   dst_data,
                   dst_linesize);
-        //回调出去进行播放
-        av_usleep(frame_delay);
+
+        double clock = frame->best_effort_timestamp * av_q2d(time_base);
+        double extra_delay = frame->repeat_pict / (2 * fps);
+        double real_delay = frame_delay + extra_delay;
+        av_usleep(real_delay * DELAY_CONST);
+#if 1
+        if (!audioChannel) {
+            //回调出去进行播放
+            av_usleep(real_delay * DELAY_CONST);
+
+        } else {
+            if (clock == 0) {
+                av_usleep(real_delay * DELAY_CONST);
+            } else {
+
+                double diff = clock - audioChannel->clock;
+
+                if (diff > 0) {
+                    // 视频快了
+
+                    LOGE("视频快了%lf", diff);
+                    av_usleep((real_delay + diff) * DELAY_CONST);
+                } else {
+                    // 视频慢了
+                    LOGE("视频慢了%lf", diff);
+                    double audioClock = audioChannel->clock;
+                    if (fabs(clock - audioClock) >= 0.05) {
+                        // 丢包
+                        releaseAvFrame(&frame);
+                        frames.sync();
+                        continue;
+                    }
+                }
+            }
+        }
+
+#endif
+
         callback(dst_data[0],dst_linesize[0],avCodecContext->width, avCodecContext->height);
         releaseAvFrame(&frame);
     }
@@ -118,3 +163,9 @@ void VideoChannel::render() {
 void VideoChannel::setRenderFrameCallback(RenderFrameCallback callback) {
     this->callback = callback;
 }
+
+void VideoChannel::setAudioChannel(AudioChannel *channel) {
+    this->audioChannel = channel;
+
+}
+

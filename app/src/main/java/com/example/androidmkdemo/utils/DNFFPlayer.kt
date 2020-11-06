@@ -51,7 +51,7 @@ class DNFFPlayer : IPlay, PlayCallback, SurfaceHolder.Callback {
 
     override fun prepare() {
 //        native_prepare(mContext?.externalCacheDir?.absolutePath + "/big_buck_bunny.mp4")
-        native_prepare("http://ivi.bupt.edu.cn/hls/cctv1hd.m3u8")
+        native_prepare("http://ivi.bupt.edu.cn/hls/cctv3hd.m3u8")
 
     }
 

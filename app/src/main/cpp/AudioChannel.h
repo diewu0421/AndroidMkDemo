@@ -6,6 +6,7 @@
 #define PLAYER_AUDIOCHANNEL_H
 
 
+#include "macro.h"
 #include "BaseChannel.h"
 #include <SLES/OpenSLES.h>
 #include <SLES/OpenSLES_Android.h>
@@ -15,7 +16,7 @@ extern  "C"{
 
 class AudioChannel: public BaseChannel {
 public:
-    AudioChannel(int id,AVCodecContext *avCodecContext);
+    AudioChannel(int id, AVCodecContext *avCodecContext, AVRational rational);
     ~AudioChannel();
     void play();
 
@@ -30,6 +31,7 @@ public:
     int out_channels;
     int out_samplesize;
     int out_sample_rate;
+
 private:
     pthread_t  pid_audio_decode;
     pthread_t  pid_audio_play;
