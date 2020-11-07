@@ -1,10 +1,15 @@
 package com.example.androidmkdemo
 
-import androidx.appcompat.app.AppCompatActivity
+import android.Manifest
+import android.content.pm.PackageManager
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import com.example.androidmkdemo.utils.DNFFPlayer
+import com.sample.breakpad.BreakpadInit
 import kotlinx.android.synthetic.main.activity_main.*
 import java.io.File
 
@@ -13,9 +18,26 @@ class MainActivity : AppCompatActivity() {
     val dnFFmpegPlayer by lazy { DNFFPlayer().setContext(this)}
 
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        if (ContextCompat.checkSelfPermission(
+                this,
+                Manifest.permission.WRITE_EXTERNAL_STORAGE
+            )
+            != PackageManager.PERMISSION_GRANTED
+        ) {
+            ActivityCompat.requestPermissions(
+                this, arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE),
+                WRITE_EXTERNAL_STORAGE_REQUEST_CODE
+            )
+        } else {
+
+            initExternalReportPath()
+        }
+
         dnFFmpegPlayer.setSurfaceView(surfaceView)
 
         dnFFmpegPlayer.setOnPlayerStateChangeListener(object :
@@ -49,6 +71,27 @@ class MainActivity : AppCompatActivity() {
             System.loadLibrary("testffmpeg")
 //            System.loadLibrary("native-lib")
         }
+        val WRITE_EXTERNAL_STORAGE_REQUEST_CODE = 100
+    }
+
+    private var externalReportPath: File? = null
+
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<out String>,
+        grantResults: IntArray
+    ) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        initExternalReportPath()
+    }
+    private fun initExternalReportPath() {
+        externalReportPath =
+            File(externalCacheDir?.absolutePath, "crashDump")
+        if (externalReportPath?.exists() == false) {
+            externalReportPath?.mkdirs()
+        }
+        BreakpadInit.initBreakpad(externalReportPath!!.absolutePath)
+
     }
 
     external fun myJni():String

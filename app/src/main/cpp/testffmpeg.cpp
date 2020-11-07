@@ -161,6 +161,7 @@ extern "C"
 JNIEXPORT void JNICALL
 Java_com_example_androidmkdemo_utils_DNFFPlayer_native_1prepare(JNIEnv *env, jobject thiz,
                                                                 jstring play_url) {
+
     if (flag) {
         LOGE("已经prepaer过了")
         return;
@@ -220,11 +221,17 @@ Java_com_example_androidmkdemo_utils_DNFFPlayer_native_1setSurface(JNIEnv *env, 
 extern "C"
 JNIEXPORT void JNICALL
 Java_com_example_androidmkdemo_utils_DNFFPlayer_native_1stop(JNIEnv *env, jobject thiz) {
+    if (!ffmpeg) {
+        LOGE("ffmpeg为null")
+        return;
+    }
     if (ffmpeg) {
         ffmpeg->stop();
     }
 
     DELETE(helper)
+
+    DELETE(ffmpeg)
 }
 extern "C"
 JNIEXPORT void JNICALL

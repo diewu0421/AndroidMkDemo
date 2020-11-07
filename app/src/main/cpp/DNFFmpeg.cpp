@@ -217,7 +217,6 @@ void *stop_task(void *args) {
         avformat_free_context(dnfFmpeg->formatContext);
         dnfFmpeg->formatContext = nullptr;
     }
-    DELETE(dnfFmpeg)
     return 0;
 }
 
