@@ -37,6 +37,7 @@ AudioChannel::~AudioChannel() {
         free(data);
         data = 0;
     }
+
 }
 
 void AudioChannel::play() {
@@ -222,4 +223,34 @@ void AudioChannel::_play() {
      * 6、手动激活一下这个回调
      */
     bqPlayerCallback(bqPlayerBufferQueueInterface, this);
+}
+
+void AudioChannel::stop() {
+
+    isPlaying = false;
+    packets.setWork(0);
+    frames.setWork(0);
+    pthread_join(pid_audio_decode, 0);
+    pthread_join(pid_audio_play, 0);
+    if (swrContext) {
+        swr_free(&swrContext);
+        swrContext = 0;
+    }
+
+    if (bqPlayerObject) {
+        (*bqPlayerObject)->Destroy(bqPlayerObject);
+        bqPlayerObject = 0;
+        bqPlayerInterface = 0;
+        bqPlayerBufferQueueInterface = 0;
+    }
+    if (outputMixObject) {
+        (*outputMixObject)->Destroy(outputMixObject);
+        outputMixObject = 0;
+    }
+
+    if (engineObject) {
+        (*engineObject)->Destroy(engineObject);
+        engineObject = 0;
+        engineInterface = 0;
+    }
 }

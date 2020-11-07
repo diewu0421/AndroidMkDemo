@@ -156,7 +156,7 @@ void render(uint8_t *data, int linesize, int width, int height) {
 }
 
 bool flag;
-
+JavaCallHelper *helper = 0;
 extern "C"
 JNIEXPORT void JNICALL
 Java_com_example_androidmkdemo_utils_DNFFPlayer_native_1prepare(JNIEnv *env, jobject thiz,
@@ -173,7 +173,7 @@ Java_com_example_androidmkdemo_utils_DNFFPlayer_native_1prepare(JNIEnv *env, job
 
 //    JavaCallHelper *helper = new JavaCallHelper(vm, env, thiz);
 
-    JavaCallHelper *helper = new JavaCallHelper(vm, env, thiz);
+    helper = new JavaCallHelper(vm, env, thiz);
 
     ffmpeg = new DNFFmpeg(helper, playUrl);
     ffmpeg->setRenderFrameCallback(render);
@@ -216,3 +216,26 @@ Java_com_example_androidmkdemo_utils_DNFFPlayer_native_1setSurface(JNIEnv *env, 
     pthread_mutex_unlock(&mutex);
 
 }
+
+extern "C"
+JNIEXPORT void JNICALL
+Java_com_example_androidmkdemo_utils_DNFFPlayer_native_1stop(JNIEnv *env, jobject thiz) {
+    if (ffmpeg) {
+        ffmpeg->stop();
+    }
+
+    DELETE(helper)
+}
+extern "C"
+JNIEXPORT void JNICALL
+Java_com_example_androidmkdemo_utils_DNFFPlayer_native_1release(JNIEnv *env, jobject thiz) {
+
+    pthread_mutex_lock(&mutex);
+    if (window) {
+        ANativeWindow_release(window);
+        window = nullptr;
+    }
+
+    pthread_mutex_unlock(&mutex);
+}
+

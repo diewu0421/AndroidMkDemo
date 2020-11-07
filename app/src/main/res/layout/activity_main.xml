@@ -26,10 +26,17 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="play"
-        android:id="@+id/play_btn"
+        android:text="stop"
+        android:id="@+id/stop_btn"
         app:layout_constraintTop_toTopOf="@id/prepare_btn"
         android:layout_marginTop="100dp"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="refresh"
+        android:id="@+id/refresh_btn"
+        app:layout_constraintTop_toTopOf="@id/stop_btn"
+        android:layout_marginTop="200dp"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

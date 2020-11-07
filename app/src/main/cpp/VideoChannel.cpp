@@ -41,6 +41,15 @@ VideoChannel::VideoChannel(int id, AVCodecContext *avCodecContext, AVRational ti
 
 VideoChannel::~VideoChannel() {
 
+    frames.clear();
+    frames.setSyncHandle(0);
+    frames.setWork(0);
+    frames.setReleaseCallback(0);
+
+    packets.clear();
+    packets.setSyncHandle(0);
+    packets.setWork(0);
+    packets.setReleaseCallback(0);
 }
 
 void VideoChannel::play() {
@@ -119,8 +128,7 @@ void VideoChannel::render() {
         double clock = frame->best_effort_timestamp * av_q2d(time_base);
         double extra_delay = frame->repeat_pict / (2 * fps);
         double real_delay = frame_delay + extra_delay;
-        av_usleep(real_delay * DELAY_CONST);
-#if 1
+#if 0
         if (!audioChannel) {
             //回调出去进行播放
             av_usleep(real_delay * DELAY_CONST);
@@ -169,3 +177,16 @@ void VideoChannel::setAudioChannel(AudioChannel *channel) {
 
 }
 
+void VideoChannel::stop() {
+    isPlaying = 0;
+    frames.setWork(0);
+    packets.setWork(0);
+
+    pthread_join(pid_decode, 0);
+    pthread_join(pid_render, 0);
+    if (swsContext) {
+        sws_freeContext(swsContext);
+        swsContext = 0;
+    }
+
+}

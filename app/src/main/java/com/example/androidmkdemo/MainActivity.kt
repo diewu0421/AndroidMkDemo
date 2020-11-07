@@ -29,12 +29,17 @@ class MainActivity : AppCompatActivity() {
 
         })
 
+
         prepare_btn.setOnClickListener {
             dnFFmpegPlayer.prepare()
         }
 
-        play_btn.setOnClickListener {
-            Toast.makeText(this, "测试有没有卡死", Toast.LENGTH_SHORT).show()
+        stop_btn.setOnClickListener {
+            dnFFmpegPlayer.stop()
+        }
+
+        refresh_btn.setOnClickListener {
+            Log.e("MainActivity","onCreate refresh")
         }
     }
 
@@ -58,10 +63,10 @@ class MainActivity : AppCompatActivity() {
 //        dnFFmpegPlayer.prepare()
     }
 
-    override fun onStop() {
-        super.onStop()
-        dnFFmpegPlayer.stop()
-    }
+//    override fun onStop() {
+//        super.onStop()
+//        dnFFmpegPlayer.stop()
+//    }
 
     override fun onPause() {
         super.onPause()

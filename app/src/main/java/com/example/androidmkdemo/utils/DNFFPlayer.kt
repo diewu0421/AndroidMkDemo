@@ -44,6 +44,7 @@ class DNFFPlayer : IPlay, PlayCallback, SurfaceHolder.Callback {
     }
 
     fun setSurfaceView(surfaceView: SurfaceView): DNFFPlayer {
+        mHolder?.removeCallback(this)
         mHolder = surfaceView.holder
         mHolder?.addCallback(this)
         return this
@@ -60,12 +61,18 @@ class DNFFPlayer : IPlay, PlayCallback, SurfaceHolder.Callback {
     }
 
     override fun stop() {
+        mHolder?.removeCallback(this)
+        mHolder = null
+        native_stop()
     }
+
+    private external fun native_stop()
 
     override fun pause() {
     }
 
     override fun destroy() {
+        native_release()
     }
 
     override fun onPrepare() {
@@ -83,6 +90,7 @@ class DNFFPlayer : IPlay, PlayCallback, SurfaceHolder.Callback {
     external fun native_prepare(playUrl: String)
     external fun native_start()
     external fun native_setSurface(surface: Surface)
+    external fun native_release()
 
     override fun surfaceCreated(holder: SurfaceHolder) {
 

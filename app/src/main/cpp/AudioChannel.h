@@ -23,14 +23,17 @@ public:
     void decode();
 
     void _play();
+    void stop();
 
     int getPcm();
+
 
 public:
     uint8_t *data = 0;
     int out_channels;
     int out_samplesize;
     int out_sample_rate;
+
 
 private:
     pthread_t  pid_audio_decode;

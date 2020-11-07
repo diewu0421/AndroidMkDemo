@@ -26,6 +26,7 @@ public:
 
     //解码+播放
     void play();
+    void stop();
 
     void decode();
 
