@@ -33,11 +33,22 @@ AudioChannel::AudioChannel(int id, AVCodecContext *avCodecContext, AVRational ra
 }
 
 AudioChannel::~AudioChannel() {
+    LOGE("audio channel xigou %d %d", frames.size(), packets.size());
     if(data){
         free(data);
         data = 0;
     }
+    frames.clear();
+    LOGE("释放后 %d",frames.size());
+    frames.setSyncHandle(0);
+    frames.setWork(0);
+    frames.setReleaseCallback(0);
 
+    packets.clear();
+    packets.setSyncHandle(0);
+    packets.setWork(0);
+    packets.setReleaseCallback(0);
+    LOGE("audio channel xigou after");
 }
 
 void AudioChannel::play() {

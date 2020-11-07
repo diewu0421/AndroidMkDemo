@@ -161,6 +161,11 @@ extern "C"
 JNIEXPORT void JNICALL
 Java_com_example_androidmkdemo_utils_DNFFPlayer_native_1prepare(JNIEnv *env, jobject thiz,
                                                                 jstring play_url) {
+//    if (true) {
+//        int *p = 0;
+//        *p = 12;
+//        return;
+//    }
 
     if (flag) {
         LOGE("已经prepaer过了")

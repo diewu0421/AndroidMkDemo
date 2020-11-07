@@ -173,7 +173,7 @@ void DNFFmpeg::_start() {
         AVPacket *packet = av_packet_alloc();
         ret = av_read_frame(formatContext, packet);
         //=0成功 其他:失败
-        if (ret == 0) {
+        if (ret == 0 && packet) {
             //stream_index 这一个流的一个序号
             if (audioChannel && packet->stream_index == audioChannel->id) {
                 audioChannel->packets.push(packet);

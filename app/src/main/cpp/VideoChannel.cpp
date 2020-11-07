@@ -40,6 +40,7 @@ VideoChannel::VideoChannel(int id, AVCodecContext *avCodecContext, AVRational ti
 
 
 VideoChannel::~VideoChannel() {
+    LOGE("videochannel xigou before %d %d", frames.size(), packets.size());
 
     frames.clear();
     frames.setSyncHandle(0);
@@ -50,6 +51,7 @@ VideoChannel::~VideoChannel() {
     packets.setSyncHandle(0);
     packets.setWork(0);
     packets.setReleaseCallback(0);
+    LOGE("videochannel xigou after");
 }
 
 void VideoChannel::play() {
@@ -128,7 +130,8 @@ void VideoChannel::render() {
         double clock = frame->best_effort_timestamp * av_q2d(time_base);
         double extra_delay = frame->repeat_pict / (2 * fps);
         double real_delay = frame_delay + extra_delay;
-#if 0
+        LOGE("延时 %lf", real_delay * DELAY_CONST);
+#if 1
         if (!audioChannel) {
             //回调出去进行播放
             av_usleep(real_delay * DELAY_CONST);

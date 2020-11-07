@@ -9,9 +9,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.example.androidmkdemo.utils.DNFFPlayer
-import com.sample.breakpad.BreakpadInit
 import kotlinx.android.synthetic.main.activity_main.*
 import java.io.File
+import java.lang.IndexOutOfBoundsException
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,6 +22,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+//        throw IndexOutOfBoundsException()
 
         if (ContextCompat.checkSelfPermission(
                 this,
@@ -90,7 +92,7 @@ class MainActivity : AppCompatActivity() {
         if (externalReportPath?.exists() == false) {
             externalReportPath?.mkdirs()
         }
-        BreakpadInit.initBreakpad(externalReportPath!!.absolutePath)
+//        BreakpadInit.initBreakpad(externalReportPath!!.absolutePath)
 
     }
 
