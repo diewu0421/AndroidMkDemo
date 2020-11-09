@@ -66,6 +66,13 @@ class DNFFPlayer : IPlay, PlayCallback, SurfaceHolder.Callback {
         native_stop()
     }
 
+    fun seekTo(progress: Int) {
+        native_seekTo(progress)
+    }
+    fun getDuration(): Int {
+        return native_get_duration()
+    }
+
     private external fun native_stop()
 
     override fun pause() {
@@ -87,10 +94,16 @@ class DNFFPlayer : IPlay, PlayCallback, SurfaceHolder.Callback {
         }
     }
 
+    fun onProgress(progress: Int) {
+        onProgressChangeListener?.invoke(progress)
+    }
+
     external fun native_prepare(playUrl: String)
     external fun native_start()
     external fun native_setSurface(surface: Surface)
     external fun native_release()
+    external fun native_get_duration(): Int
+    external fun native_seekTo(progress: Int)
 
     override fun surfaceCreated(holder: SurfaceHolder) {
 
@@ -104,14 +117,23 @@ class DNFFPlayer : IPlay, PlayCallback, SurfaceHolder.Callback {
     }
 
     private var onPlayerStateChangeListener: OnPlayerStateChangeListener? = null
+    private var onProgressChangeListener: ((Int) -> Unit)? = null
 
     fun setOnPlayerStateChangeListener(onPlayerStateChangeListener: OnPlayerStateChangeListener) {
         this.onPlayerStateChangeListener = onPlayerStateChangeListener
     }
-
-
+//    fun setOnProgressChangeListener(onProgressChangeListener: OnProgressChangeListener) {
+//        this.onProgressChangeListener = onProgressChangeListener
+//    }
+    fun setOnProgressChangeListener(progressListener: (Int) -> Unit) {
+        this.onProgressChangeListener = progressListener
+    }
     interface OnPlayerStateChangeListener {
 
         fun onPrepare()
     }
+
+//    interface OnProgressChangeListener {
+//        fun onProgressChange(progress: Int)
+//    }
 }

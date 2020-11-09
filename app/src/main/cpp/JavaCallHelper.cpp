@@ -20,11 +20,13 @@ JavaCallHelper::JavaCallHelper(JavaVM *vm, JNIEnv *env, jobject instace) {
 
 JavaCallHelper::~JavaCallHelper() {
     LOGE("javacallhelper before");
-    env->DeleteGlobalRef(instance);
+    env->CallVoidMethod(instance, onErrorId, 102);
+//    env->DeleteGlobalRef(instance);
     LOGE("javacallhelper after");
 }
 
 void JavaCallHelper::onError(int thread,int error){
+    LOGE("OnError %d %d", error, thread);
     //主线程
     if (thread == THREAD_MAIN){
        env->CallVoidMethod(instance,onErrorId,error);

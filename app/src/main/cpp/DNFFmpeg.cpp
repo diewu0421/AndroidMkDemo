@@ -20,9 +20,11 @@ DNFFmpeg::DNFFmpeg(JavaCallHelper *callHelper, const char *dataSource) {
     //strlen 获得字符串的长度 不包括\0
     this->dataSource = new char[strlen(dataSource) + 1];
     strcpy(this->dataSource, dataSource);
+    pthread_mutex_init(&mutex,0);
 }
 
 DNFFmpeg::~DNFFmpeg() {
+    pthread_mutex_destroy(&mutex);
     //释放
     DELETE(dataSource)
 }
@@ -61,6 +63,9 @@ void DNFFmpeg::_prepare() {
             callHelper->onError(THREAD_CHILD, FFMPEG_CAN_NOT_FIND_STREAMS);
         }
         return;
+    }
+    if (formatContext) {
+        duration = formatContext->duration / 1000000;
     }
     //nb_streams :几个流(几段视频/音频)
     for (int i = 0; i < formatContext->nb_streams; ++i) {
@@ -170,8 +175,18 @@ void DNFFmpeg::_start() {
     //1、读取媒体数据包(音视频数据包)
     int ret;
     while (isPlaying) {
+
+        if (audioChannel && audioChannel->packets.size() > 100) {
+            continue;
+        }
+        if (videoChannel && videoChannel->packets.size() > 100){
+            continue;
+        }
+
         AVPacket *packet = av_packet_alloc();
+        pthread_mutex_lock(&mutex);
         ret = av_read_frame(formatContext, packet);
+        pthread_mutex_unlock(&mutex);
         //=0成功 其他:失败
         if (ret == 0 && packet) {
             //stream_index 这一个流的一个序号
@@ -191,6 +206,7 @@ void DNFFmpeg::_start() {
 
         } else {
             //
+            break;
         }
 
     }
@@ -225,5 +241,10 @@ void DNFFmpeg::stop() {
     callHelper = 0;
     LOGE("stop play");
     pthread_create(&stop_pid, 0, stop_task, this);
+
+}
+
+void DNFFmpeg::seek(int progress) {
+
 
 }

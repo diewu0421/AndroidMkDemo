@@ -131,6 +131,7 @@ void VideoChannel::render() {
         double extra_delay = frame->repeat_pict / (2 * fps);
         double real_delay = frame_delay + extra_delay;
         LOGE("延时 %lf", real_delay * DELAY_CONST);
+        av_usleep(real_delay * DELAY_CONST);
 #if 1
         if (!audioChannel) {
             //回调出去进行播放

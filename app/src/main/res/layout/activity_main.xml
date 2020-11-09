@@ -38,5 +38,13 @@
         app:layout_constraintTop_toTopOf="@id/stop_btn"
         android:layout_marginTop="200dp"/>
 
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/seek"
+        android:max="100"
+        app:layout_constraintTop_toBottomOf="@+id/surfaceView"
+        android:layout_marginTop="10dp"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

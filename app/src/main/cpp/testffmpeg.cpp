@@ -148,7 +148,7 @@ void render(uint8_t *data, int linesize, int width, int height) {
 
     int dst_linesize = window_buffer.stride * 4;
     for (int i = 0; i < window_buffer.height; ++i) {
-        memcpy(dst_data + i * dst_linesize  ,data + i * linesize , dst_linesize);
+        memcpy(dst_data + i * dst_linesize, data + i * linesize, dst_linesize);
     }
 
     ANativeWindow_unlockAndPost(window);
@@ -251,3 +251,19 @@ Java_com_example_androidmkdemo_utils_DNFFPlayer_native_1release(JNIEnv *env, job
     pthread_mutex_unlock(&mutex);
 }
 
+extern "C"
+JNIEXPORT void JNICALL
+Java_com_example_androidmkdemo_utils_DNFFPlayer_native_1seekTo(JNIEnv *env, jobject thiz,
+                                                               jint progress) {
+    if (ffmpeg) {
+        ffmpeg->seek(progress);
+    }
+}extern "C"
+JNIEXPORT jint JNICALL
+Java_com_example_androidmkdemo_utils_DNFFPlayer_native_1get_1duration(JNIEnv *env, jobject thiz) {
+    if (ffmpeg) {
+        return ffmpeg->getDuration();
+    }
+
+    return 0;
+}

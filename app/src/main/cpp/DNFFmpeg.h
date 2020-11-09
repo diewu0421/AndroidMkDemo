@@ -29,6 +29,12 @@ public:
 
     void stop();
 
+    void seek(int progress);
+
+    int getDuration() {
+        return duration;
+    }
+
 public:
     char *dataSource;
     pthread_t pid;
@@ -40,6 +46,9 @@ public:
     RenderFrameCallback callback;
     bool isPlaying;
     pthread_t stop_pid;
+
+    pthread_mutex_t  mutex;
+    int duration;
 };
 
 

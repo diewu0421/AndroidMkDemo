@@ -4,6 +4,7 @@ import android.Manifest
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.util.Log
+import android.widget.SeekBar
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
@@ -16,8 +17,7 @@ import java.lang.IndexOutOfBoundsException
 class MainActivity : AppCompatActivity() {
 
     val dnFFmpegPlayer by lazy { DNFFPlayer().setContext(this)}
-
-
+    private var mDuration: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,19 +40,31 @@ class MainActivity : AppCompatActivity() {
             initExternalReportPath()
         }
 
-        dnFFmpegPlayer.setSurfaceView(surfaceView)
+        dnFFmpegPlayer.run {
 
-        dnFFmpegPlayer.setOnPlayerStateChangeListener(object :
-            DNFFPlayer.OnPlayerStateChangeListener {
-            override fun onPrepare() {
-                runOnUiThread {
-                    Toast.makeText(this@MainActivity, "开始播放", Toast.LENGTH_SHORT).show()
+            setSurfaceView(surfaceView)
+
+            setOnPlayerStateChangeListener(object :
+                DNFFPlayer.OnPlayerStateChangeListener {
+                override fun onPrepare() {
+                    mDuration = getDuration()
+                    runOnUiThread {
+                        Toast.makeText(this@MainActivity, "开始播放", Toast.LENGTH_SHORT).show()
+                    }
+                    play()
                 }
-                dnFFmpegPlayer.play()
+
+            })
+
+            setOnProgressChangeListener listener@{ progress ->
+                if (!isSeek) {
+                    isSeek = false
+                    return@listener
+                }
+                seek.progress = progress * 100 / mDuration
+
             }
-
-        })
-
+        }
 
         prepare_btn.setOnClickListener {
             dnFFmpegPlayer.prepare()
@@ -65,7 +77,35 @@ class MainActivity : AppCompatActivity() {
         refresh_btn.setOnClickListener {
             Log.e("MainActivity","onCreate refresh")
         }
+
+        seek.setOnClickListener {
+            seek.setOnSeekBarChangeListener(object: SeekBar.OnSeekBarChangeListener{
+                override fun onProgressChanged(
+                    seekBar: SeekBar,
+                    progress: Int,
+                    fromUser: Boolean
+                ) {
+                }
+
+                override fun onStartTrackingTouch(seekBar: SeekBar) {
+                    isTouch = true
+
+                }
+
+                override fun onStopTrackingTouch(seekBar: SeekBar) {
+                    isTouch = false
+                    isSeek = true
+                    val progress = seekBar.progress * mDuration / 100
+                    dnFFmpegPlayer.seekTo(progress)
+
+                }
+
+            })
+        }
     }
+
+    private var isTouch = false
+    private var isSeek = false
 
     companion object {
         init {
