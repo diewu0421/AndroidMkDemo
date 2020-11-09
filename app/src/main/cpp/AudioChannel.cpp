@@ -19,9 +19,9 @@ void *audio_play(void *args) {
     return 0;
 }
 
-AudioChannel::AudioChannel(int id, AVCodecContext *avCodecContext, AVRational rational)
+AudioChannel::AudioChannel(int id, AVCodecContext *avCodecContext, AVRational rational, JavaCallHelper* helper)
         : BaseChannel(id,
-                      avCodecContext, rational) {
+                      avCodecContext, rational, helper) {
 
     out_channels = av_get_channel_layout_nb_channels(AV_CH_LAYOUT_STEREO);
     out_samplesize = av_get_bytes_per_sample(AV_SAMPLE_FMT_S16);
@@ -131,6 +131,9 @@ int AudioChannel::getPcm() {
     data_size =  samples * out_samplesize * out_channels ;
     // 获取相对于播放时刻的相对时间
     clock = frame->pts * av_q2d(time_base);
+    if (javaCallHelper) {
+        javaCallHelper->onProgress(THREAD_CHILD, clock);
+    }
     LOGE("audio clock %lf", clock);
     return data_size;
 }

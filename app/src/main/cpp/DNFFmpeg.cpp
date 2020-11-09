@@ -119,14 +119,14 @@ void DNFFmpeg::_prepare() {
         //音频
         if (codecpar->codec_type == AVMEDIA_TYPE_AUDIO) {
             //0
-            audioChannel = new AudioChannel(i, context, time_base);
+            audioChannel = new AudioChannel(i, context, time_base, callHelper);
         } else if (codecpar->codec_type == AVMEDIA_TYPE_VIDEO) {
             //1
             // 帧率 : 单位时间内,需要显示多少个图像
             AVRational avRational = stream->avg_frame_rate;
             int fps = av_q2d(avRational);
             LOGE("fps = %d", fps);
-            videoChannel = new VideoChannel(i, context, time_base, fps);
+            videoChannel = new VideoChannel(i, context, time_base, fps, callHelper);
             videoChannel->setRenderFrameCallback(callback);
         }
     }
@@ -202,6 +202,7 @@ void DNFFmpeg::_start() {
                 videoChannel->frames.empty() &&
                 audioChannel->packets.empty() &&
                 audioChannel->frames.empty()) {
+                LOGE("播放完了");
                 break;
             }
 

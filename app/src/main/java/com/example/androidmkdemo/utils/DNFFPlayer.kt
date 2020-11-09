@@ -70,6 +70,10 @@ class DNFFPlayer : IPlay, PlayCallback, SurfaceHolder.Callback {
     fun seekTo(progress: Int) {
         native_seekTo(progress)
     }
+
+    fun onProgress(progress: Int) {
+        onProgressChangeListener?.invoke(progress)
+    }
     fun getDuration(): Int {
         return native_get_duration()
     }
@@ -95,9 +99,6 @@ class DNFFPlayer : IPlay, PlayCallback, SurfaceHolder.Callback {
         }
     }
 
-    fun onProgress(progress: Int) {
-        onProgressChangeListener?.invoke(progress)
-    }
 
     external fun native_prepare(playUrl: String)
     external fun native_start()

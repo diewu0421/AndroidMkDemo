@@ -30,9 +30,9 @@ void dropFrameCallback(queue<AVFrame *> &queue) {
         queue.pop();
     }
 }
-VideoChannel::VideoChannel(int id, AVCodecContext *avCodecContext, AVRational time_base, int fps)
+VideoChannel::VideoChannel(int id, AVCodecContext *avCodecContext, AVRational time_base, int fps, JavaCallHelper* helper)
         : BaseChannel(
-        id, avCodecContext, time_base) {
+        id, avCodecContext, time_base, helper) {
 
     this->fps = fps;
     frames.setSyncHandle(dropFrameCallback);
@@ -130,7 +130,7 @@ void VideoChannel::render() {
         double clock = frame->best_effort_timestamp * av_q2d(time_base);
         double extra_delay = frame->repeat_pict / (2 * fps);
         double real_delay = frame_delay + extra_delay;
-        LOGE("延时 %lf", real_delay * DELAY_CONST);
+//        LOGE("延时 %lf", real_delay * DELAY_CONST);
         av_usleep(real_delay * DELAY_CONST);
 #if 1
         if (!audioChannel) {
@@ -147,11 +147,11 @@ void VideoChannel::render() {
                 if (diff > 0) {
                     // 视频快了
 
-                    LOGE("视频快了%lf", diff);
+//                    LOGE("视频快了%lf", diff);
                     av_usleep((real_delay + diff) * DELAY_CONST);
                 } else {
                     // 视频慢了
-                    LOGE("视频慢了%lf", diff);
+//                    LOGE("视频慢了%lf", diff);
                     double audioClock = audioChannel->clock;
                     if (fabs(clock - audioClock) >= 0.05) {
                         // 丢包
@@ -164,6 +164,10 @@ void VideoChannel::render() {
         }
 
 #endif
+
+        if (javaCallHelper) {
+            javaCallHelper->onProgress(THREAD_CHILD, clock);
+        }
 
         callback(dst_data[0],dst_linesize[0],avCodecContext->width, avCodecContext->height);
         releaseAvFrame(&frame);
@@ -194,3 +198,5 @@ void VideoChannel::stop() {
     }
 
 }
+
+

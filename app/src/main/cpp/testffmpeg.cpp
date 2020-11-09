@@ -256,6 +256,7 @@ JNIEXPORT void JNICALL
 Java_com_example_androidmkdemo_utils_DNFFPlayer_native_1seekTo(JNIEnv *env, jobject thiz,
                                                                jint progress) {
     if (ffmpeg) {
+        LOGE("seek %d", progress)
         ffmpeg->seek(progress);
     }
 }extern "C"

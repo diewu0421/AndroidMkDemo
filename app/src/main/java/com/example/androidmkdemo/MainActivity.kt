@@ -57,11 +57,12 @@ class MainActivity : AppCompatActivity() {
             })
 
             setOnProgressChangeListener listener@{ progress ->
-                if (!isSeek) {
-                    isSeek = false
-                    return@listener
-                }
-                seek.progress = progress * 100 / mDuration
+                Log.e("MainActivity","onCreate native callback ${(progress * 100.0f / mDuration).toInt()}")
+//                if (!isSeek) {
+//                    isSeek = false
+//                    return@listener
+//                }
+                seek.setProgress((progress * 100.0f / mDuration).toInt(), true)
 
             }
         }
@@ -78,30 +79,29 @@ class MainActivity : AppCompatActivity() {
             Log.e("MainActivity","onCreate refresh")
         }
 
-        seek.setOnClickListener {
-            seek.setOnSeekBarChangeListener(object: SeekBar.OnSeekBarChangeListener{
-                override fun onProgressChanged(
-                    seekBar: SeekBar,
-                    progress: Int,
-                    fromUser: Boolean
-                ) {
-                }
+        seek.setOnSeekBarChangeListener(object: SeekBar.OnSeekBarChangeListener{
+            override fun onProgressChanged(
+                seekBar: SeekBar,
+                progress: Int,
+                fromUser: Boolean
+            ) {
+                Log.e("MainActivity","onProgressChanged java $progress")
+            }
 
-                override fun onStartTrackingTouch(seekBar: SeekBar) {
-                    isTouch = true
+            override fun onStartTrackingTouch(seekBar: SeekBar) {
+                isTouch = true
 
-                }
+            }
 
-                override fun onStopTrackingTouch(seekBar: SeekBar) {
-                    isTouch = false
-                    isSeek = true
-                    val progress = seekBar.progress * mDuration / 100
-                    dnFFmpegPlayer.seekTo(progress)
+            override fun onStopTrackingTouch(seekBar: SeekBar) {
+                isTouch = false
+                isSeek = true
+                val progress = seekBar.progress * mDuration / 100
+                dnFFmpegPlayer.seekTo(progress)
 
-                }
+            }
 
-            })
-        }
+        })
     }
 
     private var isTouch = false
