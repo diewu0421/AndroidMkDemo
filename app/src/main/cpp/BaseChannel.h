@@ -54,6 +54,21 @@ public:
     virtual void play() = 0;
     virtual void stop() = 0;
 
+    void clear (){
+        packets.clear();
+        frames.clear();
+    }
+
+    void stopWork() {
+        packets.setWork(0);
+        frames.setWork(0);
+    }
+
+    void startWork() {
+        packets.setWork(1);
+        frames.setWork(1);
+    }
+
     int id;
     //编码数据包队列
     SafeQueue<AVPacket *> packets;

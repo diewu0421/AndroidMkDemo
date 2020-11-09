@@ -67,6 +67,7 @@ void DNFFmpeg::_prepare() {
     if (formatContext) {
         duration = formatContext->duration / 1000000;
     }
+    LOGE("gettime%d", duration);
     //nb_streams :几个流(几段视频/音频)
     for (int i = 0; i < formatContext->nb_streams; ++i) {
         //可能代表是一个视频 也可能代表是一个音频
@@ -245,6 +246,27 @@ void DNFFmpeg::stop() {
 }
 
 void DNFFmpeg::seek(int progress) {
+    if (!formatContext) {
+        LOGE("seek formatcontext is null");
+        return;
+    }
+    if (!audioChannel || !videoChannel) {
+        LOGE("audiochannel or videochannel is null");
+        return;
+    }
+    pthread_mutex_lock(&mutex);
+    av_seek_frame(formatContext, -1, progress * 1000000, AVSEEK_FLAG_BACKWARD);
 
+    if (audioChannel) {
+        audioChannel->stopWork();
+        audioChannel->clear();
+        audioChannel->startWork();
+    }
+    if (videoChannel) {
+        videoChannel->stopWork();
+        videoChannel->clear();
+        videoChannel->startWork();
+    }
+    pthread_mutex_unlock(&mutex);
 
 }

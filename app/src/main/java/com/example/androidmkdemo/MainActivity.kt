@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity() {
                 override fun onPrepare() {
                     mDuration = getDuration()
                     runOnUiThread {
-                        Toast.makeText(this@MainActivity, "开始播放", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this@MainActivity, "开始播放 Duration $mDuration", Toast.LENGTH_SHORT).show()
                     }
                     play()
                 }
