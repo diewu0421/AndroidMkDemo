@@ -144,34 +144,40 @@ void VideoChannel::render() {
 
                 double diff = clock - audioChannel->clock;
 
-                if (diff > 0) {
-                    // 视频快了
+                // 视频比音频快
+                if (clock > audioChannel->clock) {
 
-//                    LOGE("视频快了%lf", diff);
-                    av_usleep((real_delay + diff) * DELAY_CONST);
+                    if (diff > 1) {
+
+                        av_usleep((real_delay + 2) * DELAY_CONST);
+                    } else {
+                        av_usleep((real_delay + diff) * DELAY_CONST);
+                    }
                 } else {
-                    // 视频慢了
-//                    LOGE("视频慢了%lf", diff);
-                    double audioClock = audioChannel->clock;
-                    if (fabs(clock - audioClock) >= 0.05) {
+                    // 视频比音频慢
+                    if (diff > 1) {
+
+                    } else if (diff >= 0.05) {
                         // 丢包
                         releaseAvFrame(&frame);
                         frames.sync();
                         continue;
                     }
                 }
+
             }
         }
 
 #endif
 
-        if (javaCallHelper) {
-            javaCallHelper->onProgress(THREAD_CHILD, clock);
-        }
+//        if (javaCallHelper) {
+//            javaCallHelper->onProgress(THREAD_CHILD, clock);
+//        }
 
         callback(dst_data[0],dst_linesize[0],avCodecContext->width, avCodecContext->height);
         releaseAvFrame(&frame);
     }
+    isPlaying = false;
     av_freep(&dst_data[0]);
     releaseAvFrame(&frame);
 }

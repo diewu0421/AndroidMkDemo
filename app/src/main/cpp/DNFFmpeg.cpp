@@ -184,8 +184,8 @@ void DNFFmpeg::_start() {
             continue;
         }
 
-        AVPacket *packet = av_packet_alloc();
         pthread_mutex_lock(&mutex);
+        AVPacket *packet = av_packet_alloc();
         ret = av_read_frame(formatContext, packet);
         pthread_mutex_unlock(&mutex);
         //=0成功 其他:失败
@@ -247,6 +247,15 @@ void DNFFmpeg::stop() {
 }
 
 void DNFFmpeg::seek(int progress) {
+    if (progress < 0 || progress > duration) {
+        LOGE("progress is invalid");
+        return;
+    }
+
+    if (progress < 0 || progress > duration) {
+        return;
+
+    }
     if (!formatContext) {
         LOGE("seek formatcontext is null");
         return;
